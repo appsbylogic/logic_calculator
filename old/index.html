@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+        <meta charset="utf-8">
+      
+        <meta name="format-detection" content="telephone=no">
+      
+        <meta name="msapplication-tap-highlight" content="no">
+      
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <title>Calculator</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+        <link rel="stylesheet" type="text/css" href="css/bottom_nav.css">
+
+        <link rel="stylesheet" type="text/css" href="css/boton.css">
+
+        <link rel="stylesheet" type="text/css" href="css/support.css">
+
+        <link rel="icon" href="img/icon.png">
+
+    </head>
+   
+    <body>
+
+       <nav class="top_nav">
+
+            <h1><i>Calc ++</i></h1>
+
+            <ul>
+                
+                <li><a href="index.html">Physics</a></li>
+                
+                <li><a href="math.html">Math</a></li>
+
+                
+
+
+            
+            </ul>
+
+
+
+            <div style="clear: both;"></div>
+
+            
+           
+       </nav>
+
+       <div class="responsive-bar" >
+           
+           <h3 class="title">Calculator</h3>
+
+           <h4 class="menu">Menu</h4>
+
+           <div style="clear: both;"></div>
+
+
+
+       </div>
+
+       <div class="content" id="content">
+
+        <div style="clear: both;"></div>
+
+           
+           <h1>Physics</h1>
+
+           <hr>
+
+           <ul>
+               
+               <li><a href="funciones/fisica/pitagoras.html">Pythagorean Theorem<a></li>
+
+               <li><a href="funciones/fisica/vectores.html">Vectors</a></li>
+
+               <li><a href="funciones/fisica/aceleracion.html">Acceleration</a></li>
+
+           </ul>
+
+       </div>
+
+       <div id="formularios" class="formularios">
+
+        <h1>Physics</h1>
+
+        <hr>
+        <br>
+
+
+        <ul>
+
+            <h2>Vectors</h2>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            
+            <li><i>Fx = F.Cosθ</i></li>
+            <li><i>Fy = F.Sinθ</i></li>
+            <li><i>θ = Tan<sup>-1</sup>(Fy/Fx)</i></li>
+            <li><i>Fr = √ ΣFx<sup>2</sup> + ΣFy<sup>2</sup></i></li>
+
+            <h2>Uniform Linear Motion</h2>
+
+            <li>V = Δx / Δt</li>
+            <li>V = x / t</li>
+            <li>Δx = x<sub>f</sub> - x<sub>o</sub></li>
+            <li>Δt = t<sub>f</sub> - t<sub>o</sub></li>
+
+            <h2>Accelerated Uniform Rectilinear Motion</h2>
+
+            <li>a = (V - V<sub>o</sub>) / t</li>
+            <li>a = ΔV / Δt</li>
+            <li>x = x<sub>o</sub> + V<sub>o</sub>t + at<sup>2</sup> / 2</li>
+            <li>V<sub>f</sub><sup>2</sup> = V<sub>o</sub><sup>2</sup> + 2aΔx</li>
+            <li>x = x<sub>o</sub> + (V<sub>o</sub> + V<sub>f</sub>)/2 . t</li>
+
+            <h2>Newton's Second Law</h2>
+
+            <li>F = ma</li>
+
+            <h2>Weight of a body</h2>
+            <li>w = mg</li>
+            <li>N = w (when there's no friction)</li>
+
+
+            <br>
+
+            <br>
+
+        </ul>
+
+
+           
+
+
+
+       </div>
+
+       <div id="aprender" class="aprender">
+
+        <h1>Physics</h1>
+
+        <hr>
+
+        <br>
+
+        <ul>
+            
+            <h2>Work in progress...</h2>
+
+        </ul>
+           
+
+       </div>
+
+
+       <div class="ayuda" id="ayuda">
+
+             <h1>Early access</h1>
+
+             <hr>
+
+             <br>
+
+             <div class="encuesta">
+           
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf8bo1gR6aA110ByGoImz47uYdB2eweMYULDLgmQKy0QYLYJw/viewform?embedded=true" width="95%" height="auto" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+
+            <hr>
+            <br>
+
+            <a href="https://twitter.com/Maldonado6F"><img src="img/twitter.png" width="auto" height="45px"></a>
+
+            <input type="button" name="support" id="support" value="Watch an ad to support me!" >
+                 <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+
+                </div>
+
+
+
+                <div style="clear: both;"></div>
+       </div>
+
+       <div class="bottom_nav">
+
+      <table>
+          
+          <tr>
+              
+              <td onclick="cambiar_calcular();" ><img src="img/calcular_a.png" id="calc"></td>
+              <td onclick="cambiar_formularios();" ><img src="img/formulas.png" id="form"></td>
+              <td onclick="cambiar_aprender();" ><img src="img/learn.png" id="learn"></td>
+              <td onclick="cambiar_ayuda();" ><img src="img/early.png" id="early"></td>
+
+          </tr>
+
+      </table>
+
+       </div>
+
+
+
+       <script type="text/javascript" src="js/nav_bottom.js"></script>
+
+       <script type="text/javascript" src="js/ads.js"></script>
+
+       <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+          >
+        </script>
+
+        <script type="text/javascript">
+
+            window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+
+
+    }
+}
+
+            
+         function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+            
+            
+            $(document).ready(function(){
+
+                $(".menu").click(function(){
+
+                    $("nav").slideToggle(500);
+                })
+
+            })
+
+        </script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        
+    </body>
+
+</html>

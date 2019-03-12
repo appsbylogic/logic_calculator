@@ -1,263 +1,323 @@
 <!DOCTYPE html>
-
 <html>
+<head>
 
-    <head>
+	
 
-        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <meta charset="utf-8">
 
-        <meta charset="utf-8">
-      
-        <meta name="format-detection" content="telephone=no">
-      
-        <meta name="msapplication-tap-highlight" content="no">
-      
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Calculator</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Calculator++</title>
+
+	 <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <style type="text/css">
+    	
+    	html{
+
+    		background-color: #fcfcfc;
+
+    	}
+
+    </style>
+
+</head>
+<body>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	  <nav class="nav-extended">
+    <div class="nav-wrapper  red darken-1">
+      <a href="#!" class="brand-logo">Calculator++</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Physics</a></li>
+        <li><a href="badges.html">Math</a></li>
+     
+      </ul>
+    </div>
+    <div class="nav-content red accent-2">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="#test1" onclick="solve()"><i class="material-icons">exposure</i></a></li>
+        <li class="tab"><a href="#test2" onclick="formule()"><i class="material-icons">functions</i></a></li>
+     
+        <li class="tab"><a href="#test4"><i class="material-icons">lightbulb_outline</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+
+  	<li>
+  		
+  		<div class="user-view">
+  			
+  			<div class="background">
+  				
+  				<img src="https://images2.alphacoders.com/601/601814.jpg">
+
+  			</div>
+
+  			<a href="">
+  				
+  				<img src="https://lh3.googleusercontent.com/AexG0PAtechIsV4dhoP7plR6Ydrj24xS7NOwsBrtSqX1M9ItJ2CJyOC84fZ2guiCz1Qt-0u71Pcm5H3BmHpmMWWQCykkV8owzSIalkixcNG_Y5pytR_LYDxa5dsaU3R69B3PxKaawwXzsNcAr7Pzwn3xE4BstanhZDscN3w84olu-rNDpd7_lzl0U44zTkwbYugVXDlsrh2N_1wRQ56gLdio0qVl-LzaPbp3bO8hLWrPMt05DqdsVuC6MYZe5FVh0u5iAoyBGMezzBC79MwF5oaus1qUGHCmKwf_Rkv8H799AZVhOGd5UM_p_9VOZkPvpTPFo2AEUzKU9_huuar3RJ-XGXhADpuKjCgvjqhGmNbVbvsRvOy3CQ_gz1j-Nn6m-tDHb87IHmoAD1QUd1_k_wS6YDOeeKeaRKlyIKDtR8Z2-HDTc7YPA8vTrtRBT5Jbv18Igr4VB2V07zH-VqyFfRVzmLVwopbEcdLeFtx3KszIfqbcpgsKEUzN6ZJqzYJ-H5docAx5Qw5-SlfjXSQboEExGYLMRiFlr72liPolvOMG9ZNb_efyr4_FL3rkolqDs_X2UsF2k962UouJ3HvxhowUWGmrzZpuYqpnBoI2mXDAjtIN8YPsILw49bbg4KtWOdsuFxO-WOgXVBzofcGFtlXoSkpqdpU=w949-h937-no" class="circle">
+
+  			</a>
+
+  			<a href="">
+  				
+  				<span class="name white-text">Fernando Maldonado </span>
+
+  			</a>
+
+  			<a href="">
+  				
+  				<span class="email white-text">fmaldonado824@gmail.com </span>
+
+  			</a>
+
+  		</div>
+
+  	</li>
+
+  	<li><a class="subheader">Themes</a></li>
+    <li><a href="#"   class="waves-effect"><i class="material-icons">straighten</i>Physics</a></li>
+    <li><a href="#" class="waves-effect"><i class="material-icons">exposure_plus_1</i>Math</a></li>
+
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Options</a></li>
+    <li><a class="waves-effect" href="#!" onclick="darkEnable()">Dark mode <i class="material-icons">brightness_2</i></a></li>
+    
+  </ul>
+
         
-        <link rel="stylesheet" type="text/css" href="css/index.css">
 
-        <link rel="stylesheet" type="text/css" href="css/bottom_nav.css">
+	<div class="container" >
 
-        <link rel="stylesheet" type="text/css" href="css/boton.css">
 
-        <link rel="stylesheet" type="text/css" href="css/support.css">
+		<h4 id="head">Formulas and Equations</h4>
+		
+	
 
-        <link rel="icon" href="img/icon.png">
+	</div>
 
-    </head>
-   
-    <body>
 
-       <nav class="top_nav">
 
-            <h1><i>Calc ++</i></h1>
+	<div class="container" id="formulas">
 
-            <ul>
-                
-                <li><a href="index.html">Physics</a></li>
-                
-                <li><a href="math.html">Math</a></li>
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div class="card-content">
+						
+						<ul>
+							<h5>Vectors</h5>
+							<hr>
+							
 
-                
+							
+							<li><blockquote><i>Fx = F.Cosθ</i></blockquote></li>
+            				<li><blockquote><i>Fy = F.Sinθ</i></blockquote></li>
+            				<li><blockquote><i>θ = Tan<sup>-1</sup>(Fy/Fx)</i></blockquote></li>
+            				<li><blockquote><i>Fr = √ ΣFx<sup>2</sup> + ΣFy<sup>2</sup></i></blockquote></li>
 
+						</ul>
 
-            
-            </ul>
+					</div>
 
+				</div>
 
+			</div>
 
-            <div style="clear: both;"></div>
+		</div>
 
-            
-           
-       </nav>
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div class="card-content">
+						
+						<ul>
+							<h5>Uniform Linear Motion</h5>
+							<hr>
+							
 
-       <div class="responsive-bar" >
-           
-           <h3 class="title">Calculator</h3>
+							
+							<li><blockquote><i>V = Δx / Δt</i></blockquote></li>
+            				<li><blockquote><i>V = x / t</i></blockquote></li>
+            				<li><blockquote><i>Δx = x<sub>f</sub> - x<sub>o</sub></i></blockquote></li>
+            				<li><blockquote><i>Δt = t<sub>f</sub> - t<sub>o</sub></i></blockquote></li>
 
-           <h4 class="menu">Menu</h4>
+						</ul>
 
-           <div style="clear: both;"></div>
+					</div>
 
+				</div>
 
+			</div>
 
-       </div>
+		</div>
 
-       <div class="content" id="content">
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div class="card-content">
+						
+						<ul>
+							<h5>Accelerated Uniform Rectilinear Motion</h5>
+							<hr>
+							
 
-        <div style="clear: both;"></div>
+							
+							<li><blockquote><i>a = (V - V<sub>o</sub>) / t</i></blockquote></li>
+            				<li><blockquote><i>a = ΔV / Δt</i></blockquote></li>
+            				<li><blockquote><i>x = x<sub>o</sub> + V<sub>o</sub>t + at<sup>2</sup> / 2</i></blockquote></li>
+            				<li><blockquote><i>V<sub>f</sub><sup>2</sup> = V<sub>o</sub><sup>2</sup> + 2aΔx</i></blockquote></li>
+            				<li><blockquote><i>x = x<sub>o</sub> + (V<sub>o</sub> + V<sub>f</sub>)/2 . t</i></blockquote></li>
 
-           
-           <h1>Physics</h1>
+						</ul>
 
-           <hr>
+					</div>
 
-           <ul>
-               
-               <li><a href="funciones/fisica/pitagoras.html">Pythagorean Theorem<a></li>
+				</div>
 
-               <li><a href="funciones/fisica/vectores.html">Vectors</a></li>
+			</div>
 
-               <li><a href="funciones/fisica/aceleracion.html">Acceleration</a></li>
+		</div>
 
-           </ul>
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div class="card-content">
+						
+						<ul>
+							<h5>Newton's Second Law</h5>
+							<hr>
+							
 
-       </div>
+							
+							<li><blockquote><i>F = ma</i></blockquote></li>
+            				
 
-       <div id="formularios" class="formularios">
+						</ul>
 
-        <h1>Physics</h1>
+					</div>
 
-        <hr>
-        <br>
+				</div>
 
+			</div>
 
-        <ul>
+		</div>
 
-            <h2>Vectors</h2>
-            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-            
-            <li><i>Fx = F.Cosθ</i></li>
-            <li><i>Fy = F.Sinθ</i></li>
-            <li><i>θ = Tan<sup>-1</sup>(Fy/Fx)</i></li>
-            <li><i>Fr = √ ΣFx<sup>2</sup> + ΣFy<sup>2</sup></i></li>
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div class="card-content">
+						
+						<ul>
+							<h5>Weight of a body</h5>
+							<hr>
+							
 
-            <h2>Uniform Linear Motion</h2>
+							
+							<li><blockquote><i>w = mg</i></blockquote></li>
 
-            <li>V = Δx / Δt</li>
-            <li>V = x / t</li>
-            <li>Δx = x<sub>f</sub> - x<sub>o</sub></li>
-            <li>Δt = t<sub>f</sub> - t<sub>o</sub></li>
+							<li><blockquote><i>N = w (when there's no friction)</i></blockquote></li>
+            				
 
-            <h2>Accelerated Uniform Rectilinear Motion</h2>
+						</ul>
 
-            <li>a = (V - V<sub>o</sub>) / t</li>
-            <li>a = ΔV / Δt</li>
-            <li>x = x<sub>o</sub> + V<sub>o</sub>t + at<sup>2</sup> / 2</li>
-            <li>V<sub>f</sub><sup>2</sup> = V<sub>o</sub><sup>2</sup> + 2aΔx</li>
-            <li>x = x<sub>o</sub> + (V<sub>o</sub> + V<sub>f</sub>)/2 . t</li>
+					</div>
 
-            <h2>Newton's Second Law</h2>
+				</div>
 
-            <li>F = ma</li>
+			</div>
 
-            <h2>Weight of a body</h2>
-            <li>w = mg</li>
-            <li>N = w (when there's no friction)</li>
+		</div>
 
+	</div>
 
-            <br>
+	<div class="fixed-action-btn">
 
-            <br>
+		<a href="" class="btn-floating btn-large red">
+			<i class="material-icons large">mode_edit</i>
+		</a>
 
-        </ul>
+		<ul>
+			
+			<li>
+				<a href="" class="btn-floating blue"><i class="material-icons large">mode_edit</i></a>
 
+			</li>
 
-           
+		</ul>
 
+  
+	</div>
+      
 
 
-       </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-       <div id="aprender" class="aprender">
+    <script type="text/javascript">
+		
+		 document.addEventListener('DOMContentLoaded', function() {
+   		var elems = document.querySelectorAll('.sidenav');
+    	var instances = M.Sidenav.init(elems);
 
-        <h1>Physics</h1>
+    	var elems = document.querySelectorAll('.fixed-action-btn');
+    		var instances = M.FloatingActionButton.init(elems);
 
-        <hr>
+  	});
 
-        <br>
+		 var formula = document.getElementById('formulas')
 
-        <ul>
-            
-            <h2>Work in progress...</h2>
+		 var title = document.getElementById('head')
 
-        </ul>
-           
+		 function solve(){
 
-       </div>
+		 	formula.setAttribute('style','display:none')
 
+		 	title.innerHTML = 'Solve'
 
-       <div class="ayuda" id="ayuda">
 
-             <h1>Early access</h1>
+		 }
 
-             <hr>
+		  function formule(){
 
-             <br>
+		 	formula.setAttribute('style','display:initial')
 
-             <div class="encuesta">
-           
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf8bo1gR6aA110ByGoImz47uYdB2eweMYULDLgmQKy0QYLYJw/viewform?embedded=true" width="95%" height="auto" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+		 	title.innerHTML = 'Formulas and Equations'
 
-            <hr>
-            <br>
 
-            <a href="https://twitter.com/Maldonado6F"><img src="img/twitter.png" width="auto" height="45px"></a>
+		 }
 
-            <input type="button" name="support" id="support" value="Watch an ad to support me!" >
-                 <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            
 
-                </div>
+   		 	
+  	
+	</script>
 
 
 
-                <div style="clear: both;"></div>
-       </div>
-
-       <div class="bottom_nav">
-
-      <table>
-          
-          <tr>
-              
-              <td onclick="cambiar_calcular();" ><img src="img/calcular_a.png" id="calc"></td>
-              <td onclick="cambiar_formularios();" ><img src="img/formulas.png" id="form"></td>
-              <td onclick="cambiar_aprender();" ><img src="img/learn.png" id="learn"></td>
-              <td onclick="cambiar_ayuda();" ><img src="img/early.png" id="early"></td>
-
-          </tr>
-
-      </table>
-
-       </div>
-
-
-
-       <script type="text/javascript" src="js/nav_bottom.js"></script>
-
-       <script type="text/javascript" src="js/ads.js"></script>
-
-       <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-          >
-        </script>
-
-        <script type="text/javascript">
-
-            window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-
-
-    }
-}
-
-            
-         function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-            
-            
-            $(document).ready(function(){
-
-                $(".menu").click(function(){
-
-                    $("nav").slideToggle(500);
-                })
-
-            })
-
-        </script>
-
-        <script type="text/javascript" src="cordova.js"></script>
-        
-    </body>
-
+</body>
 </html>
