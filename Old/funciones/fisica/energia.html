@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	   <meta charset="utf-8">
+      
+        <meta name="format-detection" content="telephone=no">
+      
+        <meta name="msapplication-tap-highlight" content="no">
+      
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <title>Calculator</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../css/index.css">
+
+        <link rel="stylesheet" type="text/css" href="../../css/energia.css">
+
+        <link rel="icon" href="../../../res/icon/android/icon-72-hdpi.png">
+
+</head>
+<body>
+
+	 <nav class="top_nav">
+
+            <h1><a href="../../index.html"><</a></h1>
+
+      
+
+            <div style="clear: both;"></div>
+           
+       </nav>
+
+       <div class="responsive-bar">
+           
+           <h3 class="title"><a href="../../index.html"><</a></h3>
+
+           <div style="clear: both;"></div>
+
+       </div>
+
+       <div class="content">
+
+           
+           <h1>Energy</h1>
+
+           <hr>
+
+           <br>
+
+           <form>
+
+              <select id="select">
+                
+                <option>Potential</option>
+
+                <option>Cinetic</option>
+
+                <option>Mechanic</option>
+
+              </select>
+
+              <div class="potencial" id="potencial">
+
+                <label for="masa">Mass</label>
+                
+                <input type="number" name="masa" id="masa" value="0" style="width: 4em;" onfocus="this.value = ''">
+
+                <br>
+
+                <label for="altura">Height</label>
+
+                <input type="number" name="altura"  id="altura" value="0" style="width: 4em;" onfocus="this.value = ''">
+
+              </div>
+
+              <div class="cinetica" id="cinetica">
+
+                <label for="masa">Mass</label>
+                
+                <input type="number" name="masa" id="masa" value="0" style="width: 4em;" onfocus="this.value = ''">
+
+                <br>
+
+                <label for="altura">Velocity</label>
+
+                <input type="number" name="velocidad" id="velocidad" value="0" style="width: 4em;" onfocus="this.value = ''">
+
+              </div>
+
+              <div class="mecanica" id="mecanica">
+
+                <label for="masa">Mass</label>
+                
+                <input type="number" name="masa" id="masa" value="0" style="width: 4em;" onfocus="this.value = ''">
+
+                <br>
+
+                <label for="altura">Velocity</label>
+
+                <input type="number" name="velocidad" id="velocidad" value="0" style="width: 4em;" onfocus="this.value = ''">
+
+                <br>
+
+                <label for="altura">Height</label>
+
+                <input type="number" name="altura" id="altura" value="0" style="width: 4em;" onfocus="this.value = ''">
+
+              </div>
+
+              <input type="button" name="calcular" value="Calculate">
+
+              <input type="button" name="reset" value="Reset" onclick="reload()">
+             
+
+
+
+           </form>
+
+           
+
+
+       </div>
+
+       <script type="text/javascript" src="../../js/ads.js"></script>
+
+       <script type="text/javascript" src="../../js/ad_int.js"></script>
+
+        <script type="text/javascript" src="../../js/reload.js"></script>
+
+       <script type="text/javascript" src="../../js/fisica/energia/calcular.js"></script>
+
+       <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js">
+        </script>
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+
+</body>
+</html>

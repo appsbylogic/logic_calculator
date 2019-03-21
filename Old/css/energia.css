@@ -1,0 +1,19 @@
+#potencial{
+
+	display: block;
+}
+
+#mecanica{
+
+	display: none;
+}
+
+#cinetica{
+
+	display: none;
+}
+
+#select{
+
+	width: 100%;
+}

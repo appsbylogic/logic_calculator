@@ -1,0 +1,155 @@
+
+html{
+
+    background-color: #fcfcfc;
+
+    transition: all 0.4s ease;
+
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(icon.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Social Media Circled';
+ 
+  src: url('Social Media Circled.otf');
+}
+
+@font-face {
+  font-family: 'Social Media Circled_2';
+ 
+  src: url('Smartphone Color Pro.woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.social {
+  font-family: 'Social Media Circled';
+
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+
+
+
+}
+
+.card, .collapsible-header, .collapsible{
+
+    border-radius: 10px;
+
+}
+
+.border{
+
+    border-color: #161616;
+
+}
+
+.link{
+
+    color: #ef5350;
+
+}
+
+.social_2 {
+  font-family: 'Social Media Circled_2';
+font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.grey.darken-5{
+
+    background-color: #161616 !important;
+
+}
+
+#formulas{
+
+    opacity: 0;
+
+	display: none;
+
+    transition: all 0.4s ease;
+
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: white !important;
+}
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #FF5252 !important;
+}
+
+#solve{
+
+    		
+    opacity: 100;
+
+    display: block;
+
+
+    transition: all 0.4s ease;
+
+}
+
+.navbar-fixed{
+
+    height: 110px;
+
+    		
+
+}
+
+#head{
+
+    transition: opacity .4s ease;
+}
+
+
+
+.sidenav-footer {
+    position: relative !important;
+
+    margin-bottom: 0% !important;
+
+}

@@ -13,101 +13,206 @@
 	<title>Calculator++</title>
 
 	 <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/materialize.css">
 
-    <style type="text/css">
-    	
-    	html{
+    <script src="js/jquery-3.3.1.min.js"></script>
 
-    		background-color: #fcfcfc;
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 
-    	}
-
-    </style>
+    <link rel="icon" href="img/favicon (2).ico">
 
 </head>
 <body>
 
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
-	  <nav class="nav-extended">
-    <div class="nav-wrapper  red darken-1">
-      <a href="#!" class="brand-logo">Calculator++</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Physics</a></li>
-        <li><a href="badges.html">Math</a></li>
-     
-      </ul>
-    </div>
-    <div class="nav-content red accent-2">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#test1" onclick="solve()"><i class="material-icons">exposure</i></a></li>
-        <li class="tab"><a href="#test2" onclick="formule()"><i class="material-icons">functions</i></a></li>
-     
-        <li class="tab"><a href="#test4"><i class="material-icons">lightbulb_outline</i></a></li>
-      </ul>
-    </div>
-  </nav>
+	<ul class="sidenav" id="mobile-demo">
 
-  <ul class="sidenav" id="mobile-demo">
-
-  	<li>
+  			<!--<li>
   		
-  		<div class="user-view">
+  				<div class="user-view">
   			
-  			<div class="background">
+  					<div class="background">
   				
-  				<img src="https://images2.alphacoders.com/601/601814.jpg">
+  						<img src="https://images2.alphacoders.com/601/601814.jpg">
 
-  			</div>
+  					</div>
 
-  			<a href="">
+  					<a href="">
   				
-  				<img src="https://lh3.googleusercontent.com/AexG0PAtechIsV4dhoP7plR6Ydrj24xS7NOwsBrtSqX1M9ItJ2CJyOC84fZ2guiCz1Qt-0u71Pcm5H3BmHpmMWWQCykkV8owzSIalkixcNG_Y5pytR_LYDxa5dsaU3R69B3PxKaawwXzsNcAr7Pzwn3xE4BstanhZDscN3w84olu-rNDpd7_lzl0U44zTkwbYugVXDlsrh2N_1wRQ56gLdio0qVl-LzaPbp3bO8hLWrPMt05DqdsVuC6MYZe5FVh0u5iAoyBGMezzBC79MwF5oaus1qUGHCmKwf_Rkv8H799AZVhOGd5UM_p_9VOZkPvpTPFo2AEUzKU9_huuar3RJ-XGXhADpuKjCgvjqhGmNbVbvsRvOy3CQ_gz1j-Nn6m-tDHb87IHmoAD1QUd1_k_wS6YDOeeKeaRKlyIKDtR8Z2-HDTc7YPA8vTrtRBT5Jbv18Igr4VB2V07zH-VqyFfRVzmLVwopbEcdLeFtx3KszIfqbcpgsKEUzN6ZJqzYJ-H5docAx5Qw5-SlfjXSQboEExGYLMRiFlr72liPolvOMG9ZNb_efyr4_FL3rkolqDs_X2UsF2k962UouJ3HvxhowUWGmrzZpuYqpnBoI2mXDAjtIN8YPsILw49bbg4KtWOdsuFxO-WOgXVBzofcGFtlXoSkpqdpU=w949-h937-no" class="circle">
+  						<img src="img/foto.jpg" class="circle">
 
-  			</a>
+  					</a>
 
-  			<a href="">
+  					<a href="">
   				
-  				<span class="name white-text">Fernando Maldonado </span>
+  						<span class="name white-text">Fernando Maldonado </span>
 
-  			</a>
+  					</a>
 
-  			<a href="">
+  					<a href="">
   				
-  				<span class="email white-text">fmaldonado824@gmail.com </span>
+  						<span class="email white-text">fmaldonado824@gmail.com </span>
 
-  			</a>
+  					</a>
+  				</div>
 
-  		</div>
+  			</li>-->
 
-  	</li>
+  			<li><a class="subheader topic">Themes</a></li>
+    		<li><a href="#" class="waves-effect topic"><i class="material-icons">straighten</i>Physics</a></li>
+    		<li><a href="#" class="waves-effect topic"><i class="material-icons">exposure_plus_1</i>Math</a></li>
 
-  	<li><a class="subheader">Themes</a></li>
-    <li><a href="#"   class="waves-effect"><i class="material-icons">straighten</i>Physics</a></li>
-    <li><a href="#" class="waves-effect"><i class="material-icons">exposure_plus_1</i>Math</a></li>
+    		<li><div class="divider"></div></li>
+    		<li><a class="subheader topic">Options</a></li>
+    		<li>
 
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Options</a></li>
-    <li><a class="waves-effect" href="#!" onclick="darkEnable()">Dark mode <i class="material-icons">brightness_2</i></a></li>
+          <a class="switch topic" onclick="darkToggle()">
+            Dark mode <i class="material-icons">brightness_2</i>
+            <label>
+            <input type="checkbox" id='darkSwitch' onclick="darkToggle()">
+            <span class="lever"></span>
+            
+            </label>
+
+
+          </a>
+
+        </li>
+
+        <li><a class="subheader topic">About and help</a></li>
+
+       	<li class="sidenav-footer"><a href="credits.html" class="topic"><i class="material-icons">help</i> Credits</a></li>
+
+
     
-  </ul>
+  	</ul>
 
+	<div class="navbar-fixed ">
+
+		<nav class="nav-extended ">
+
+    		<div class="nav-wrapper  red darken-1">
+      			<a href="#!" class="brand-logo">Calculator++</a>
+      			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      			<ul class="right hide-on-med-and-down">
+        			<li><a href="sass.html">Physics</a></li>
+        			<li><a href="badges.html">Math</a></li>
+        			<li> <a class='dropdown-trigger ' href='#' data-target='dropdown1'><i class="material-icons">settings</i></a></li>
+
+        			<ul id='dropdown1' class='dropdown-content' constrainWidth="false" style="width: 1000px !important">
+    					<li>
+    						<a class="switch topic black-text" data-constrainWidth="false" onclick="darkToggle()">
+            					Dark Mode<i class="material-icons">brightness_2</i>
+            					<label>
+           							<input type="checkbox" id='darkSwitch_pc' onclick="darkToggle()">
+            						<span class="lever"></span>
+            
+            					</label>
+
+
+          					</a>
+          				</li>
+
+          				<li><a href="credits.html" class="topic black-text"><i class="material-icons">help</i>Credits</a></li>
+    				
+  					</ul>
+     
+      			</ul>
+    
+    		</div>
+
+    		<div class="nav-content red accent-2">
+      			<ul class="tabs tabs-transparent">
+        			<li class="tab"><a href="#test1" class="active" onclick="solve()"><i class="material-icons">exposure</i>ddd</a></li>
+        			<li class="tab"><a href="#test2" onclick="formule()"><i class="material-icons">functions</i></a></li>
+     
+        			<li class="tab"><a href="#test4"><i class="material-icons">lightbulb_outline</i></a></li>
+      			</ul>
+    		</div>
+  		</nav>
+
+  		
+	</div>
         
 
 	<div class="container" >
 
 
-		<h4 id="head">Formulas and Equations</h4>
+		<h4 id="head">Solve</h4>
 		
 	
 
 	</div>
 
+	<div class="container" id="solve">
+		
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div  class="card-content" id="cardPyth" onclick="window.open('funciones/fisica/pitagoras/pitagoras.html', '_self')">
+						
 
+						<h5>Pythagorean Theorem <i class="material-icons right">chevron_right</i></h5>
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div class="card-content" id="cardPyth" onclick="window.open('funciones/fisica/vectores/vectores.html', '_self')">
+						
+
+						<h5>Vector Sum<i class="material-icons right">chevron_right</i></h5>
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div class="card-content" id="cardPyth" onclick="window.open('funciones/fisica/couloumb/couloumb.html', '_self')">
+						
+
+						<h5>Coulomb's Law<i class="material-icons right">chevron_right</i></h5>
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
 
 	<div class="container" id="formulas">
 
@@ -255,11 +360,41 @@
 
 		</div>
 
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div class="card-content">
+						
+						<ul>
+							<h5>Couloumb's Law</h5>
+							<hr>
+							
+
+							
+							<li><blockquote><i>F = kq<sub>1</sub>q<sub>2</sub> / r<sup>2</sup></i></blockquote></li>
+
+							<li><blockquote>K = 9x10<sup>9</sup></blockquote></li>
+
+            				
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
 	</div>
 
 	<div class="fixed-action-btn">
 
-		<a href="" class="btn-floating btn-large red">
+		<a href="#" id="floatBtn"  class="btn-floating btn-large red scale-transition scale-out" >
 			<i class="material-icons large">mode_edit</i>
 		</a>
 
@@ -277,46 +412,14 @@
       
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/materialize.js"></script>
 
-    <script type="text/javascript">
-		
-		 document.addEventListener('DOMContentLoaded', function() {
-   		var elems = document.querySelectorAll('.sidenav');
-    	var instances = M.Sidenav.init(elems);
+    <script type="text/javascript" src="js/statusbar.js">	</script>
 
-    	var elems = document.querySelectorAll('.fixed-action-btn');
-    		var instances = M.FloatingActionButton.init(elems);
+    <script type="text/javascript" src="index.js">	</script>
 
-  	});
-
-		 var formula = document.getElementById('formulas')
-
-		 var title = document.getElementById('head')
-
-		 function solve(){
-
-		 	formula.setAttribute('style','display:none')
-
-		 	title.innerHTML = 'Solve'
-
-
-		 }
-
-		  function formule(){
-
-		 	formula.setAttribute('style','display:initial')
-
-		 	title.innerHTML = 'Formulas and Equations'
-
-
-		 }
-
-
-   		 	
-  	
-	</script>
-
+    <script type="text/javascript" src="js/dark.js">	</script>
+	<script type="text/javascript" src="cordova.js"></script>
 
 
 </body>
