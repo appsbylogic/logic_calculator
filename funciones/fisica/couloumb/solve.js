@@ -39,14 +39,14 @@ function calcular(){
 
 	if(f.val() == ''){
 
-		finalR = 'F = ' + calcularF(q1.val(),q1.val(),r.val());
+		finalR = 'F = ' + calcularF(q1.val(),q2.val(),r.val());
 
 		console.log(finalR)
 	}
 
 	if(r.val() == ''){
 
-		finalR = 'r = ' + calcularR(q1.val(),q1.val(),f.val());
+		finalR = 'r = ' + calcularR(q1.val(),q2.val(),f.val());
 
 		console.log(finalR)
 	}
@@ -77,7 +77,7 @@ function calcularQE(r,f){
 
 }
 
-function calcularF(q1,q1,r){
+function calcularF(q1,q2,r){
 
 	var resultado = (9e9*q1*q2)/Math.pow(r,2)
 
@@ -85,7 +85,7 @@ function calcularF(q1,q1,r){
 
 }
 
-function calcularR(q1,q1,f){
+function calcularR(q1,q2,f){
 
 	var resultado = Math.sqrt((9e9*q1*q2)/f)
 
