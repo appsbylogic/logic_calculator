@@ -23,9 +23,9 @@ function anadir(){
 
 	
 
-	document.body.style.overflow = 'visible'
 
-	document.getElementById('table_c').style.opacity = 1;
+
+	$('.table_c').addClass('show')
 
 	var magnitude = parseInt(document.getElementById("vector").value);
 
@@ -83,7 +83,9 @@ function anadir(){
 
 function calcular(){
 
-	document.getElementById('result').style.opacity = 1;
+	$("html, body").animate({ scrollTop: $(document).height() }, 750);
+
+	$('.result').addClass('show')
 
 	var resultado = document.getElementById("resultado");
 

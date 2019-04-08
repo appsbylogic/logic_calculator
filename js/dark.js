@@ -1,7 +1,9 @@
 var dark = JSON.parse(localStorage.getItem('dark')) ? localStorage.getItem('dark') : false
 
 var img = dark ? "img/logic_no_fodno.png" : "img/logic_fondo_black.png"
-
+$(document).ready(function(){
+   
+  
 if(dark){
 
 	$('#darkSwitch').prop('checked', true)
@@ -12,7 +14,8 @@ if(dark){
 
 	$(".card").toggleClass('grey darken-4')
 
-	$(".dropdown-content").toggleClass('grey darken-4')
+	$(".dropdown-content").addClass('grey darken-4')
+
 
 	$(".card").toggleClass('white-text ')
 
@@ -32,10 +35,15 @@ if(dark){
 
 	$(".topic").toggleClass('white-text')
 
+	
+
 	$("#head").toggleClass('white-text')
+
+
 
 }
 
+});
 function darkToggle(){
 
 
@@ -48,6 +56,8 @@ function darkToggle(){
 	$('#darkSwitch').prop('checked', dark)
 
 	$('#darkSwitch_pc').prop('checked', dark)
+
+	
 
 	localStorage.setItem('dark',dark)
 

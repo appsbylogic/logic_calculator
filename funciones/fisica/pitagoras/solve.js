@@ -2,7 +2,9 @@
 
 function calcular(){
 
-	document.getElementById('result').style.opacity = 1;
+
+	$("html, body").animate({ scrollTop: $(document).height() }, 1000);
+	$('.result_card').addClass('show')
 
 	var leg_1 = parseInt(document.getElementById("a").value);
 
@@ -47,7 +49,16 @@ if(isNaN(hypotenuse)){
 
 }
 
-	
+	if(hypotenuse==0 && leg_1==0&&leg_2==0){
+
+		resul.innerHTML = 'Invalid operation (Remember to leave blank the value to calculate)';
+
+		fuerzas_x.innerHTML = ""
+
+		fuerzas_y.innerHTML = "";
+		return
+
+	}
 
 	if(hypotenuse===0){
 
@@ -74,7 +85,7 @@ if(isNaN(hypotenuse)){
 	
 
 		
-	}
+	}else
 
 	if(leg_1===0){
 
@@ -103,7 +114,7 @@ if(isNaN(hypotenuse)){
 	
 
 		
-	}
+	}else
 
 	if(leg_2===0){
 
@@ -133,6 +144,14 @@ if(isNaN(hypotenuse)){
 
 
 		
+	}else{
+
+		resul.innerHTML = 'No values added';
+
+		fuerzas_x.innerHTML = ""
+
+		fuerzas_y.innerHTML = "";
+
 	}
 }
 

@@ -29,7 +29,9 @@
 
     		background-color: #fcfcfc;
 
-    	}
+        }
+        
+       
 
     	#formulas{
 
@@ -43,9 +45,54 @@
 
     		transition: all 0.4s ease;
 
-    	}
+        }
 
-   
+        td {
+            
+            width: 15% ;
+            
+            border-radius: 0px;
+              
+        }   
+
+        tr{
+           
+            border-bottom: none;
+        }
+
+        .war{ 
+            
+            padding: 0px 0px !important;
+            bottom: 0px;
+            margin: 0px;
+            
+        }
+
+     
+        .keyboard{
+            
+            font-size: 20px;
+            width: 100%;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+
+            padding: 0px;
+
+        }
+
+      .result_card{
+
+        display: none;
+
+      }
+
+      .show{
+
+display: block;
+}
+
 
      .input-field input:focus {
         border-bottom: 1px solid #e57373 !important;
@@ -77,23 +124,23 @@
 
     	}
 
-      .result_card{
+      #result{
 
-        display: none;
+        opacity: 0;
 
-			}
-			
-			.show{
+        transition: all .5s ease;
 
-				display: block;
-
-			}
+      }
 
     	#head{
 
     		transition: opacity .4s ease;
     	}
 
+    	.sidenav-overlay{
+
+    		
+    	}
 
     </style>
 
@@ -133,14 +180,14 @@
   				</div>
 
   			</li>-->
-
-				<br>
+        <br>
 				
 				<li><a class="red-text"><h5>Calculator ++</h5></a></li>
 				<li><div class="divider"></div></li>
   			<li><a class="subheader topic">Themes</a></li>
-    		<li><a href="#" class="waves-effect topic selected red-text text-darken-1"><i class="material-icons red-text text-darken-1">straighten</i>Physics</a></li>
-    		<li><a href="../../../math.html" class="waves-effect topic"><i class="material-icons">exposure_plus_1</i>Math</a></li>
+    		<li><a href="../../../index.html" class="waves-effect topic "><i class="material-icons ">straighten</i>Physics</a></li>
+    		<li><a href="#" class="waves-effect topic selected red-text text-darken-1"><i class="material-icons red-text text-darken-1">exposure_plus_1</i>Math</a></li>
+
 
         <li><div class="divider topic"></div></li>
         <li><a class="subheader topic">Options</a></li>
@@ -161,7 +208,7 @@
      
         <li><a class="subheader topic">About and help</a></li>
 
-        <li class="sidenav-footer"><a href="../../../credits.html" class="topic"><i class="material-icons">help</i> Credits</a></li>
+        <li class="sidenav-footer"><a  href="../../../credits.html" class="topic"><i class="material-icons">help</i> Credits</a></li>
 
         
     
@@ -202,7 +249,7 @@
 
     		<div class="nav-content red accent-2">
       			<ul class="tabs tabs-transparent">
-        			<li class="tab "><a href="../../../index.html" class="medium white-text" target="_self"><i class=" material-icons  left">chevron_left</i></a></li>
+        			<li class="tab "><a href="../../../math.html" target="_self" class="medium white-text" ><i class=" material-icons  left">chevron_left</i></a></li>
         			
       			</ul>
     		</div>
@@ -213,7 +260,7 @@
 
 	<div class="container">
 					
-		<h4 id="head">Pythagorean Theorem</h4>
+		<h4 id="head">Derivatives</h4>
 
 	</div>
 
@@ -227,69 +274,11 @@
 					
 					<div class="card-content">
 
-						<div class="row">
-
-						<h5>Insert your values</h5>
-
-						<div class="input-field col s12 l6 ">
-         					<input  id="a" type="number" class="topic" >
-          					<label for="a">a</label>
-        				</div>
-						
-						</div>
-						<div class="row">
-						<div class="input-field col s12 l6">
-         					<input  id="b" type="number" class="topic">
-          					<label for="b">b</label>
-        				</div>
-
-        			</div>
-        			<div class="row">
-
-        				<div class="input-field col s12 l6">
-         					<input  id="c" type="number" class="topic">
-          					<label for="c">c</label>
-        				</div>
-
-								</div>
-								
-								<div class="row">
-                
-										<div class="col s12 l6">
-										 
-										 <ul class="collapsible" >
-										 <li>
-											 <div class="collapsible-header topic"><i class="material-icons ">help</i>Help</div>
-											 <div class="collapsible-body" ><span><ul>
-												 
-	 
-	 
-												 <li><blockquote>a = Leg 1</blockquote></li>
-	 
-												 <li><blockquote>b = Leg 2</blockquote></li>
-	 
-												 <li><blockquote>c = Hypotenuse</blockquote></li>
-	 
-												 <li><b>Leave blank the value to calculate</b></li>
-	 
-											 </ul></span></div>
-										 </li>
-	 
-									 </ul>
-	 
-									 </div>
-	 
-								 </div>
-
-        				<div class="row">
-        				<a class="red waves-effect waves-light btn-large" onclick="calcular()">Calculate</a>
-
-								</div>
-								
-								
-
-
-					</div>
+					
+                          <h5 id="preview"><i>f</i><sub>(x)</sub> = </h5>
+                          
+                          <br>
+              
 
 				</div>
 
@@ -297,25 +286,89 @@
 
 		</div>
 
-	</div>
-    
-  <div class="container result_card">
-    
-    <div class="row">
+ 
+
+      </div>
+
+    </div>
+
+    <div class="container keyboard grey darken-4">
+    <div class="row war">
+
+        <div class="col s12 war">
+                <table class="centered white-text">
+                        <tbody>
+                            <tr style="width:100%;">
+                              <td  class="grey darken-5"></td>
+                              <td class="grey darken-5"></td>
+                              <td class="grey darken-5" ></td>
+                              <td class="grey darken-5"></td>
+                              <td class="grey darken-5" onclick='borrarTodo()'><i class="material-icons">remove_circle_outline</i></td>
+                              <td class="grey darken-5" onclick="eliminar()"><i class="material-icons">navigate_before</i></td>
+                          </tr>
+                          <tr>
+                              <td onclick="insert('(')">(</td>
+                              <td onclick="insert(')')">)</td>
+                              <td class="grey darken-3" onclick="insert(7)">7</td>
+                              <td class="grey darken-3" onclick="insert(8)">8</td>
+                              <td class="grey darken-3" onclick="insert(9)">9</td>
+                              <td onclick="insert('/')">/</td>
+                          </tr>
+                        </tbody>
+                
+                        <tbody>
+                          <tr>
+                            <td onclick="insert('<sup>2</sup>')">x<sup> [ ]</sup></td>
+                            <td>√</td>
+                            <td class="grey darken-3" onclick="insert(4)">4</td>
+                            <td class="grey darken-3" onclick="insert(5)">5</td>
+                            <td class="grey darken-3" onclick="insert(6)">6</td>
+                            <td onclick="insert('*')">x</td>
+                          </tr>
+                          <tr>
+                            <td><sup>[ ]</sup> / <sub>[ ]</sub></td>
+                            <td>abc</td>
+                            <td class="grey darken-3" onclick="insert(1)">1</td>
+                            <td class="grey darken-3" onclick="insert(2)">2</td>
+                            <td class="grey darken-3" onclick="insert(3)">3</td>
+                            <td onclick="insert('-')">-</td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="grey darken-3"onclick="insert(0)">0</td>
+                            <td class="grey darken-3"onclick="insert('.')">.</td>
+                            <td class="red lighten-1">=</td>
+                            <td onclick="insert('+')">+</td>
+                          </tr>
+                        </tbody>
+                      </table>
+            
+        </div>
+
+    </div>
+
+</div>
+
+     <div class="row result_card">
       
       <div class="col s12">
         
-        <div class="card">
+        <div class="card" >
           
           <div class="card-content">
             
             <h4>Result</h4>
 
+            <blockquote id="discriminante"></blockquote>
+
             <blockquote id="resultado"></blockquote>
 
-            <blockquote id="area"></blockquote>
+            <blockquote id="vertex"></blockquote>
 
-            <blockquote id="perimetro"></blockquote>
+            <blockquote id="x-int"></blockquote>
+
+            <blockquote id="y-int"></blockquote>
 
           </div>
 
@@ -326,7 +379,8 @@
     </div>
 
 
-  </div>    
+	</div>
+
 
    <script src="../../../js/materialize.js"></script>
 

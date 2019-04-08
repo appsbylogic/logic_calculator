@@ -32,8 +32,37 @@
        
     	}
 
-      
+     
+      .result_card{
 
+        display: none;
+
+        transition: all .5s ease;
+
+      }
+
+      .show{
+
+        display: block;
+      }
+
+      ul.dropdown-content.select-dropdown li span {
+    color: #ef5350; /* no need for !important :) */
+
+    
+}
+
+
+
+.select-dropdown{
+    color: #9e9e9e ;
+}
+   
+   .background-col{
+
+    background: red !important;
+
+   }
 
      .input-field input:focus {
         border-bottom: 1px solid #e57373 !important;
@@ -55,7 +84,15 @@
 
     		transition: all 0.4s ease;
 
-    	}
+        }
+        
+        #values{
+
+
+            transition: all 0.4s ease;
+
+        }
+
 
 
 
@@ -67,29 +104,15 @@
 
     	}
 
-      .result, .table_c{
+     
 
-        display: none;
-
-
-       
-
-      }
-
-      .show{
-        display: block;
-
-      }
 
     	#head{
 
     		transition: opacity .4s ease;
     	}
 
-    	.sidenav-overlay{
-
-    		
-    	}
+ 
 
     </style>
 
@@ -137,10 +160,9 @@
   			<li><a class="subheader topic">Themes</a></li>
     		<li><a href="#" class="waves-effect topic selected red-text text-darken-1"><i class="material-icons red-text text-darken-1">straighten</i>Physics</a></li>
     		<li><a href="../../../math.html" class="waves-effect topic"><i class="material-icons">exposure_plus_1</i>Math</a></li>
-
-        <li><div class="divider topic"></div></li>
-        <li><a class="subheader topic">Options</a></li>
-        <li>
+    		<li><div class="divider topic"></div></li>
+    		<li><a class="subheader topic">Options</a></li>
+    		<li>
 
           <a class="switch topic" onclick="darkToggle()">
             Dark mode <i class="material-icons">brightness_2</i>
@@ -161,20 +183,20 @@
 
         
     
-      </ul>
+  		</ul>
 
 
   
-  <div class="navbar-fixed">
+	<div class="navbar-fixed">
 
-    <nav class="nav-extended">
+		<nav class="nav-extended">
 
-        <div class="nav-wrapper  red darken-1">
-            <a href="#!" class="brand-logo">Calculator++</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="../../../index.html">Physics</a></li>
-              <li><a href="../../../math.html">Math</a></li>
+    		<div class="nav-wrapper  red darken-1">
+      			<a href="#!" class="brand-logo">Calculator++</a>
+      			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      			<ul class="right hide-on-med-and-down">
+        			<li><a href="../../../index.html">Physics</a></li>
+        			<li><a href="../../../math.html">Math</a></li>
               <li> <a class='dropdown-trigger ' href='#' data-target='dropdown1'><i class="material-icons">settings</i></a></li>
 
               <ul id='dropdown1' class='dropdown-content' constrainWidth="false" style="width: 1000px !important">
@@ -198,7 +220,7 @@
 
     		<div class="nav-content red accent-2">
       			<ul class="tabs tabs-transparent">
-        			<li class="tab "><a href="../../../index.html" class="medium white-text" target="_self"><i class=" material-icons  left">chevron_left</i></a></li>
+        			<li class="tab "><a href="../../../index.html" target="_self" class="medium white-text" ><i class=" material-icons  left">chevron_left</i></a></li>
         			
       			</ul>
     		</div>
@@ -209,7 +231,7 @@
 
 	<div class="container">
 					
-		<h4 id="head">Vector Sum</h4>
+		<h4 id="head">Electric Field</h4>
 
 	</div>
 
@@ -223,47 +245,99 @@
 					
 					<div class="card-content">
 
-						<div class="row">
+						<div class="row">     
 
-						<h5>Insert your values</h5>
+                            <h5>Choose your formula</h5>
+                        
+                            <br>
 
-						<div class="input-field col s12 l6 ">
-         					<input  id="vector" type="number" class="topic" >
-          					<label for="vector">Vector Magnitude</label>
-        				</div>
+                            <div class="input-field  col s12 l6 ">
+                                <select class="formula ">
+                                    <option value="1" >E = F / q</option>
+                                    <option value="2">E = k q / r&sup2</option>
+                                    
+                                </select>
+                                
+                            </div>
+
+                      
+
+                        <div class="row">
+
+                            <div class="col s12">
+
+                                    <h5>Insert your values</h5>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div id="values">
+
+                    <div class="row">
+
+                        <div class="input-field col s12 l6">
+                            <input  id="r" type="number" class="topic">
+                            <label id="r_text"for="angle">F</label>
+                        </div>
 						
-						</div>
-						<div class="row">
-						<div class="input-field col s12 l6">
-         					<input  id="angle" type="number" class="topic">
-          					<label for="angle">angle</label>
-        				</div>
+                    </div>
+					
+                    <div class="row">
+           
+                        <div class="input-field col s12 l6 ">
+                            <input  id="ch" type="number" class="topic" >
+                            <label id="ch_text" for="vector">q</label>
+        			    </div>
+                
+                    </div>
 
-        			</div>
-        			
+                    <div class="row">
+                        <div class="input-field col s12 l6">
+                            <input  id="field" type="number" class="topic">
+                            <label id="field_text" for="angle">E</label>
+                        </div>
+
+                    </div>
+
+                </div>
               <div class="row">
                 
-                  <div class="col s12 l6">
-                   
-                   <ul class="collapsible" >
-                   <li>
-                     <div class="collapsible-header topic"><i class="material-icons ">help</i>Help</div>
-                     <div class="collapsible-body" ><span><ul>
- 
-                       <li><blockquote>Add the values of the magnitude and angle of the vector and then click add, do this with the rest of the vectors and click calculate when you finish.</blockquote></li>
- 
-                     </ul></span></div>
-                   </li>
- 
-                 </ul>
- 
-                 </div>
- 
-               </div>
-        		<div class="row">
-        		  <a class="red waves-effect waves-light btn-large" onclick="anadir()">Add</a>
+                 <div class="col s12 l6">
+                  
+                  <ul class="collapsible" >
+                  <li>
+                    <div class="collapsible-header topic"><i class="material-icons ">help</i>Help</div>
+                    <div class="collapsible-body" ><span><ul>
+                      
 
-              <a class="red waves-effect waves-light btn-large right disabled" id="calculate_button" onclick="calcular()">Calculate</a>
+
+                      <li><blockquote>q = value of charge</blockquote></li>
+
+                      <li><blockquote>r = distance</blockquote></li>
+
+                      <li><blockquote>F = force between the charges</blockquote></li>
+                      
+                      <li><blockquote>E = value of the electric field</blockquote></li>
+
+                      <li><b>Leave blank the value to calculate</b></li>
+
+                    </ul></span></div>
+                  </li>
+
+                </ul>
+
+                </div>
+
+              </div>
+
+               
+        			
+
+        		<div class="row">
+        		  <a class="red waves-effect waves-light btn-large " onclick="calcular()">Calculate</a>
 
         		</div>
 
@@ -277,8 +351,8 @@
 		</div>
 
 	</div>
-    
-  <div  class="container table_c">
+
+  <div class="container result_card" >
     
     <div class="row">
       
@@ -288,50 +362,11 @@
           
           <div class="card-content">
             
-            <h4>Vectors</h4>
+            <h4>Result</h4>
 
-            <table id="table" class="stripped">
-            <tr>
-              
-              <th>Forces</th>
+            <blockquote id="result"></blockquote>
 
-              <th>Angle</th>
-
-              <th>X comp</th>
-
-              <th>Y comp</th>
-
-            </tr>
-
-
-          </table>
-
-
-          </div>
-
-        </div>
-
-      </div>
-
-       <div class="row">
-      
-      <div class="col s12">
-        
-        <div  class="card result">
-          
-          <div class="card-content">
             
-           
-
-          <h4>Result</h4>
-
-          <blockquote id="y_forces"></blockquote>
-
-          <blockquote id="x_forces"></blockquote>
-
-          <blockquote id="r_angle"></blockquote>
-
-          <blockquote id="resultado"></blockquote>
 
           </div>
 
@@ -341,9 +376,9 @@
 
     </div>
 
-
-  </div>    
-
+  </div>
+    
+ 
     <script src="../../../js/materialize.js"></script>
 
    <script type="text/javascript" src="../../../index.js"> </script>

@@ -1,5 +1,5 @@
 var q1 = $('#ch1')
-var q2 = $('#ch1')
+var q2 = $('#ch2')
 var r = $('#distance')
 var f = $('#force')
 var result = $('#result')
@@ -21,40 +21,44 @@ function calcular(){
 		finalR = 'q1 = ' + calcularQ(q2.val(),r.val(),f.val());
 
 		console.log(finalR)
-	}
+	}else
 
 	if(q2.val() == ''){
 
 		finalR = 'q2 = ' + calcularQ(q1.val(),r.val(),f.val());
 
 		console.log(finalR)
-	}
+	}else
 
 	if(q1.val() == '' && q2.val() == ''){
 
 		finalR = 'q = ' + calcularQE(r.val(),f.val());
 
 		
-	}
+	}else
 
 	if(f.val() == ''){
 
 		finalR = 'F = ' + calcularF(q1.val(),q2.val(),r.val());
 
 		console.log(finalR)
-	}
+	}else
 
 	if(r.val() == ''){
 
 		finalR = 'r = ' + calcularR(q1.val(),q2.val(),f.val());
 
 		console.log(finalR)
-	}
+	}else
 
 	if(q1.val() == '' && q2.val() == '' && r.val() == '' && f.val() == ''){
 
 
 		finalR = "No values added"
+
+	}else{
+
+		finalR = 'Invalid operation (Remember to leave blank the value to calculate)'
 
 	}
 

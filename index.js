@@ -7,9 +7,6 @@ $('.dropdown-trigger').dropdown({ constrainWidth: false, alignment:'left' });
 
 $("#floatBtn").on('click', function(){
 
-  
-    		
-
     		
 
     		console.log()
@@ -18,7 +15,10 @@ $("#floatBtn").on('click', function(){
 
 $(document).ready(function(){
     $('.collapsible').collapsible();
+		$('.tabs').tabs()
+		$('select').formSelect();
   });
+
 		
 		document.addEventListener('DOMContentLoaded', function() {
    		var elems = document.querySelectorAll('.sidenav');
@@ -28,7 +28,6 @@ $(document).ready(function(){
     		var instances = M.FloatingActionButton.init(elems);
 
   		});
-
 		 var formula = document.getElementById('formulas')
 
 		 var solves = document.getElementById('solve')
@@ -36,28 +35,23 @@ $(document).ready(function(){
 		 var title = document.getElementById('head')
 
 		 function solve(){
+		 	$("#formulas").css({"-webkit-transform":"translateX(-500vw)"},700)
 
 		 	$("#floatBtn").addClass('scale-out')
 
 		 	$("#floatBtn").removeClass('scale-in')
 
-		 	formula.setAttribute('style','opacity:0')
-
-		 	
-
-		 	title.style.opacity = 0;
 
 		 	window.setTimeout(function(){
 
-		 		formula.setAttribute('style','display:none ')
+		 		
+		 		
+				solves.setAttribute('style',' display:block')
 
-		 		solves.setAttribute('style',' opacity:1; display:block')
+		 		
+				formula.setAttribute('style','display:none')
 
-		 		title.innerHTML = 'Solve'
-
-		 		title.style.opacity = 1;
-
-		 	},200)
+		 	},150)
 
 		 	
 
@@ -66,32 +60,39 @@ $(document).ready(function(){
 
 		  function formule(){
 
+		  	$("#solve").css({"-webkit-transform":"translate(-500vw,0)"},700)
+
+
+
 		  	$("#floatBtn").toggleClass('scale-in')
 
 		  	$("#floatBtn").removeClass('scale-out')
+		  	
+	
+		  	window.setTimeout(function(){
 
-		  	title.style.opacity = 0;
+				formula.setAttribute('style','display:block')
 
-		  	solves.setAttribute('style','opacity:0')
+		 		solves.setAttribute('style',' display:none')
+
+
+
+		 	},150)
+
 
 		 	
 
-		 	
 
-		 	window.setTimeout(function(){
+	
 
 		 		
 
-		 		solves.setAttribute('style','display:none')
 
-		 		formula.setAttribute('style','display:block;opacity:1')
 
-		 		title.innerHTML = 'Formulas and Equations'
 
-		 		title.style.opacity = 1;
-		 	
 
-		 	},200)
+
+
 
 
 		 }
