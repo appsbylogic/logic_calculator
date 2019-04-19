@@ -4,7 +4,7 @@
 
 	
 
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,23 +29,20 @@
 
     		background-color: #fcfcfc;
 
+       
     	}
 
-    	#formulas{
-
-    		opacity: 0;
-
-    		position: absolute;
-    		
-    		left: 50%;
-
-    		transform: translateX(-50%);
-
-    		transition: all 0.4s ease;
-
-    	}
-
+      
+     
       .result_card{
+
+        display: none;
+
+        transition: all .5s ease;
+
+      }
+
+      .array_card{
 
         display: none;
 
@@ -53,9 +50,10 @@
 
       .show{
 
-display: block;
-}
+        display: block;
+      }
 
+   
 
      .input-field input:focus {
         border-bottom: 1px solid #e57373 !important;
@@ -74,6 +72,45 @@ display: block;
     		
 
     	}
+      .back{
+        
+        margin-top: 40px;
+        
+
+      }
+
+      .backBtn{
+        box-shadow: 0px 1px 6px rgba(128, 128, 128, 0.507);
+        text-shadow: 1px 1px 5px grey;
+        background:#ff5252;
+        padding: 2px;
+        border-radius: 100px;
+
+        user-select: none;
+
+      }
+
+      .disBtn{
+        background:rgba(167, 167, 167, 0.616) !important;
+        text-shadow: none !important;
+        color: rgba(136, 136, 136, 0.493);
+        cursor:unset;
+
+      }
+
+      .clearBtn{
+
+        margin-left: 5px;
+        box-shadow: 0px 1px 6px rgba(128, 128, 128, 0.507);
+        text-shadow: 1px 1px 5px grey;
+        background:#ff5252;
+        padding: 2px;
+        border-radius: 100px;
+
+        user-select: none;
+
+      }
+
 
     </style>
 
@@ -113,17 +150,18 @@ display: block;
   				</div>
 
   			</li>-->
+
         <br>
 				
 				<li><a class="red-text"><h5>Accurate</h5></a></li>
 				<li><div class="divider"></div></li>
   			<li><a class="subheader topic">Themes</a></li>
-    		<li><a href="../../../index.html" class="waves-effect topic "><i class="material-icons ">straighten</i>Physics</a></li>
+    		<li><a href="../../../index.html" class="waves-effect topic"><i class="material-icons ">straighten</i>Physics</a></li>
     		<li><a href="#" class="waves-effect topic selectedTopic red-text text-darken-1"><i class="material-icons red-text text-darken-1">exposure_plus_1</i>Math</a></li>
 
-        <li><div class="divider topic"></div></li>
-        <li><a class="subheader topic">Options</a></li>
-        <li>
+    		<li><div class="divider topic"></div></li>
+    		<li><a class="subheader topic">Options</a></li>
+    		<li>
 
           <a class="switch topic" onclick="darkToggle()">
             Dark mode <i class="material-icons">brightness_2</i>
@@ -140,24 +178,24 @@ display: block;
      
         <li><a class="subheader topic">About and help</a></li>
 
-        <li class="sidenav-footer"><a  href="../../../credits.html" class="topic"><i class="material-icons">help</i> Credits</a></li>
+        <li class="sidenav-footer"><a href="../../../credits.html" class="topic"><i class="material-icons ">help</i> Credits</a></li>
 
         
     
-      </ul>
+  		</ul>
 
 
   
-  <div class="navbar-fixed">
+	<div class="navbar-fixed">
 
-    <nav class="nav-extended">
+		<nav class="nav-extended">
 
-        <div class="nav-wrapper  red darken-1">
-            <a href="#!" class="brand-logo">Accurate</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="../../../index.html">Physics</a></li>
-              <li><a href="../../../math.html">Math</a></li>
+    		<div class="nav-wrapper  red darken-1">
+      			<a href="#!" class="brand-logo">Accurate</a>
+      			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      			<ul class="right hide-on-med-and-down">
+        			<li><a href="../../../index.html">Physics</a></li>
+        			<li><a href="../../../math.html">Math</a></li>
               <li> <a class='dropdown-trigger ' href='#' data-target='dropdown1'><i class="material-icons">settings</i></a></li>
 
               <ul id='dropdown1' class='dropdown-content' constrainWidth="false" style="width: 1000px !important">
@@ -173,7 +211,7 @@ display: block;
 
                     </a></li>
 
-              <li><a href="../../../credits.html" class="topic black-text"><i class="material-icons">help</i>Credits</a></li>
+                    <li><a href="../../../credits.html" class="topic black-text"><i class="material-icons">help</i>Credits</a></li>
      
       			</ul>
     
@@ -190,9 +228,10 @@ display: block;
   		
 	</div>
 
+
 	<div class="container" id="solve">
 
-      <h4 id="head">Second Grade Equations</h4>
+    <h4 id="head">Basic Statistic</h4>
 					
 		<div class="row">
 			
@@ -202,46 +241,30 @@ display: block;
 					
 					<div class="card-content">
 
-					
-      					
-            <h5 id="preview"><b>x<sup>2</sup> = 0</b></h5>      
+						<div class="row">
 
-				</div>
+						<h5>Insert your values</h5>
 
-			</div>
+           
 
-		</div>
-
-    <div class="row">
-      
-      <div class="col s12">
-        
-        <div class="card">
-          
-          <div class="card-content">
-
-            <h5>Insert your values</h5>
-
-            <div class="row">
+						<div class="input-field col s9 l6 ">
+         					<input  id="input" type="number" class="topic" onfocus="this.value=''" >
+          					<label for="vector">Data</label>
+                </div>
                 
-              <div class="input-field col s4">
-                <input  id="a" type="number" class="topic" >
-                <label for="a">a</label>
-              </div>
+              <div class="back white-text  ">
+                <i class="material-icons backBtn waves-effect waves-light" onclick="remove()">chevron_left</i>
+                <i class="material-icons clearBtn waves-effect waves-light disBtn" onclick="removeAll()">clear</i></div>
+              
 
-              <div class="input-field col s4">
-                <input  id="b" type="number" class="topic" >
-                <label for="b">b</label>
-              </div>
+						</div>
+						
+             
+            
 
-              <div class="input-field col s4">
-                <input  id="c" type="number" class="topic" >
-                <label for="c">c</label>
-              </div>
-
-               <div class="row">
+              <div class="row">
                 
-                 <div class="col s12">
+                 <div class="col s12 l6">
                   
                   <ul class="collapsible" >
                   <li>
@@ -250,11 +273,8 @@ display: block;
                       
 
 
-                      <li><blockquote>a = cuadratic coefficient</blockquote></li>
-
-                      <li><blockquote>b = linear coefficient</blockquote></li>
-
-                      <li><blockquote>c = free term</blockquote></li>
+                      <li><blockquote>Add your values to calculate the average, average deviation, standard deviation, the variance, the median and the mode of the given data.</blockquote></li>
+                  
 
                     </ul></span></div>
                   </li>
@@ -263,40 +283,47 @@ display: block;
 
                 </div>
 
-              </div>   
+              </div>
 
-            </div>
+               
+        			
 
-            <div class="row">
-              <a class="red waves-effect waves-light btn-large btn-round" onclick="calcular()">Calculate</a>
+        		<div class="row">
+              <a class="red waves-effect waves-light btn-large " onclick="add()">Add</a>
+              
+              
+              
+              <a class="red waves-effect right waves-light btn-large disabled" onclick="calcular()">Calculate</a>
 
-            </div>    
+              
 
-        </div>
+        		</div>
 
-      </div>
 
-    </div>
+					</div>
 
-     <div class="row result_card">
-      
+				</div>
+
+			</div>
+
+		</div>
+
+  </div>
+  
+  <div class="container array_card">
+
+    <div class="row">
+
       <div class="col s12">
-        
-        <div class="card" >
-          
+
+        <div class="card">
+
+
           <div class="card-content">
-            
-            <h4>Result</h4>
 
-            <blockquote id="discriminante"></blockquote>
+            <h4>Data</h4>
 
-            <blockquote id="resultado"></blockquote>
-
-            <blockquote id="vertex"></blockquote>
-
-            <blockquote id="x-int"></blockquote>
-
-            <blockquote id="y-int"></blockquote>
+            <blockquote class="values"><b>Values: </b></blockquote>
 
           </div>
 
@@ -306,13 +333,44 @@ display: block;
 
     </div>
 
+  </div>
 
-	</div>
+  <div class="container result_card" >
+    
+    <div class="row">
+      
+      <div class="col s12">
+        
+        <div class="card">
+          
+          <div class="card-content">
+            
+            <h4>Result</h4>
 
+            <blockquote class="promedio"></blockquote>
+            <blockquote class="mediana"></blockquote>
+            <blockquote class="moda"></blockquote>
+            <blockquote class="varianza"></blockquote>
+            <blockquote class="desviacionM"></blockquote>
+            <blockquote class="desviacionS"></blockquote>
 
-   <script src="../../../js/materialize.js"></script>
+            
 
-    <script type="text/javascript" src="../../../index.js"> </script>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+    
+ 
+    <script src="../../../js/materialize.js"></script>
+
+   <script type="text/javascript" src="../../../index.js"> </script>
+
 	<script type="text/javascript" src="cordova.js"></script>
 
   <script type="text/javascript" src="solve.js"></script>

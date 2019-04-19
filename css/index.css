@@ -62,6 +62,22 @@ html{
 
 }
 
+.input-field input:focus {
+  border-bottom: 1px solid #e57373 !important;
+  box-shadow: 0 1px 0 0 #e57373 !important;
+}
+
+.input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+  color: #ef5350 !important;
+}
+
+.modal{
+
+  border-radius: 10px;
+
+  
+}
+
 .selectedTopic{
 
   background: rgb(244, 67, 54,0.25);
@@ -116,6 +132,72 @@ font-weight: normal;
 
 }
 
+#floatBtn{
+
+  display: none;
+
+  
+
+
+
+}
+
+.btnDelGroup{
+
+  position: absolute;
+
+ 
+
+  top: 5px;
+
+  right: 5px;
+
+  display: none;
+
+}
+
+.btnFormula{
+
+  position: absolute;
+
+  top: 5px;
+  left: 75%;
+  display: none;
+
+}
+
+.showBtn{
+  
+  display: block;
+
+}
+
+
+.groupTitle, .formTxt{
+
+  transition: all .5s ease;
+
+}
+
+
+.btnAnim{
+  animation: anim .3s forwards;
+
+}
+
+
+@keyframes anim {
+
+
+  100%{
+
+    transform: rotate(-360deg);
+  }
+
+
+
+}
+
 #formulas{
 
 
@@ -137,13 +219,12 @@ font-weight: normal;
 }
 
 
+
+
 #solve{
 
     		
     opacity: 100;
-
-
-
 
     transition: all 0.4s ease;
 
@@ -164,6 +245,56 @@ font-weight: normal;
 
 }
 
+.groupBody{
+
+  position: relative !important;
+
+
+
+  box-sizing: border-box;
+
+
+}
+
+.groupBodyA{
+
+
+  border-left: 5px solid rgba(0,0,0,0) !important;
+
+
+}
+
+
+.groupBodyB::before{
+  
+ 
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border-left: 5px solid #ef5350 !important;
+  left: 0px;
+  top: 0px; 
+  transform: translate(-5px,0px);
+  content:'';
+  animation: spinBack .1s forwards;
+  
+}
+
+.groupBodyB::after{
+  
+ 
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border-left: 5px solid #EE6E73 !important;
+  left: 0px;
+  top: 0px; 
+  transform: translate(-5px,0px);
+  content:'';
+  animation: spinL .1s forwards;
+  
+}
+
 .head{
 
   animation: slide .7s ease;
@@ -177,6 +308,58 @@ font-weight: normal;
     position: relative !important;
 
     margin-bottom: 0% !important;
+
+}
+
+@keyframes spin{
+
+  100%{
+
+    
+
+    transform: rotate(-45deg) translate(-2px,-8px);
+  }
+
+
+}
+
+@keyframes spinL{
+
+  100%{
+    
+    transform: rotate(45deg) translate(0px,10px);
+  }
+
+
+}
+
+@keyframes spinBackL{
+
+  0%{
+    transform: rotate(45deg) translate(0px,10px);
+
+
+  }
+
+  100%{
+    
+    transform: rotate(0deg) translate(-5px,0px)
+
+  }
+}
+
+@keyframes spinBack{
+
+  0%{
+    transform: rotate(-45deg) translate(-2px,-8px);
+
+  }
+
+  100%{
+
+    transform: rotate(0deg) translate(-5px,0px);
+  }
+
 
 }
 

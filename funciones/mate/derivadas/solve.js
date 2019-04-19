@@ -5,7 +5,7 @@ var terminos = []
 function insert(c){
     $('#preview').append('<span class="appendText">'+c+'</span>')
 
-    console.log($('span').last().text())
+
 
     if(typeof c !== 'string'){
 
@@ -16,7 +16,7 @@ function insert(c){
         bases.join()
         
         terminos.push(bases.join(''))
-        console.log(terminos)
+        
         bases = []
 
         
@@ -27,13 +27,13 @@ function insert(c){
 }
 
 function eliminar(){
-    $('span').last().remove()
+    $('.appendText').last().remove()
 
 }
 
 function borrarTodo(){
 
-    $('span').remove();
+    $('.appendText').remove();
 
 }
 

@@ -8440,11 +8440,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_handleFABClick",
       value: function _handleFABClick() {
-        if (this.isOpen) {
-          this.close();
-        } else {
-          this.open();
-        }
+        
       }
 
       /**
