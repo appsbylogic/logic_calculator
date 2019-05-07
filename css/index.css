@@ -14,18 +14,17 @@ body {
 
   -webkit-touch-callout: none;
 
-  background-color: #c62828;
-}
-
-.content{
-
   background-color: #fcfcfc;
-
-  height: 100%;
-
 }
+
 
 .statusbar {
+
+  position: fixed;
+  top: -2%;
+  height: 5%;
+
+  width: 100%;
   background: #c62828;
 }
 
