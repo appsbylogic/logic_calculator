@@ -7,6 +7,14 @@ html{
 
 }
 
+body {
+  -webkit-user-select: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  -webkit-touch-callout: none;
+}
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
