@@ -17,102 +17,222 @@
    <!--Import Google Icon Font-->
     
 
-    <link rel="stylesheet" href="../../../css/materialize.css">
+  <link rel="stylesheet" href="../../../css/materialize.css">
 
-    <script src="../../../js/jquery-3.3.1.min.js"></script>
+  <script src="../../../js/jquery-3.3.1.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../../../css/index.css">
+  <link rel="stylesheet" type="text/css" href="../../../css/index.css">
 
-    <style type="text/css">
+  <style type="text/css">
     	
-    	html{
+    html{
 
-    		background-color: #fcfcfc;
+   
 
-        }
-        
+
+    	background-color: #fcfcfc;
+
+      height: 100%;
+
+    }
+    
+    body{
+
+      height: 100%;
+    }
        
 
-    	#formulas{
+    #formulas{
 
-    		opacity: 0;
+    	opacity: 0;
 
-    		position: absolute;
+    	position: absolute;
     		
-    		left: 50%;
+    	left: 50%;
 
-    		transform: translateX(-50%);
+    	transform: translateX(-50%);
 
-    		transition: all 0.4s ease;
+    	transition: all 0.4s ease;
 
-        }
+    }
 
-        td {
+    .dropBtn{
+
+      color: white;
+
+    }
+
+    td {
             
-            width: 15% ;
+      width: 15% ;
             
-            border-radius: 0px;
+      border-radius: 0px;
+
+      padding: 0px 0px;
+
+      cursor: pointer;
               
-        }   
+    }
 
-        tr{
+    .navbar-fixed{
+
+      z-index: 0;
+
+    }
+        
+    td a{
+
+      color: white;
+
+      padding: 1.5vh 15px;
+
+      width: 100%;
+
+      height: 100%;
+
+    }
+
+    tr{
            
-            border-bottom: none;
+      border-bottom: none;
+
+    }
+
+    .war{ 
+            
+      padding: 0px 0px !important;
+      bottom: 0px;
+      margin: 0px;
+            
+    }
+
+    .showKeyboard{
+
+      animation: showKey .5s forwards;
+
+    }
+
+    .hideKeyboard{
+
+      animation: hideKey .5s forwards;
+
+    }
+
+    .spinSign{
+
+      animation: spin .5s forwards;
+
+    }
+
+    .spinSignBack{
+
+      animation: spinBack .5s forwards;
+
+    }
+
+    @keyframes hideKey{
+
+      100%{
+        
+        transform: translate(-50%,85%);
+       
+       
+
+      }
+
+
+    }
+
+    @keyframes showKey{
+
+      0%{
+
+        transform: translate(-50%,85%);
+
+      }
+
+      100%{        
+        
+        transform: translate(-50,0%);
+
+      }
+
+    }
+
+    @keyframes spin{
+
+      0%{
+
+        transform: rotate(180deg)
+
+      }
+
+      100%{
+
+        transform: rotate(0deg);
+
+      }
+
+    }
+
+    @keyframes spinBack{
+
+      100%{
+
+        transform: rotate(180deg);
+
         }
 
-        .war{ 
-            
-            padding: 0px 0px !important;
-            bottom: 0px;
-            margin: 0px;
-            
-        }
-
+      }
      
-        .keyboard{
-            
-            font-size: 20px;
-            width: 100%;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            position: absolute;
+    .keyboard{
+        
+      font-size: 20px;
+      
+      width: 100%;
 
-            padding: 0px;
+      bottom: 0;
+      
+      left: 50%;
+      
+      transform: translate(-50%);
+      
+      position: fixed;
 
-        }
+      display: inline-block;
 
-      .result_card{
+      padding: 0px;
 
-        display: none;
+    }
 
-      }
+    .result_card{
 
-      .show{
+      display: none;
 
-display: block;
-}
+    }
 
+    .show{
 
-     .input-field input:focus {
-        border-bottom: 1px solid #e57373 !important;
-        box-shadow: 0 1px 0 0 #e57373 !important;
-      }
-
-      .input-field input[type=number]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
-        color: #ef5350 !important;
-      }
+      display: block;
+    }
 
 
-    	.navbar-fixed{
+    .input-field input:focus {
+      border-bottom: 1px solid #e57373 !important;
+      box-shadow: 0 1px 0 0 #e57373 !important;
+    }
 
-    		height: 110px;
-
-    		
-
-    	}
+    .input-field input[type=number]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+      color: #ef5350 !important;
+    }
 
 
+    .navbar-fixed{
+
+      height: 110px;
+
+    
+    }
 
     </style>
 
@@ -231,7 +351,7 @@ display: block;
 	</div>
 
 
-	<div class="container" id="solve">
+	<div class="container cardContainer" id="solve">
 
       <h4 id="head">Derivatives</h4>
 					
@@ -244,7 +364,7 @@ display: block;
 					<div class="card-content">
 
 					
-                          <h5 id="preview"><i>f</i><sub>(x)</sub> = </h5>
+                          <h5 id="preview" ><i>f</i><sub>(x)</sub> = </h5>
                           
                           <br>
               
@@ -259,56 +379,81 @@ display: block;
 
       </div>
 
+      <div class="row result_card">
+      
+        <div class="col s12">
+          
+          <div class="card" >
+            
+            <div class="card-content cardResult">
+              
+              <h4>Result</h4>
+  
+              
+
+  
+              
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+
     </div>
 
-    <div class="container keyboard grey darken-4">
+    <div class="container keyboard showKeyboard grey darken-4 ">
     <div class="row war">
 
         <div class="col s12 war">
-                <table class="centered white-text">
+                <table class="centered white-text z-depth-2">
                         <tbody>
-                            <tr style="width:100%;">
-                              <td  class="grey darken-5"></td>
-                              <td class="grey darken-5"></td>
-                              <td class="grey darken-5" ></td>
-                              <td class="grey darken-5"></td>
-                              <td class="grey darken-5" onclick='borrarTodo()'><i class="material-icons">remove_circle_outline</i></td>
-                              <td class="grey darken-5" onclick="eliminar()"><i class="material-icons">navigate_before</i></td>
+                            <tr style="width:100%;" >
+                              <td  class="grey darken-5 " style="cursor:default;" onclick="hideKey()"><a class="waves-effect waves-light "><i class="material-icons arrowUp spinSign">keyboard_arrow_down</i></a></td>
+                              <td class="grey darken-5" style="cursor:default;"></td>
+                              <td class="grey darken-5" style="cursor:default;"></td>
+                              <td class="grey darken-5" style="cursor:default;"></td>
+                              <td class="grey darken-5 " onclick='borrarTodo()'><a class="waves-effect waves-light "><i class="material-icons">remove_circle_outline</i></a></td>
+                              <td class="grey darken-5" onclick="eliminar()"><a class="waves-effect waves-light "><i class="material-icons">navigate_before</i></a></td>
                           </tr>
                           <tr>
-                              <td onclick="insert('(')">(</td>
-                              <td onclick="insert(')')">)</td>
-                              <td class="grey darken-3" onclick="insert(7)">7</td>
-                              <td class="grey darken-3" onclick="insert(8)">8</td>
-                              <td class="grey darken-3" onclick="insert(9)">9</td>
-                              <td onclick="insert('/')">/</td>
+                              <td onclick="insert('(')"><a class="waves-effect waves-light ">(</a></td>
+                              <td onclick="insert(')')"><a class="waves-effect waves-light ">)</a></td>
+                              <td class="grey darken-3 " onclick="insert(7)"><a class="waves-effect waves-light ">7</a></td>
+                              <td class="grey darken-3" onclick="insert(8)"><a class="waves-effect waves-light ">8</a></td>
+                              <td class="grey darken-3" onclick="insert(9)"><a class="waves-effect waves-light ">9</a></td>
+                              <td onclick="insert('÷')"><a class="waves-effect waves-light ">÷</a></td>
                           </tr>
                         </tbody>
                 
                         <tbody>
                           <tr>
-                            <td onclick="insert('<sup>2</sup>')">x<sup> [ ]</sup></td>
-                            <td>√</td>
-                            <td class="grey darken-3" onclick="insert(4)">4</td>
-                            <td class="grey darken-3" onclick="insert(5)">5</td>
-                            <td class="grey darken-3" onclick="insert(6)">6</td>
-                            <td onclick="insert('*')">x</td>
+                            <td >
+                              <a class='dropdown-trigger1 dropBtn waves-effect waves-light' href='#' data-target='dropdown2' onclick="addArray('^')">x <sup>[ ]</sup></a>
+                            </td>
+                            <td><a class='dropdown-trigger dropBtn waves-effect waves-light' href='#' data-target='dropdown3'>sin</a></td>
+                            <td class="grey darken-3" onclick="insert(4)"><a class="waves-effect waves-light ">4</a></td>
+                            <td class="grey darken-3" onclick="insert(5)"><a class="waves-effect waves-light ">5</a></td>
+                            <td class="grey darken-3" onclick="insert(6)"><a class="waves-effect waves-light ">6</a></td>
+                            <td onclick="insert('×')"><a class="waves-effect waves-light ">×</a></td>
                           </tr>
                           <tr>
-                            <td><sup>[ ]</sup> / <sub>[ ]</sub></td>
-                            <td>abc</td>
-                            <td class="grey darken-3" onclick="insert(1)">1</td>
-                            <td class="grey darken-3" onclick="insert(2)">2</td>
-                            <td class="grey darken-3" onclick="insert(3)">3</td>
-                            <td onclick="insert('-')">-</td>
+                            <td onclick="insert('/')"><a class="waves-effect waves-light ">/</a></td>
+                            <td onclick="insert('x')"><a class="waves-effect waves-light ">x</a></td>
+                            <td class="grey darken-3" onclick="insert(1)"><a class="waves-effect waves-light ">1</a></td>
+                            <td class="grey darken-3" onclick="insert(2)"><a class="waves-effect waves-light ">2</a></td>
+                            <td class="grey darken-3" onclick="insert(3)"><a class="waves-effect waves-light ">3</a></td>
+                            <td onclick="insert('-')"><a class="waves-effect waves-light ">-</a></td>
                           </tr>
                           <tr>
                             <td></td>
                             <td></td>
-                            <td class="grey darken-3"onclick="insert(0)">0</td>
-                            <td class="grey darken-3"onclick="insert('.')">.</td>
-                            <td class="red lighten-1">=</td>
-                            <td onclick="insert('+')">+</td>
+                            <td class="grey darken-3"onclick="insert(0)"><a class="waves-effect waves-light ">0</a></td>
+                            <td class="grey darken-3"onclick="insert('.')"><a class="waves-effect waves-light ">.</a></td>
+                            <td class="red lighten-1" onclick="calcular()"><a class="waves-effect waves-light ">=</a></td>
+                            <td onclick="insert('+')"><a class="waves-effect waves-light ">+</a></td>
                           </tr>
                         </tbody>
                       </table>
@@ -319,36 +464,32 @@ display: block;
 
 </div>
 
-     <div class="row result_card">
-      
-      <div class="col s12">
-        
-        <div class="card" >
-          
-          <div class="card-content">
-            
-            <h4>Result</h4>
-
-            <blockquote id="discriminante"></blockquote>
-
-            <blockquote id="resultado"></blockquote>
-
-            <blockquote id="vertex"></blockquote>
-
-            <blockquote id="x-int"></blockquote>
-
-            <blockquote id="y-int"></blockquote>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
+    
 
 
-	</div>
+  
+  <ul id='dropdown2' class='dropdown-content' style="z-index:999 !important;">
+      <li ><a href="#!"  class="topic black-text" onclick="insertSup('<sup>/</sup>', true)" >/</a></li>
+      <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>(</sup>', true)">(</a></li>
+      <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>)</sup>', true)">)</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>9</sup>', true)">9</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>8</sup>', true)">8</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>7</sup>', true)">7</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>6</sup>', true)">6</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>5</sup>', true)">5</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>4</sup>', true)">4</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>3</sup>', true)">3</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>2</sup>', true)">2</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>1</sup>', true)">1</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>0</sup>', true)">0</a></li>
+  </ul>
+
+  <ul id='dropdown3' class='dropdown-content'>
+    <li><a href="#!" class="topic black-text" onclick="insert('sin(')">sin</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insert('cos(')">cos</a></li>
+    <li><a href="#!"  class="topic black-text" onclick="insert('tan(')">tan</a></li>
+    
+  </ul>
 
 
    <script src="../../../js/materialize.js"></script>
@@ -359,7 +500,7 @@ display: block;
   <script type="text/javascript" src="solve.js"></script>
 
   <script type="text/javascript" src="../../../js/dark.js"></script>
-
+  <script type="text/javascript" src="../../../js/math.js"></script>
 
 </body>
 </html>
