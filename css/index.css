@@ -18,15 +18,7 @@ body {
 }
 
 
-.statusbar {
 
-  position: fixed;
-  top: -2%;
-  height: 5%;
-
-  width: 100%;
-  background: #c62828;
-}
 
 @font-face {
   font-family: 'Material Icons';
