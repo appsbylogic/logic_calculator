@@ -13,6 +13,16 @@ body {
   -webkit-tap-highlight-color: transparent;
 
   -webkit-touch-callout: none;
+
+  background-color: #c62828;
+}
+
+.content{
+
+  background-color: #fcfcfc;
+
+  height: 100%;
+
 }
 
 .statusbar {

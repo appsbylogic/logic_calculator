@@ -41,6 +41,8 @@ function darkToggle(){
 
 	$("html").toggleClass('grey darken-5')
 
+	$(".content").toggleClass('grey darken-5')
+
 	$(".sidenav").toggleClass('grey darken-5')
 
 	$(".material-icons").toggleClass('white-text')
@@ -82,6 +84,8 @@ if(dark){
 	$(".card").addClass('white-text ')
 
 	$("html").addClass('grey darken-5')
+
+	$(".content").addClass('grey darken-5')
 
 	$(".sidenav").addClass('grey darken-5')
 
@@ -131,6 +135,8 @@ if(dark){
 	$(".card").removeClass('white-text ')
 
 	$("html").removeClass('grey darken-5')
+
+	$(".content").removeClass('grey darken-5')
 
 	$(".sidenav").removeClass('grey darken-5')
 
