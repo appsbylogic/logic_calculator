@@ -101,6 +101,7 @@ function insertSup(c,activar){
 
 function eliminar(){
 
+if(!addExp){
     
     $('.appendText').last().remove()
 
@@ -139,16 +140,18 @@ function eliminar(){
 
     console.log(derivada)
 
-    
+    }
 
 }
 
 function borrarTodo(){
 
+if(!addExp){
+
     derivada = []
 
     $('.appendText').remove();
-
+}
 }
 
 function calcular(){
