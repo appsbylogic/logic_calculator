@@ -6,12 +6,12 @@
     "start_url" : "https://appsbylogic.github.io/logic_calculator/",
     "short_name" : "Accurate",
     "theme_color" : "black",
-    "description" : "",
+    "description" : "Solve Math and physics problems with just a click!",
     "orientation" : "any",
     "background_color" : "transparent",
     "related_applications" : "",
     "prefer_related_applications" : "false",
-    "generated" : "true",
+    "generated" : "undefined",
     "icons" : [
         {
             "src": "https://appsbylogic.github.io/logic_calculator/img/icon.png",
