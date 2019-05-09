@@ -4,7 +4,14 @@ const CACHE = "pwabuilder-precache";
 const precacheFiles = [
   /* Add an array of files to precache for your app */
   'index.html',
-'math.html'
+'math.html',
+'funciones/fisica/couloumb/couloumb.html',
+'funciones/fisica/field/field.html',
+'funciones/fisica/pitagoras/pitagoras.html',
+'funciones/fisica/vectores/vectores.html',
+'funciones/mate/cuadratica/cuadratica.html',
+'funciones/mate/derivadas/derivadas.html',
+'funciones/mate/estadistica/estadistica.html'
 ];
 
 self.addEventListener("install", function (event) {
