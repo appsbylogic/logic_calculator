@@ -5,6 +5,7 @@ const precacheFiles = [
   /* Add an array of files to precache for your app */
   'index.html',
 'math.html',
+'credits.html',
 'funciones/fisica/couloumb/couloumb.html',
 'funciones/fisica/field/field.html',
 'funciones/fisica/pitagoras/pitagoras.html',
