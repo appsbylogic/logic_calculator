@@ -1,18 +1,18 @@
-{"dir" : "ltr",
-    "lang" : "en",
-    "name" : "Accurate",
-    "scope" : "/logic_calculator/",
-    "display" : "standalone",
-    "start_url" : "https://appsbylogic.github.io/logic_calculator/",
-    "short_name" : "Accurate",
-    "theme_color" : "black",
-    "description" : "Solve Math and physics problems with just a click!",
-    "orientation" : "any",
-    "background_color" : "transparent",
-    "related_applications" : "",
-    "prefer_related_applications" : "false",
-    "generated" : "undefined",
-    "icons" : [
+{
+    "dir": "ltr",
+    "lang": "EN",
+    "name": "Accurate",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "https://appsbylogic.github.io/logic_calculator/",
+    "short_name": "PWABuilder",
+    "theme_color": "#000000",
+    "description": "Solve and learn physics and math problems with just a click!",
+    "orientation": "any",
+    "background_color": "#F76F65",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
         {
             "src": "https://appsbylogic.github.io/logic_calculator/img/icon.png",
             "sizes": "512x512"
@@ -21,4 +21,5 @@
             "src": "https://appsbylogic.github.io/logic_calculator/logic_calculator/img/favicon%20(2).ico",
             "sizes": "16x16 32x32 48x48 64x64 128x128 256x256"
         }
-    ]}
+    ]
+}
