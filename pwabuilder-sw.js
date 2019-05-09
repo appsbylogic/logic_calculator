@@ -11,7 +11,17 @@ const precacheFiles = [
 'funciones/fisica/vectores/vectores.html',
 'funciones/mate/cuadratica/cuadratica.html',
 'funciones/mate/derivadas/derivadas.html',
-'funciones/mate/estadistica/estadistica.html'
+'funciones/mate/estadistica/estadistica.html',
+'funciones/fisica/couloumb/solve.js',
+'funciones/fisica/field/solve.js',
+'funciones/fisica/pitagoras/solve.js',
+'funciones/fisica/vectores/solve.js',
+'funciones/mate/cuadratica/solve.js',
+'funciones/mate/derivadas/solve.js',
+'funciones/mate/estadistica/solve.js',
+'index.js',
+'js/dark.js'
+
 ];
 
 self.addEventListener("install", function (event) {
