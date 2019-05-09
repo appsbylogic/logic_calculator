@@ -2,7 +2,7 @@
     "dir": "ltr",
     "lang": "EN",
     "name": "Accurate",
-    "scope": "/",
+    "scope": "/logic_calculator/",
     "display": "standalone",
     "start_url": "https://appsbylogic.github.io/logic_calculator/",
     "short_name": "PWABuilder",
