@@ -4,7 +4,7 @@ var fisica = true;
 
 
 document.addEventListener('deviceready', function(){
-	StatusBar.backgroundColorByHexString('#c62828');
+	StatusBar.backgroundColorByHexString('#e53935 ');
 });
 
 $('.dropdown-trigger').dropdown({ constrainWidth: false, alignment:'left' });
