@@ -3,8 +3,9 @@
 const CACHE = "pwabuilder-precache";
 const precacheFiles = [
   /* Add an array of files to precache for your app */
-  'index.html',
+'index.html',
 'math.html',
+'calculator.html',
 'credits.html',
 'funciones/fisica/couloumb/couloumb.html',
 'funciones/fisica/field/field.html',
@@ -22,7 +23,7 @@ const precacheFiles = [
 'funciones/mate/estadistica/solve.js',
 'index.js',
 'js/dark.js',
-'math.js'
+'js/math.js'
 
 ];
 
