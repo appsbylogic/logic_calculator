@@ -1,6 +1,6 @@
 var dark = JSON.parse(localStorage.getItem('dark')) ? localStorage.getItem('dark') : false
 
-var img = dark ? "img/logic_no_fodno.png" : "img/logic_fondo_black.png"
+var img = dark ? "img/logic_fondo_black.png" : "img/logic_no_fodno.png"
 
 addDark()
 
@@ -115,7 +115,7 @@ if(dark){
 
 	$('#darkSwitch').prop('checked', false)
 
-	$('#logo').attr("src","img/logic_no_fodno.png")
+	$('#logo').attr("src","img/logic_fondo_black.png")
 
 	$('#darkSwitch_pc').prop('checked', false)
 
