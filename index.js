@@ -5,7 +5,17 @@ var fisica = true;
 
 document.addEventListener('deviceready', function(){
 	StatusBar.backgroundColorByHexString('#e53935 ');
+	admob.banner.show({
+		id: {
+		  // replace with your ad unit IDs
+		  android: 'ca-app-pub-4382391968703736/1926946762',
+		  ios: 'ca-app-pub-xxx/zzz',
+		  
+		},
+	  })
 });
+
+
 
 $('.dropdown-trigger').dropdown({ constrainWidth: false, alignment:'left' });
 
@@ -103,13 +113,20 @@ document.addEventListener('DOMContentLoaded', function() {
 var formula = document.getElementById('formulas')
 
 var solves = document.getElementById('solve')
+var aprender = document.getElementById('learn')
 
 var title = document.getElementById('head')
+
+var currentPage = 'solve'
 
 var floatBtn = M.FloatingActionButton.getInstance(document.querySelectorAll('.fixed-action-btn'))
 
 function solve(){
 
+	if(currentPage=='formulas'){
+
+		console.log('asdasdasd')
+		currentPage = 'solve'
 	instance.close()
 
 	$("#formulas").css({"-webkit-transform":"translateX(-500vw)"},700)
@@ -128,13 +145,32 @@ function solve(){
 		 		
 		formula.setAttribute('style','display:none')
 
-	},150)		 	
+	},150)	
+	
+	}else{
+		
+		$("#learn").css({"-webkit-transform":"translateX(-500vw)"},700)
+
+		window.setTimeout(function(){	 		
+
+			
+	
+			solves.setAttribute('style',' display:block')
+	
+					 
+			aprender.setAttribute('style','display:none')
+	
+		},150)
+	}
 
 
 }
 
 function formule(){
-				
+	
+	if(currentPage == "solve"){
+
+	
 	$("#floatBtn").css('display','block')
 
 	$("#solve").css({"-webkit-transform":"translate(-500vw,0)"},700)		  	
@@ -150,6 +186,65 @@ function formule(){
 		solves.setAttribute('style',' display:none')
 
 	},150)
+
+	}else{
+		$("#floatBtn").css('display','block')
+		$("#learn").css({"-webkit-transform":"translateX(-500vw)"},700)
+
+		window.setTimeout(function(){	 		
+
+			$("#floatBtn").toggleClass('scale-in')
+
+			$("#floatBtn").removeClass('scale-out')
+	
+			formula.setAttribute('style',' display:block')
+	
+					 
+			aprender.setAttribute('style','display:none')
+	
+		},150)
+	}
+
+	currentPage = 'formulas';
+}
+
+function learn(){
+				
+	
+	if(currentPage=="solve"){
+	
+		$("#solve").css({"-webkit-transform":"translate(-500vw,0)"},700)		  	
+			
+		window.setTimeout(function(){
+
+			aprender.setAttribute('style','display:block')
+
+			solves.setAttribute('style',' display:none')
+
+		},150)
+
+	}else{
+
+		
+
+		$("#formulas").css({"-webkit-transform":"translate(-500vw,0)"},700)	
+		
+		$("#floatBtn").addClass('scale-out')
+
+		$("#floatBtn").removeClass('scale-in')
+			
+		window.setTimeout(function(){
+			$("#floatBtn").css('display','none')
+
+			aprender.setAttribute('style','display:block')
+
+			formula.setAttribute('style',' display:none')
+
+		},150)
+
+	}
+
+	currentPage = 'learn'
 }
 
 

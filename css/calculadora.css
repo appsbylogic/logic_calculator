@@ -1,3 +1,9 @@
+html{
+
+  height: 100%;
+
+}
+
 .col{
     position: relative;
     
@@ -26,63 +32,103 @@
   }
 
   .keyboard{
-    position: absolute;
-    width: 100%;
-    margin: 0px !important;
-
-    left: 0px !important;
+    position: fixed;
     bottom: 0px;
+    width: 100%;
+    
+    left: 0px !important;
+    transition: all 0.4s ease;
+
+  animation: slide .7s ease;
+    
+    padding: 0px 0px!important;
+    margin: 0px !important;
+    
+    
+
+  }
+
+  @keyframes hideKey{
+
+    100%{
+      
+      transform: translateY(85%);
+     
+     
+
+    }
+
+
+  }
+
+  @keyframes showKey{
+
+    0%{
+
+      transform:  translateX(-500vw);
+  
+    }
+  
+    60%{
+   
+      transform: translateX(0px);
+  
+    }
 
   }
 
   .keyboardCol{
+
+    bottom: 0px;
     margin: 0px !important;
     left: 0px;
+    padding: 0px 0px!important;
 
+    height: 100%;
+ 
   }
 
-table{
-    position: absolute;
-    width:100%;
-    table-layout: fixed;
-    border-radius: 10px !important;
-   left: 0px;
-   border-collapse: collapse !important;
-   bottom: 0px;
-   border: none;
+
+  .keyboard table{
+    
+  width:100%;
+  table-layout: fixed;
+  border-radius: 10px !important;
+  left: 0px;
+  border-collapse: collapse !important;
+  bottom: 0px;
+  border: none;
+  
+  
     
     
 }
 
-td{
-
-  margin: 0px !important;
-    padding: 0px !important;
-    border-radius: 0px !important;
-    border: none;
-    font-size: 25px !important;
-    text-align: center;
-    width: 100%;
-    color: white;
-    
-
+.navBarConversions tbody {
+  border-bottom: 1px solid #e0e0e0 ;
 }
-h4{
+
+.dropdown-content{
+ 
+}
+.keyboard h4{
    
     font-size: 20px;
     margin: 0px !important;
     
     
 }
-
-tr{
+ tr{
 
     border-bottom: none;
 }
 
-.waves-effect{
+
+
+.wavesBtn{
   padding: 2.5vh;
   width: 100%;
+  height: 100%;
 
 }
 
@@ -138,4 +184,54 @@ h4:hover{
   
   
   width: 100%;
+}
+
+.calculadora{
+
+  transition: all 0.4s ease;
+
+  animation: slide .7s ease;
+
+}
+
+.conversiones{
+
+    		
+  display: none;
+
+  transition: all 0.4s ease;
+
+  animation: slide .7s ease;
+
+}
+
+@keyframes slide{
+
+  0%{
+
+    transform:  translateX(-500vw);
+
+  }
+
+  60%{
+ 
+    transform: translateX(0px);
+
+  }
+
+
+
+}
+.keyboard td{
+
+  margin: 0px !important;
+    padding: 0px 0px !important;
+    border-radius: 0px !important;
+    border: none;
+  
+    text-align: center;
+    width: 100%;
+    color: white;
+    
+
 }

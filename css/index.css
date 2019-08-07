@@ -224,7 +224,28 @@ font-weight: normal;
 
 }
 
+
 #formulas{
+
+
+
+
+	display: none;
+
+  transition: all 0.4s ease;
+  animation: slide .7s ease;
+
+
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: white !important;
+}
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #FF5252 !important;
+}
+
+#learn{
 
 
 
@@ -247,6 +268,7 @@ font-weight: normal;
 
 
 
+
 #solve{
 
     		
@@ -257,6 +279,8 @@ font-weight: normal;
     animation: slide .7s ease;
 
 }
+
+
 
 .out{
   animation: fade .7s infinite;

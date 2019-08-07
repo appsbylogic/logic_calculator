@@ -23,7 +23,9 @@ const precacheFiles = [
 'funciones/mate/estadistica/solve.js',
 'index.js',
 'js/dark.js',
-'js/math.js'
+'js/math.js',
+'js/conversions.js',
+'js/declararValoresConversiones.js'
 
 ];
 

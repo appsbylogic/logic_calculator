@@ -199,3 +199,41 @@ document.addEventListener('keydown', function(e){
     }
 
 })
+
+var conversion = document.getElementById('conversiones')
+
+var keyboard= document.getElementById('keyboard')
+var calc = document.getElementById('calculadora')
+
+function conversiones(){
+
+    $(".calculadora").css({"-webkit-transform":"translateX(-500vw)"},700)
+
+    $(".keyboard").css({"-webkit-transform":"translateX(-500vw)"},700)
+    window.setTimeout(function(){
+
+		conversion.setAttribute('style','display:block')
+
+        calc.setAttribute('style',' display:none')
+        
+        keyboard.setAttribute('style',' display:none')
+
+	},150)
+
+}
+
+function calculadora(){
+
+    $(".conversiones").css({"-webkit-transform":"translateX(-500vw)"},700)	
+
+    window.setTimeout(function(){
+
+        calc.setAttribute('style','display:block')
+        
+        keyboard.setAttribute('style','display:block')
+
+		conversion.setAttribute('style',' display:none')
+
+	},150)
+
+}
