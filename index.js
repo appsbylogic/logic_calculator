@@ -5,14 +5,7 @@ var fisica = true;
 
 document.addEventListener('deviceready', function(){
 	StatusBar.backgroundColorByHexString('#e53935 ');
-	admob.banner.show({
-		id: {
-		  // replace with your ad unit IDs
-		  android: 'ca-app-pub-4382391968703736/1926946762',
-		  ios: 'ca-app-pub-xxx/zzz',
-		  
-		},
-	  })
+	
 });
 
 

@@ -17,7 +17,8 @@ function insertar(char){
     operacion.push(char)
     $('.blink').html('')
     $('.blink').append(operacion)
-
+    var left = $(document).outerWidth() - $(window).width();
+    $('.scrollRight').scrollLeft(10000);
 
 }
 
@@ -62,15 +63,15 @@ function solve(){
     
         }else if(operacion[i] == 'sin('){
     
-            operacion[i] = 'Math.sin('
+            operacion[i] = 'MathD.tan('
     
         }else if(operacion[i] == 'cos('){
     
-            operacion[i] = 'Math.cos('
+            operacion[i] = 'MathD.cos('
     
         }else if(operacion[i] == 'tan('){
     
-            operacion[i] = 'Math.tan('
+            operacion[i] = 'MathD.tan('
     
         }
         else if(operacion[i] == 'π'){
@@ -122,15 +123,15 @@ function solve(){
 
         }else if(operacion[i] == 'tan<sup>-1</sup>('){
     
-            operacion[i] = 'Math.atan('
+            operacion[i] = 'MathD.atan('
     
         }else if(operacion[i] == 'cos<sup>-1</sup>('){
     
-            operacion[i] = 'Math.acos('
+            operacion[i] = 'MathD.acos('
     
         }else if(operacion[i] == 'sin<sup>-1</sup>('){
     
-            operacion[i] = 'Math.asin('
+            operacion[i] = 'MathD.asin('
     
         }else if(operacion[i] == '10^'){
     
@@ -143,22 +144,73 @@ function solve(){
 
     var resolver = operacion.join().replace(/,/g,'')
     console.log(resolver)
-   
+    $('.scrollRight').scrollLeft(10000);
     try {
         $('.blink').html(eval(resolver))
          operacion = []
+         operacion.push(eval(resolver))
         
         ans = eval(resolver)
     } catch (error) {
-
-        $('.blink').html('Syntax Error')
+   
+        if(error.message == "Unexpected end of input" || "missing ) after argument list"){
+            
+            $('.blink').html(eval(resolver+")"))
+            operacion = []
+            operacion.push(eval(resolver+")"))
+        }else{
+            $('.blink').html('Syntax Error')
         operacion = []
   
+        }
+        
         
     }
     
 
 }
+
+function tanDeg(angle){
+    return Math.tan(angle * (Math.PI/180));
+}
+
+function atanDeg(angle){
+    return Math.atan(angle )*(180/Math.PI);
+}
+var toDegree = function (radians) {
+    return radians * (180 / Math.PI);
+}
+
+var toRadians = function (degree) {
+    return degree * (Math.PI / 180);
+};
+
+
+var roundNumber = function(number, decimals) {
+    decimals = decimals || 5;
+    return number
+}
+var MathD = {
+    sin: function(number){
+        return roundNumber(Math.sin(toRadians(number)));
+    },
+    cos: function(number){
+        return roundNumber(Math.cos(toRadians(number)));
+    },
+    tan: function(number){
+        return roundNumber(Math.tan(toRadians(number)));
+    },
+    asin: function(number){
+        return roundNumber(toDegree(Math.asin(number)));
+    },
+    acos: function(number){
+       return roundNumber(toDegree(Math.acos(number)));
+   },
+   atan: function(number){
+       return roundNumber(toDegree(Math.atan(number)));
+   }
+};
+
 
 document.addEventListener('keydown', function(e){
     console.log(e.key)

@@ -145,7 +145,7 @@ function cambiarUnidades(value){
             $('#dropdownConversions').html(`
             <li><a class="topic black-text " href="#!" onclick="unidadE(mm, 'mm')">Milimetre (mm)</a></li>
             <li><a class="topic black-text " href="#!" onclick="unidadE(cm, 'cm')">Centimetre (cm)</a></li>
-            <li><a class="topic black-text " href="#!" onclick="unidadE(m, 'hm')">Metre (m)</a></li>
+            <li><a class="topic black-text " href="#!" onclick="unidadE(metro, 'm')">Metre (m)</a></li>
             <li><a class="topic black-text " href="#!" onclick="unidadE(km, 'km')">Kilometre (km)</a></li>
             <li><a class="topic black-text " href="#!" onclick="unidadE(pulgada, 'in')">Inch (in)</a></li>
             <li><a class="topic black-text " href="#!" onclick="unidadE(pie, 'ft')">Feet (ft)</a></li>
@@ -159,7 +159,7 @@ function cambiarUnidades(value){
             $('#dropdownConversions2').html(`
             <li><a class="topic black-text " href="#!" onclick="unidadS(mm, 'mm')">Milimetre (mm)</a></li>
             <li><a class="topic black-text " href="#!" onclick="unidadS(cm, 'cm')">Centimetre (cm)</a></li>
-            <li><a class="topic black-text " href="#!" onclick="unidadS(m, 'hm')">Metre (m)</a></li>
+            <li><a class="topic black-text " href="#!" onclick="unidadS(metro, 'm')">Metre (m)</a></li>
             <li><a class="topic black-text " href="#!" onclick="unidadS(km, 'km')">Kilometre (km)</a></li>
             <li><a class="topic black-text " href="#!" onclick="unidadS(pulgada, 'in')">Inch (in)</a></li>
             <li><a class="topic black-text " href="#!" onclick="unidadS(pie, 'ft')">Feet (ft)</a></li>
