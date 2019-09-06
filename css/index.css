@@ -245,6 +245,11 @@ font-weight: normal;
     background-color: #FF5252 !important;
 }
 
+[contenteditable] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
 #learn{
 
 
