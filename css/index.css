@@ -245,10 +245,13 @@ font-weight: normal;
     background-color: #FF5252 !important;
 }
 
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 [contenteditable] {
-  -webkit-user-modify:read-write;
-  -webkit-user-select: text;
-  
+  -webkit-user-select: text !important;
   user-select: text;
 }
 
