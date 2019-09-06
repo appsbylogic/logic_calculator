@@ -245,8 +245,10 @@ font-weight: normal;
     background-color: #FF5252 !important;
 }
 
-[contenteditable] {
+h5,li[contenteditable] {
+  -webkit-user-modify:read-write;
   -webkit-user-select: text;
+  
   user-select: text;
 }
 
