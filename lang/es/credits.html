@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="img/favicon (2).ico">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+		<link rel="apple-touch-icon" href="img/icon.png">
+
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="apple-mobile-web-app-title" content="Accurate">
+
+  <title>Calculator++</title>
+
+   <!--Import Google Icon Font-->
+    
+
+    <link rel="stylesheet" href="css/materialize.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <style type="text/css">
+    	
+    	html{
+
+    		background-color: #fcfcfc;
+
+    	}
+
+      .selectedTopic{
+        position: relative;
+        left: -15px !important;
+
+      }
+
+     .input-field input:focus {
+        border-bottom: 1px solid #e57373 !important;
+        box-shadow: 0 1px 0 0 #e57373 !important;
+      }
+
+      .input-field input[type=number]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+        color: #ef5350 !important;
+      }
+
+    	.navbar-fixed{
+
+    		height: 110px;
+
+    		
+
+    	}
+
+
+    </style>
+
+</head>
+<body>
+
+
+
+    <ul class="sidenav" id="mobile-demo">
+
+        <!--<li>
+      
+          <div class="user-view">
+        
+            <div class="background">
+          
+              <img src="https://images2.alphacoders.com/601/601814.jpg">
+    
+            </div>
+    
+            <a href="">
+          
+              <img src="img/foto.jpg" class="circle">
+    
+            </a>
+    
+            <a href="">
+          
+              <span class="name white-text">Fernando Maldonado </span>
+    
+            </a>
+    
+            <a href="">
+          
+              <span class="email white-text">fmaldonado824@gmail.com </span>
+    
+            </a>
+          </div>
+    
+        </li>-->
+          <br>
+          
+          <li><a class="red-text"><h5>Accurate</h5></a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader topic">Sections</a></li>
+          <li><a href="calculator.html" class="waves-effect topic "><i class="material-icons ">exposure</i>Calculator</a></li>
+        <li><a href="index.html" class="waves-effect topic "><i class="material-icons ">school</i>Physics</a></li>
+        <li><a href="math.html" class="waves-effect topic"><i class="material-icons">exposure_plus_1</i>Math</a></li>
+    
+        <li><div class="divider"></div></li>
+        <li><a class="subheader topic">Options</a></li>
+        <li>
+    
+      <a class="switch topic" onclick="darkToggle()">
+        Dark mode <i class="material-icons">brightness_2</i>
+        <label>
+        <input type="checkbox" id='darkSwitch' onclick="darkToggle()">
+        <span class="lever"></span>
+        
+        </label>
+    
+    
+      </a>
+    
+      </li>
+
+      <li><a class='dropdown-trigger trigger2' href='#' data-target='dropdown4'><i class="material-icons">language</i><span class="containerDrop">Español</span></a>
+
+        <!-- Dropdown Structure -->
+        <ul id='dropdown4' class='dropdown-content '>
+          
+          <li><a href="#!">Español</a></li>
+          <li><a href="../../credits.html">English</a></li>
+          
+        </ul>
+      </li>
+    
+      <li><a class="subheader topic">About and help</a></li>
+    
+       <li class="sidenav-footer"><a href="#" class="topic selectedTopic red-text text-darken-1""><i class="material-icons red-text text-darken-1 ">help</i> Credits</a></li>
+    
+    
+    
+    </ul>
+    
+    <div class="navbar-fixed ">
+    
+      <nav class="nav-extended ">
+    
+        <div class="nav-wrapper  red darken-1">
+          <a href="#!" class="brand-logo">Accurate</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul  class="right hide-on-med-and-down">
+            <li><a href="index.html" class="">Physics</a></li>
+            <li><a href="math.html" >Math</a></li>
+            <li><a href="calculator.html"  >Calculator</a></li>
+            <li> <a class='dropdown-trigger ' href='#' data-target='dropdown1'><i class="material-icons">settings</i></a></li>
+    
+            <ul id='dropdown1' class='dropdown-content' constrainWidth="false" style="width: 1000px !important">
+              <li>
+                <a class="switch topic black-text" data-constrainWidth="false" onclick="darkToggle()">
+                  Dark Mode<i class="material-icons">brightness_2</i>
+                  <label>
+                     <input type="checkbox" id='darkSwitch_pc' onclick="darkToggle()">
+                    <span class="lever"></span>
+        
+                  </label>
+    
+    
+                </a>
+              </li>
+
+              
+    
+              <li><a href="#" class="topic black-text active red darken-4"><i class="material-icons">help</i>Credits</a></li>
+            
+            </ul>
+    
+          </ul>
+    
+        </div>
+    
+        <div class="nav-content red accent-2">
+          <ul class="tabs tabs-transparent">
+  
+          </ul>
+        </div>
+      </nav>
+    
+      
+    </div>
+            
+    
+    
+
+	<div class="container" id="solve">
+
+      <h4 id="head">Credits</h4>
+
+    <div class="row">
+
+      <div class="col s12" >
+
+        <div class="card" >
+
+          <div class="card-content">
+
+            <div class="row">
+              
+              <div class="col s12 xl8" style="position: relative; left: 50%; transform: translateX(-50%);">
+                
+                <img class="responsive-img" id="logo"  src="img/logic_fondo_black.png">
+
+                
+
+              </div>
+
+            </div>           
+
+            <blockquote style="font-size: .85em;">Logic Apps created by Fernando Maldonado</blockquote>    
+        
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>	
+
+	</div>
+
+
+
+    <div class="container" id="solve">
+
+    <h4 class="topic">Contact Information</h4>
+
+    <div class="row">
+
+      <div class="col s12" >
+       
+                 <ul class="collapsible">
+                  <li>
+                    <div class="collapsible-header topic"><i class="material-icons red-text">mail</i>Mail</div>
+                    <div class="collapsible-body"><span><a class='link'  href="#">fmaldonado824@gmail.com</a></span></div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header topic"><i class="social blue-text text-darken-4">E</i>Facebook</div>
+                    <div class="collapsible-body"><span><a class='link'   href="https://www.facebook.com/Logic-Apps-277895006182290/" onclick="window.open('https://www.facebook.com/Logic-Apps-277895006182290/','_blank')">Logic Apps</a></span></div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header topic"><i class="social blue-text">D</i>Twitter</div>
+                    <div class="collapsible-body"><span><a class='link'   href="https://twitter.com/Fmaldonado4202" onclick="window.open('https://twitter.com/Fmaldonado4202','_blank')">@Fmaldonado4202</a></span></div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header topic"><i class="social pink-text">Q</i>Instagram</div>
+                    <div class="collapsible-body"><span><a  class='link'    href="https://www.instagram.com/appsbylogic/" onclick="window.open('https://www.instagram.com/appsbylogic/','_blank')">Appsbylogic</a></span></div>
+                  </li>
+                </ul>
+     
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>  
+
+  </div>
+
+ 
+
+    <script src="js/materialize.js"></script>
+
+    <script type="text/javascript" src="index.js"> </script>
+
+
+
+
+  <script type="text/javascript" src="js/dark.js"></script>
+
+
+</body>
+</html>

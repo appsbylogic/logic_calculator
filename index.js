@@ -2,6 +2,7 @@ var storage = $('.card-formulas')
 
 var fisica = true;
 
+var lang = "en";
 
 document.addEventListener('deviceready', function(){
 	StatusBar.backgroundColorByHexString('#e53935 ');
@@ -11,6 +12,8 @@ document.addEventListener('deviceready', function(){
 
 
 $('.dropdown-trigger').dropdown({ constrainWidth: false, alignment:'left' });
+
+$('.trigger2').dropdown({ alignment:'right'});
 
 
 var modal
@@ -22,7 +25,7 @@ $(document).ready(function(){
 	
 	
 	
-  $('.collapsible').collapsible();
+  	$('.collapsible').collapsible();
 	$('.tabs').tabs()
 	$('select').formSelect();
 	$('.modal').modal();
@@ -191,7 +194,8 @@ function formule(){
 			$("#floatBtn").removeClass('scale-out')
 	
 			formula.setAttribute('style',' display:block')
-	
+			head = lang == "en" ? "Formulas and equations" : "Fórmulas y Ecuaciones";
+			$("#head").html(head);
 					 
 			aprender.setAttribute('style','display:none')
 	
@@ -199,6 +203,7 @@ function formule(){
 	}
 
 	currentPage = 'formulas';
+	
 }
 
 function learn(){

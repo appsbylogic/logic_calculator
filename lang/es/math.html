@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<link rel="apple-touch-icon" href="img/icon.png">
+
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="apple-mobile-web-app-title" content="Accurate">
+
+	<title>Accurate</title>
+
+	 <!--Import Google Icon Font-->
+    
+
+    <link rel="stylesheet" href="css/materialize.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <link rel="icon" href="img/favicon (2).ico">
+
+</head>
+<body>
+
+		<script>
+		
+				$(document).ready(function(){
+
+			
+		
+					fisica = false;
+		
+				})
+				
+				</script>
+				
+	
+	
+				<ul class="sidenav" id="mobile-demo">
+
+					<!--<li>
+				
+						<div class="user-view">
+					
+							<div class="background">
+						
+								<img src="https://images2.alphacoders.com/601/601814.jpg">
+			
+							</div>
+			
+							<a href="">
+						
+								<img src="img/foto.jpg" class="circle">
+			
+							</a>
+			
+							<a href="">
+						
+								<span class="name white-text">Fernando Maldonado </span>
+			
+							</a>
+			
+							<a href="">
+						
+								<span class="email white-text">fmaldonado824@gmail.com </span>
+			
+							</a>
+						</div>
+			
+					</li>-->
+					  <br>
+					  
+					  <li><a class="red-text"><h5>Accurate</h5></a></li>
+					  <li><div class="divider"></div></li>
+					  <li><a class="subheader topic">Secciones</a></li>
+					  <li><a href="calculator.html" class="waves-effect topic "><i class="material-icons ">exposure</i>Calculadora</a></li>
+				  <li><a href="index.html" class="waves-effect topic "><i class="material-icons ">school</i>Física</a></li>
+				  <li><a href="#" class="waves-effect topic selectedTopic red-text text-darken-1"><i class="material-icons red-text text-darken-1 ">exposure_plus_1</i>Matemáticas</a></li>
+			
+				  <li><div class="divider"></div></li>
+				  <li><a class="subheader topic">Opciones</a></li>
+				  <li>
+			
+				<a class="switch topic" onclick="darkToggle()">
+						Modo Oscuro <i class="material-icons">brightness_2</i>
+				  <label>
+				  <input type="checkbox" id='darkSwitch' onclick="darkToggle()">
+				  <span class="lever"></span>
+				  
+				  </label>
+			
+			
+				</a>
+			
+			  </li>
+
+			  <li><a class='dropdown-trigger trigger2' href='#' data-target='dropdown4'><i class="material-icons">language</i><span class="containerDrop">Español</span></a>
+
+				<!-- Dropdown Structure -->
+				<ul id='dropdown4' class='dropdown-content '>
+				  
+				  <li><a href="#!">Español</a></li>
+				  <li><a href="../../math.html">English</a></li>
+				  
+				</ul>
+			</li>
+			
+			  <li><a class="subheader topic">Información y ayuda</a></li>
+			
+				 <li class="sidenav-footer"><a href="credits.html" class="topic"><i class="material-icons">help</i> Créditos</a></li>
+			
+			
+			
+			</ul>
+			
+			<div class="navbar-fixed ">
+			
+			  <nav class="nav-extended ">
+			
+				  <div class="nav-wrapper  red darken-1">
+						<a href="#!" class="brand-logo">Accurate</a>
+						<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+						<ul  class="right hide-on-med-and-down">
+						  <li><a href="index.html" class="">Física</a></li>
+						  <li><a href="#" class="active red darken-4">Matemáticas</a></li>
+						  <li><a href="calculator.html"  >Calculadora</a></li>
+						  <li> <a class='dropdown-trigger ' href='#' data-target='dropdown1'><i class="material-icons">settings</i></a></li>
+			
+						  <ul id='dropdown1' class='dropdown-content' constrainWidth="false" style="width: 1000px !important">
+							  <li>
+								  <a class="switch topic black-text" data-constrainWidth="false" onclick="darkToggle()">
+										Modo Oscuro<i class="material-icons">brightness_2</i>
+									  <label>
+											 <input type="checkbox" id='darkSwitch_pc' onclick="darkToggle()">
+										  <span class="lever"></span>
+				  
+									  </label>
+			
+			
+									</a>
+								</li>
+								<li><a class="topic black-text selectedLanguage "><i class="material-icons">language</i>Español</a></li>
+								<li><a class="topic black-text"href="../../math.html"><i class="material-icons">language</i>English</a></li>
+								<li><a href="credits.html" class="topic black-text"><i class="material-icons">help</i>Créditos</a></li>
+						  
+							</ul>
+			
+						</ul>
+			
+				  </div>
+			
+				  <div class="nav-content red accent-2">
+						<ul class="tabs tabs-transparent">
+								<li class="tab"><a href="#"  onclick="solve()"><i class="material-icons">exposure</i></a></li>
+								<li class="tab"><a href="#" onclick="formule()"><i class="material-icons">functions</i></a></li>
+				 
+								<li class="tab"><a href="#"><i class="material-icons" onclick="M.toast({html: 'Work in progress!'})">lightbulb_outline</i></a></li>
+						  
+						</ul>
+				  </div>
+				</nav>
+			
+				
+			</div>
+					
+			
+
+
+
+
+	<div class="container " id="solve">
+
+		<h4 id="head">Resolver</h4>
+		
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div  class="card-content" id="cardPyth" onclick="window.open('funciones/mate/cuadratica/cuadratica.html', '_self')">
+						
+
+						<h5>Ecuaciones de Segundo Grado<i class="material-icons right">chevron_right</i></h5>
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+	<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div class="card-content" id="cardPyth" onclick="window.open('funciones/mate/derivadas/derivadas.html', '_self')">
+						
+
+						<h5>Derivadas<i class="material-icons right">chevron_right</i></h5>
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div class="card">
+					
+					<div class="card-content" id="cardPyth" onclick="window.open('funciones/mate/estadistica/estadistica.html', '_self')">
+						
+
+						<h5>Estadística Básica<i class="material-icons right">chevron_right</i></h5>
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="container card-formulas" id="formulas">
+
+		<h4 id="head" class="topic">Fórmulas y Ecuaciones</h4>
+		
+	
+		<div class="row">
+			
+				<div class="col s12">
+					
+					<div class="card">
+						
+						<div class="card-content">
+								<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out"><i class="btnEditText material-icons grey-text">close</i></a>
+								<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
+							
+							<ul>
+								
+								<h5 class="groupTitle">Ecuaciones de Segundo Grado</h5>
+								<hr>
+								
+								
+								
+								<li><blockquote class="groupBody " ><i class="formTxt" >-b +- √(b<sup>2</sup> - 4ac) / 2a</i></blockquote></li>
+	
+							
+	
+											
+	
+							</ul>
+							
+	
+						</div>
+	
+					</div>
+	
+				</div>
+	
+			</div>
+
+			<div class="row">
+			
+					<div class="col s12">
+						
+						<div class="card">
+							
+							<div class="card-content">
+									<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out"><i class="btnEditText material-icons grey-text">close</i></a>
+									<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
+								
+								<ul>
+									
+									<h5 class="groupTitle">Estadística Básica</h5>
+									<hr>
+									
+									
+									
+									<li><blockquote class="groupBody " ><i class="formTxt" >Media = Σ de los valores/ número de valores</i></blockquote></li>
+
+									<li><blockquote class="groupBody " ><i class="formTxt" >s<sup>2</sup> = Σ (x<sub>i</sub> - x <sup>-</sup>)<sup>2</sup>/ N - 1</i></blockquote></li>
+
+									<li><blockquote class="groupBody " ><i class="formTxt" >DM = Σ |x<sub>i</sub> - x <sup>-</sup>|/ N </i></blockquote></li>
+		
+								
+		
+												
+		
+								</ul>
+								
+		
+							</div>
+		
+						</div>
+		
+					</div>
+		
+				</div>
+	
+			
+	
+		</div>
+	
+	
+		<div class="fixed-action-btn click-to-toggle buttonSolve horizontal ">
+	
+			<a id="floatBtn"  class="btn-floating btn-large red scale-transition scale-out " >
+				<i class="material-icons large btnIcon" onclick="editGroups()">mode_edit</i>
+			</a>
+	
+			<ul>
+		
+				<li><a class="btn-floating blue" onclick="addGroup()"><i class="material-icons">add</i></a></li>
+			</ul>
+		
+		</div>
+	
+		<div id="delModal" class="modal">
+				<div class="modal-content">
+					<h4>Eliminar Formula</h4>
+					<p>¿Estás seguro de que deseas eliminar ésta fórmula? Esta acción no se puede deshacer</p>
+				</div>
+				<div class="modal-footer">
+						<a href="#!" class="modal-close waves-effect waves-green modal-cancel btn-flat">Cancelar</a>
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat red-text" onclick='deleteFinal()'>Aceptar</a>
+				</div>
+			</div>
+	
+			<div id="delGroupModal" class="modal groupModal">
+					<div class="modal-content">
+						<h4>Eliminar Grupo</h4>
+						<p>¿Estás seguro de que deseas eliminar éste grupo? Esta acción no se puede deshacer</p>
+					</div>
+					<div class="modal-footer">
+							<a href="#!" class="modal-close waves-effect waves-green modal-cancel btn-flat">Cancelar</a>
+						<a href="#!" class="modal-close waves-effect waves-green btn-flat red-text" onclick='deleteFinalGroup()'>Aceptar</a>
+					</div>
+				</div>
+		
+	
+	
+	
+
+    <script src="js/materialize.js"></script>
+
+    <script type="text/javascript" src="js/statusbar.js">	</script>
+
+    <script type="text/javascript" src="index.js">	</script>
+
+    <script type="text/javascript" src="js/dark.js">	</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,477 @@
+
+html{
+
+    background-color: #fcfcfc;
+
+
+
+}
+
+body {
+  -webkit-user-select: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  -webkit-touch-callout: none;
+overscroll-behavior: contain;
+
+
+ 
+}
+
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(MaterialIcons-Regular.woff2) format('woff2'),
+       url(MaterialIcons-Regular.woff) format('woff'),
+       url(MaterialIcons-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Social Media Circled';
+ 
+  src: url('Social Media Circled.otf');
+}
+
+@font-face {
+  font-family: 'Social Media Circled_2';
+ 
+  src: url('Smartphone Color Pro.woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.social {
+  font-family: 'Social Media Circled';
+
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+
+
+
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid #e57373 !important;
+  box-shadow: 0 1px 0 0 #e57373 !important;
+}
+
+.input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+  color: #ef5350 !important;
+}
+
+.modal{
+
+  border-radius: 10px;
+
+  
+}
+.selectedLanguage{
+  background: rgb(244, 67, 54,0.25);
+
+
+}
+.selectedTopic{
+
+  background: rgb(244, 67, 54,0.25);
+  border-radius: 20px;
+  left: -15px;
+}
+
+.card, .collapsible-header, .collapsible{
+
+    border-radius: 10px;
+
+}
+
+.border{
+
+    border-color: #161616;
+
+}
+
+.link{
+
+    color: #ef5350;
+
+}
+
+.social_2 {
+  font-family: 'Social Media Circled_2';
+font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.grey.darken-5{
+
+    background-color: #161616 !important;
+
+}
+
+.btn-round{
+
+  border-radius: 10px;
+
+}
+
+#floatBtn{
+
+  display: none;
+
+  
+
+
+
+}
+
+.btnDelGroup{
+
+  position: absolute;
+
+ 
+
+  top: 5px;
+
+  right: 5px;
+
+  display: none;
+
+}
+
+.btnFormula{
+
+  position: absolute;
+
+  top: 5px;
+  left: 75%;
+  display: none;
+
+}
+
+.showBtn{
+  
+  display: block;
+
+}
+
+
+.groupTitle, .formTxt{
+
+  transition: all .5s ease;
+
+}
+
+
+.btnAnim{
+  animation: anim .3s forwards;
+
+}
+
+
+@keyframes anim {
+
+
+  100%{
+
+    transform: rotate(-360deg);
+  }
+
+
+
+}
+
+
+#formulas{
+
+
+
+
+	display: none;
+
+  transition: all 0.4s ease;
+  animation: slide .7s ease;
+
+
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: white !important;
+}
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #FF5252 !important;
+}
+
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+[contenteditable] {
+  -webkit-user-select: text !important;
+  user-select: text;
+}
+
+#learn{
+
+
+
+
+	display: none;
+
+  transition: all 0.4s ease;
+  animation: slide .7s ease;
+
+
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: white !important;
+}
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #FF5252 !important;
+}
+
+
+
+
+
+#solve{
+
+    		
+    opacity: 100;
+
+    transition: all 0.4s ease;
+
+    animation: slide .7s ease;
+
+}
+
+
+
+.out{
+  animation: fade .7s infinite;
+
+}
+
+.navbar-fixed{
+
+    height: 110px;
+
+    		
+
+}
+
+.groupBody{
+
+  position: relative !important;
+
+
+
+  box-sizing: border-box;
+
+
+}
+
+.update-notification {
+  background-color: #222;
+  color: #fff;
+  display:block;
+  position: absolute;
+  bottom:0;
+  right:0;
+  padding:0.8em 1.2em;
+  text-decoration: none;
+}
+
+.groupBodyA{
+
+
+  border-left: 5px solid rgba(0,0,0,0) !important;
+
+
+}
+
+
+.groupBodyB::before{
+  
+ 
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border-left: 5px solid #ef5350 !important;
+  left: 0px;
+  top: 0px; 
+  transform: translate(-5px,0px);
+  content:'';
+  animation: spinBack .1s forwards;
+  
+}
+
+.groupBodyB::after{
+  
+ 
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border-left: 5px solid #EE6E73 !important;
+  left: 0px;
+  top: 0px; 
+  transform: translate(-5px,0px);
+  content:'';
+  animation: spinL .1s forwards;
+  
+}
+
+.head{
+
+  animation: slide .7s ease;
+
+    transition: opacity .4s ease;
+}
+
+
+
+.sidenav-footer {
+    position: relative !important;
+
+    margin-bottom: 0% !important;
+
+}
+
+@keyframes spin{
+
+  100%{
+
+    
+
+    transform: rotate(-45deg) translate(-2px,-8px);
+  }
+
+
+}
+
+@keyframes spinL{
+
+  100%{
+    
+    transform: rotate(45deg) translate(0px,10px);
+  }
+
+
+}
+
+@keyframes spinBackL{
+
+  0%{
+    transform: rotate(45deg) translate(0px,10px);
+
+
+  }
+
+  100%{
+    
+    transform: rotate(0deg) translate(-5px,0px)
+
+  }
+}
+
+@keyframes spinBack{
+
+  0%{
+    transform: rotate(-45deg) translate(-2px,-8px);
+
+  }
+
+  100%{
+
+    transform: rotate(0deg) translate(-5px,0px);
+  }
+
+
+}
+
+@keyframes slide{
+
+  0%{
+
+    transform:  translateX(-500vw);
+
+  }
+
+  60%{
+
+    transform: translateX(0px);
+
+  }
+
+
+
+}
+
+
+
+@keyframes fade{
+
+  from{
+
+    transform:  translateX(0px);
+
+  }
+
+  to{
+
+    transform: translateX(-500vw);
+
+  }
+
+
+
+}
