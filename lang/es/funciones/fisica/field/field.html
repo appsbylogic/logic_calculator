@@ -173,7 +173,7 @@
           <ul id='dropdown4' class='dropdown-content '>
             
             <li><a href="#!">Español</a></li>
-            <li><a href="../../../../../funciones/fisica/field/field.html">English</a></li>
+            <li><a href="../../../../../funciones/fisica/field/field.html" onclick="localStorage.setItem('language','en'), console.log('asasd')">English</a></li>
             
           </ul>
         </li>
@@ -211,9 +211,10 @@
 			
 			
 						</a>
-					  </li>
+            </li>
+            <li><a class="topic black-text"href="../../../../../funciones/fisica/field/field.html" onclick="localStorage.setItem('language','en'), console.log('asasd')"><i class="material-icons">language</i>English</a></li>
             <li><a class="topic black-text selectedLanguage "><i class="material-icons">language</i>Español</a></li>
-					  <li><a class="topic black-text"href="../../../../../funciones/fisica/field/field.html"><i class="material-icons">language</i>English</a></li>
+					  
 					  <li><a href="../../../credits.html" class="topic black-text"><i class="material-icons">help</i>Créditos</a></li>
 					
 					</ul>
@@ -337,7 +338,12 @@
         			
 
         		<div class="row">
-        		  <a class="red waves-effect waves-light btn-large " onclick="calcular()">Calcular</a>
+
+              <div class="col s12">
+                <a class="red waves-effect waves-light btn-large btn-round" onclick="calcular()">Calcular</a>
+
+              </div>
+        		  
 
         		</div>
 

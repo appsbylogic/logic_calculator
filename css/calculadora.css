@@ -8,15 +8,23 @@ html{
     position: relative;
     
     left: 50% !important;
-
+  
     transform: translateX(-50%);
     
 
 }
 
+
 .blink{
+
     text-align: right;
-   
+ 
+}
+
+.dropdown-content{
+  
+    z-index: 9999 !important;
+  
 }
 
 .blink:after {
@@ -24,11 +32,15 @@ html{
     border-left: transparent solid  1px;
     border-radius: 50px;
    
-
+ 
     content:'';
   }
   @keyframes blink-empty {
     50% {border-left: 1px solid gray;}
+  }
+
+  .dropdown-content {
+    z-index: 2 !;
   }
 
   .keyboard{
@@ -110,11 +122,22 @@ html{
 
 
 .keyboard h4{
-   
-    font-size: 20px;
+    padding: 2.7vh;
+    font-size: 1.5rem;
     margin: 0px !important;
     
     
+}
+
+.blank{
+  color: #212121;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.small{
+  font-size: 1.25rem !important;
 }
  tr{
 
@@ -124,7 +147,8 @@ html{
 
 
 .wavesBtn{
-  padding: 2.5vh;
+  
+  position: relative;
   width: 100%;
   height: 100%;
 
@@ -173,10 +197,7 @@ h4:hover{
   box-shadow: inset  0 0px 100px  rgba(255, 255, 255, 0.055);
 }
 
-.input h2{
 
-
-}
 
 .input tr{
   
@@ -220,16 +241,27 @@ h4:hover{
 
 
 }
-.keyboard td{
 
-  margin: 0px !important;
-    padding: 0px 0px !important;
-    border-radius: 0px !important;
-    border: none;
+table{
+  border-spacing: 0 !important;
+border-collapse: collapse !important;
+}
+.keyboard td{
   
-    text-align: center;
-    width: 100%;
-    color: white;
+ 
+ 
+  border-radius: 0px !important;
+
+  padding: 0px;
+
+  text-align: center;
+  
+  color: white;
     
 
+}
+
+.waves-effect{
+  -webkit-transition: .05s ease-out !important;
+  transition: .05s ease-out !important;
 }

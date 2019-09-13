@@ -120,7 +120,7 @@
 			<ul id='dropdown4' class='dropdown-content '>
 			  
 			  <li><a href="#!">Español</a></li>
-			  <li><a href="../../calculator.html">English</a></li>
+			  <li><a href="../../calculator.html" onclick="localStorage.setItem('language','en'), console.log('asasd')">English</a></li>
 			  
 			</ul>
 		</li>
@@ -158,9 +158,10 @@
 
 
           					</a>
-          				</li>
+                          </li>
+                          <li><a class="topic black-text"href="../../calculator.html" onclick="localStorage.setItem('language','en'), console.log('asasd')"><i class="material-icons">language</i>English</a></li>
                           <li><a class="topic black-text selectedLanguage "><i class="material-icons">language</i>Español</a></li>
-                          <li><a class="topic black-text"href="../../calculator.html"><i class="material-icons">language</i>English</a></li>
+                         
           				<li><a href="credits.html" class="topic black-text"><i class="material-icons">help</i>Créditos</a></li>
     				
   					</ul>
@@ -211,119 +212,119 @@
 
          
 
-              <div class="row keyboard" id="keyboard">     
-                    <div class="col s12 xl6 keyboardCol">  
+    <div class="row keyboard" id="keyboard">     
+        <div class="col s12 xl6 keyboardCol">  
 
-                            <table class="grey darken-5">
+                <table class="grey darken-5" >
 
-                                <tbody >
-                                        <tr class="invTrue" >
+                    <tbody >
+                            <tr class="invTrue" >
 
-                                                <td ><h4 class="waves-effect  inv" onclick="invertir()">INV</h4></td>
-                                                <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('^3')">x<sup>3</sup></h4></td>
-                                                <td ><h4 class="waves-effect  wavesBtn waves-light " onclick="insertar('sin<sup>-1</sup>(')">sin<sup>-1</sup></h4></td>
-                                                <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('cos<sup>-1</sup>(')" >cos<sup>-1</sup></h4></td>
-                                                <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('tan<sup>-1</sup>(')">tan<sup>-1</sup></h4></td>
-        
-                                            </tr>
-        
-                                            <tr class="invTrue">
-        
-                                                <td > <h4 class="waves-effect wavesBtn waves-light " onclick="insertar('%')">%</h4></td>
-                                                <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('ln(')">Ln</h4></td>
-                                                <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('10^')">10<sup>x</sup></h4></td>
-                                                <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('!')">!</h4></td>
-                                                <td ><h4 class="waves-effect wavesBtn waves-light "  onclick="insertar('^')">^</h4></td>
-        
-                                            </tr>
-        
-                                            <tr class="invTrue">
-        
-                                                <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('π')">π</h4></td>
-                                                <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('e')">E</h4></td>
-                                                <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('(')">(</h4></td>
-                                                <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(')')">)</h4></td>
-                                                <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('<sup>3</sup>√(')"><sup>3</sup>√</h4></td>
-        
-                                            </tr>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light  inv" onclick="invertir()">INV</h4></td>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('^3')">x<sup>3</sup></h4></td>
+                                    <td ><h4 class="waves-effect  wavesBtn waves-light " onclick="insertar('sin<sup>-1</sup>(')">sin<sup>-1</sup></h4></td>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('cos<sup>-1</sup>(')" >cos<sup>-1</sup></h4></td>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('tan<sup>-1</sup>(')">tan<sup>-1</sup></h4></td>
 
-                                    <tr class="invFalse" >
+                                </tr>
 
-                                        <td ><h4 class="waves-effect" onclick="invertir()">INV</h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('^2')">x<sup>2</sup></h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('sin(')">sin</h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('cos(')" >cos</h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('tan(')">tan</h4></td>
+                                <tr class="invTrue">
 
-                                    </tr>
+                                    <td > <h4 class="waves-effect wavesBtn waves-light " onclick="insertar('%')">%</h4></td>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('ln(')">Ln</h4></td>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('10^')">10<sup>x</sup></h4></td>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('!')">!</h4></td>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light "  onclick="insertar('^')">^</h4></td>
 
-                                    <tr class="invFalse">
+                                </tr>
 
-                                        <td > <h4 class="waves-effect wavesBtn waves-light " onclick="insertar('%')">%</h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('ln(')">Ln</h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('log(')">log</h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('!')">!</h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light "  onclick="insertar('^')">^</h4></td>
+                                <tr class="invTrue">
 
-                                    </tr>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('π')">π</h4></td>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('e')">E</h4></td>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('(')">(</h4></td>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(')')">)</h4></td>
+                                    <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('<sup>3</sup>√(')"><sup>3</sup>√</h4></td>
 
-                                    <tr class="invFalse">
+                                </tr>
 
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('π')">π</h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('e')">E</h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('(')">(</h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(')')">)</h4></td>
-                                        <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('√(')">√</h4></td>
+                        <tr class="invFalse" >
 
-                                    </tr>
+                            <td ><h4 class="waves-effect wavesBtn waves-light" onclick="invertir()">INV</h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('^2')">x<sup>2</sup></h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('sin(')">sin</h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('cos(')" >cos</h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('tan(')">tan</h4></td>
 
-                                    <tr >
+                        </tr>
 
-                                        <td class="grey darken-3" ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(7)">7</h4></td>
-                                        <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(8)">8</h4></td>
-                                        <td class=" grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(9)">9</h4></td>
-                                        <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('÷')">÷</h4></td>
-                                        <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="eliminar()"><i class="material-icons">backspace</i></h4></td>
+                        <tr class="invFalse">
 
-                                    </tr>
-                                    <tr>
+                            <td > <h4 class="waves-effect wavesBtn waves-light " onclick="insertar('%')">%</h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('ln(')">Ln</h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('log(')">log</h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('!')">!</h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light "  onclick="insertar('^')">^</h4></td>
 
-                                        <td  class="grey darken-3 "><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(4)">4</h4></td>
-                                        <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light "  onclick="insertar(5)">5</h4></td>
-                                        <td class=" grey darken-3"><h4 class="waves-effect wavesBtn waves-light "  onclick="insertar(6)">6</h4></td>
-                                        <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('×')" >×</h4></td>
-                                        <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="eliminarTodo()"><i class="material-icons">remove_circle_outline</i></h4></td>
+                        </tr>
 
-                                    </tr>
+                        <tr class="invFalse">
 
-                                    <tr>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('π')">π</h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('e')">E</h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('(')">(</h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(')')">)</h4></td>
+                            <td ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('√(')">√</h4></td>
 
-                                        <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(1)">1</h4></td>
-                                        <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(2)">2</h4></td>
-                                        <td class=" grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(3)">3</h4></td>
-                                        <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('-')">-</h4></td>
-                                        <td  class="grey darken-4"><h4 ></h4></td>
+                        </tr>
 
-                                    </tr>
+                        <tr >
 
-                                    <tr>
+                            <td class="grey darken-3" ><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(7)">7</h4></td>
+                            <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(8)">8</h4></td>
+                            <td class=" grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(9)">9</h4></td>
+                            <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('÷')">÷</h4></td>
+                            <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="eliminar()"><i class="material-icons small">backspace</i></h4></td>
 
-                                        <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('.')">.</h4></td>
-                                        <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(0)">0</h4></td>
-                                        <td class=" grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(ans)">Ans</h4></td>
-                         
-                                        <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('+')">+</h4></td>
-                                        <td  class="red"><h4 class="waves-effect wavesBtn waves-light " onclick="solve()">=</h4></td>
+                        </tr>
+                        <tr>
 
-                                    </tr>
+                            <td  class="grey darken-3 "><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(4)">4</h4></td>
+                            <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light "  onclick="insertar(5)">5</h4></td>
+                            <td class=" grey darken-3"><h4 class="waves-effect wavesBtn waves-light "  onclick="insertar(6)">6</h4></td>
+                            <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('×')" >×</h4></td>
+                            <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="eliminarTodo()"><i class="material-icons small">remove_circle_outline</i></h4></td>
 
-                                </tbody>
+                        </tr>
 
-                            </table>
+                        <tr>
 
-                   
-                        </div>
-                        </div>
+                            <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(1)">1</h4></td>
+                            <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(2)">2</h4></td>
+                            <td class=" grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(3)">3</h4></td>
+                            <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('-')">-</h4></td>
+                            <td  class="grey darken-4"><h4 class="wavesBtn blank">.</h4></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('.')">.</h4></td>
+                            <td  class="grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(0)">0</h4></td>
+                            <td class=" grey darken-3"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar(ans)">Ans</h4></td>
+             
+                            <td  class="grey darken-4"><h4 class="waves-effect wavesBtn waves-light " onclick="insertar('+')">+</h4></td>
+                            <td  class="red"><h4 class="waves-effect wavesBtn waves-light " onclick="solve()">=</h4></td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+       
+            </div>
+            </div>
 
 
   

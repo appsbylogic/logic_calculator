@@ -11,7 +11,7 @@ if (/(android)/i.test(navigator.userAgent)) {  // for android & amazon-fireos
   }
 }
 
-document.addEventListener('deviceready', function() {
+
   
   admob.banner.config({
     id: admobid.banner,
@@ -30,9 +30,7 @@ document.addEventListener('deviceready', function() {
   admob.interstitial.prepare()
 
    
-  
 
-}, false)
 
 document.addEventListener('admob.banner.events.LOAD_FAIL', function(event) {
   console.log(event)

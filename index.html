@@ -2,8 +2,14 @@
 <html>
 <head>
 
-	
-
+	<script type="text/javascript" src="js/admob/admob.js">	</script>
+		<script>
+		
+				if(localStorage.getItem("language") == "es"){
+					window.location.href = "lang/es/index.html";
+				}
+				
+			</script>
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -40,7 +46,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<script type="text/javascript" src="js/admob/admob.js">	</script>
+	
 
     <link rel="icon" href="img/favicon (2).ico">
 
@@ -104,12 +110,12 @@
 		<li>
 
 			<a class="switch topic" onclick="darkToggle()">
-			Dark mode <i class="material-icons">brightness_2</i>
-			<label>
-			<input type="checkbox" id='darkSwitch' onclick="darkToggle()">
-			<span class="lever"></span>
-			
-			</label>
+				Dark mode <i class="material-icons">brightness_2</i>
+				<label>
+					<input type="checkbox" id='darkSwitch' onclick="darkToggle()">
+					<span class="lever"></span>
+				
+				</label>
 
 
 			</a>
@@ -121,69 +127,68 @@
 			<!-- Dropdown Structure -->
 			<ul id='dropdown4' class='dropdown-content '>
 			  <li><a href="#!">English</a></li>
-			  <li><a href="lang/es">Español</a></li>
+			  <li><a href="lang/es/index.html" onclick="localStorage.setItem('language','es'), console.log('asasd')">Español</a></li>
 			  
 			</ul>
 		</li>
 
   		<li><a class="subheader topic">About and help</a></li>
 
-	 	<li class="sidenav-footer"><a href="credits.html" class="topic"><i class="material-icons">help</i> Credits</a></li>
+		<li class="sidenav-footer"><a href="credits.html" class="topic"><i class="material-icons">help</i> Credits</a></li>
 
 
 
 	</ul>
 
-<div class="navbar-fixed ">
+	<div class="navbar-fixed ">
 
-  <nav class="nav-extended ">
+		<nav class="nav-extended ">
 
-	  <div class="nav-wrapper  red darken-1">
-			<a href="#!" class="brand-logo">Accurate</a>
-			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-			<ul  class="right hide-on-med-and-down">
-			  <li><a href="#" class="active red darken-4">Physics</a></li>
-			  <li><a href="math.html" >Math</a></li>
-			  <li><a href="calculator.html"  >Calculator</a></li>
-			  <li> <a class='dropdown-trigger ' href='#' data-target='dropdown1'><i class="material-icons">settings</i></a></li>
+			<div class="nav-wrapper  red darken-1">
+				<a href="#!" class="brand-logo">Accurate</a>
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+				<ul  class="right hide-on-med-and-down">
+					<li><a href="#" class="active red darken-4">Physics</a></li>
+					<li><a href="math.html" >Math</a></li>
+					<li><a href="calculator.html"  >Calculator</a></li>
+					<li> <a class='dropdown-trigger ' href='#' data-target='dropdown1'><i class="material-icons">settings</i></a></li>
 
-			  <ul id='dropdown1' class='dropdown-content' constrainWidth="false" style="width: 1000px !important">
-				  <li>
-					  <a class="switch topic black-text" data-constrainWidth="false" onclick="darkToggle()">
-						  Dark Mode<i class="material-icons">brightness_2</i>
-						  <label>
-								 <input type="checkbox" id='darkSwitch_pc' onclick="darkToggle()">
-							  <span class="lever"></span>
-	  
-						  </label>
+					<ul id='dropdown1' class='dropdown-content' constrainWidth="false" style="width: 1000px !important">
+						<li>
+							<a class="switch topic black-text" data-constrainWidth="false" onclick="darkToggle()">
+								Dark Mode<i class="material-icons">brightness_2</i>
+								<label>
+									<input type="checkbox" id='darkSwitch_pc' onclick="darkToggle()">
+									<span class="lever"></span>
+		
+								</label>
 
 
-						</a>
-					</li>
-					<li><a class="topic black-text selectedLanguage"href="#"><i class="material-icons">language</i>English</a></li>
-					<li><a class="topic black-text" href="lang/es/index.html"><i class="material-icons">language</i>Español</a></li>
-					
-					<li><a href="credits.html" class="topic black-text"><i class="material-icons">help</i>Credits</a></li>
-			  
+							</a>
+						</li>
+						<li><a class="topic black-text selectedLanguage"href="#"><i class="material-icons">language</i>English</a></li>
+						<li><a class="topic black-text" href="lang/es/index.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')"><i class="material-icons">language</i>Español</a></li>
+						
+						<li><a href="credits.html" class="topic black-text"><i class="material-icons">help</i>Credits</a></li>
+				
+					</ul>
+
 				</ul>
 
-			</ul>
+			</div>
 
-	  </div>
-
-	  <div class="nav-content red accent-2">
-			<ul class="tabs tabs-transparent">
+			<div class="nav-content red accent-2">
+				<ul class="tabs tabs-transparent">
 					<li class="tab"><a href="#"  onclick="solve()"><i class="material-icons">exposure</i></a></li>
-        			<li class="tab"><a href="#" onclick="formule()"><i class="material-icons">functions</i></a></li>
-     
-        			<li class="tab"><a href="#"><i class="material-icons" onclick="M.toast({html: 'Work in progress!'})">lightbulb_outline</i></a></li>
-			  
-			</ul>
-	  </div>
-	</nav>
-
+					<li class="tab"><a href="#" onclick="formule()"><i class="material-icons">functions</i></a></li>
+		
+					<li class="tab"><a href="#"><i class="material-icons" onclick="M.toast({html: 'Work in progress!'})">lightbulb_outline</i></a></li>
+				
+				</ul>
+			</div>
+		</nav>
 	
-</div>
+	</div>
         
 
 
@@ -199,14 +204,11 @@
 				
 				<div class="card">
 					<a href="funciones/fisica/pitagoras/pitagoras.html" class="topic black-text">
-					<div  class="card-content" id="cardPyth" >
-						
+						<div  class="card-content" id="cardPyth" >
+							
 
-						<h5>Pythagorean theorem <i class="material-icons right">chevron_right</i></h5>
-
-
-
-					</div>
+							<h5>Pythagorean theorem <i class="material-icons right">chevron_right</i></h5>
+						</div>
 					</a>
 				</div>
 
@@ -220,15 +222,12 @@
 				
 				<div class="card">
 					<a href="funciones/fisica/vectores/vectores.html" class="topic black-text">
-					<div class="card-content" id="cardPyth" >
-						
+						<div class="card-content" id="cardPyth" >
+		
+							<h5>Vector Sum<i class="material-icons right">chevron_right</i></h5>
 
-						<h5>Vector Sum<i class="material-icons right">chevron_right</i></h5>
-
-
-
-					</div>
-				</a>
+						</div>
+					</a>
 
 				</div>
 
@@ -242,15 +241,12 @@
 				
 				<div class="card">
 					<a href="funciones/fisica/couloumb/couloumb.html " class="topic black-text">
-					<div class="card-content" id="cardPyth" >
-						
+						<div class="card-content" id="cardPyth" >
+							
+							<h5>Coulomb's Law<i class="material-icons right">chevron_right</i></h5>
 
-						<h5>Coulomb's Law<i class="material-icons right">chevron_right</i></h5>
-
-
-
-					</div>
-				</a>
+						</div>
+					</a>
 
 				</div>
 
@@ -264,15 +260,12 @@
 				
 				<div class="card">
 					<a href="funciones/fisica/field/field.html" class="topic black-text">
-					<div class="card-content" id="cardPyth" >
-						
+						<div class="card-content" id="cardPyth" >
 
-						<h5>Electric Field<i class="material-icons right">chevron_right</i></h5>
+							<h5>Electric Field<i class="material-icons right">chevron_right</i></h5>
 
-
-
-					</div>
-				</a>
+						</div>
+					</a>
 				</div>
 
 			</div>
@@ -297,17 +290,17 @@
 					
 					<div class="card-content ">
 
-							<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out"><i class="btnEditText material-icons grey-text">close</i></a>
-							<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
+						<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out"><i class="btnEditText material-icons grey-text">close</i></a>
+						<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
 						
 						
 						<ul>
 							<h5 class="groupTitle">Vectors</h5>
 							<hr>	
 							<li><blockquote class="groupBody"><i class="formTxt" >Fx = F.Cosθ</i></blockquote></li>
-            	<li><blockquote class="groupBody"><i class="formTxt" >Fy = F.Sinθ</i></blockquote></li>
-            	<li><blockquote class="groupBody"><i class="formTxt" >θ = Tan<sup>-1</sup>(Fy/Fx)</i></blockquote></li>
-            	<li><blockquote class="groupBody"><i class="formTxt" >Fr = √ ΣFx<sup>2</sup> + ΣFy<sup>2</sup></i></blockquote></li>
+							<li><blockquote class="groupBody"><i class="formTxt" >Fy = F.Sinθ</i></blockquote></li>
+							<li><blockquote class="groupBody"><i class="formTxt" >θ = Tan<sup>-1</sup>(Fy/Fx)</i></blockquote></li>
+							<li><blockquote class="groupBody"><i class="formTxt" >Fr = √ ΣFx<sup>2</sup> + ΣFy<sup>2</sup></i></blockquote></li>
 
 						</ul>
 
@@ -327,17 +320,17 @@
 					
 					<div class="card-content">
 
-							<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out"><i class="btnEditText material-icons grey-text">close</i></a>
-							<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
+						<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out"><i class="btnEditText material-icons grey-text">close</i></a>
+						<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
 						
 						
 						<ul>
 							<h5 class="groupTitle">Uniform Linear Motion</h5>
 							<hr>						
 							<li><blockquote class="groupBody"><i class="formTxt" >V = Δx / Δt</i></blockquote></li>
-            	<li><blockquote class="groupBody"><i class="formTxt" >V = x / t</i></blockquote></li>
-            	<li><blockquote class="groupBody"><i class="formTxt" >Δx = x<sub>f</sub> - x<sub>o</sub></i></blockquote></li>
-            	<li><blockquote class="groupBody"><i class="formTxt" >Δt = t<sub>f</sub> - t<sub>o</sub></i></blockquote></li>
+							<li><blockquote class="groupBody"><i class="formTxt" >V = x / t</i></blockquote></li>
+							<li><blockquote class="groupBody"><i class="formTxt" >Δx = x<sub>f</sub> - x<sub>o</sub></i></blockquote></li>
+							<li><blockquote class="groupBody"><i class="formTxt" >Δt = t<sub>f</sub> - t<sub>o</sub></i></blockquote></li>
 
 						</ul>
 
@@ -357,18 +350,18 @@
 					
 					<div class="card-content">
 
-							<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out"><i class="btnEditText material-icons grey-text">close</i></a>
-							<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
+						<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out"><i class="btnEditText material-icons grey-text">close</i></a>
+						<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
 						
 						
 						<ul>
 							<h5 class="groupTitle">Accelerated Uniform Rectilinear Motion</h5>
 							<hr>				
 							<li><blockquote class="groupBody"><i class="formTxt" >a = (V - V<sub>o</sub>) / t</i></blockquote></li>
-            	<li><blockquote class="groupBody"><i class="formTxt" >a = ΔV / Δt</i></blockquote></li>
-            	<li><blockquote class="groupBody"><i class="formTxt" >x = x<sub>o</sub> + V<sub>o</sub>t + at<sup>2</sup> / 2</i></blockquote></li>
-            	<li><blockquote class="groupBody"><i class="formTxt" >V<sub>f</sub><sup>2</sup> = V<sub>o</sub><sup>2</sup> + 2aΔx</i></blockquote></li>
-            	<li><blockquote class="groupBody"><i class="formTxt" >x = x<sub>o</sub> + (V<sub>o</sub> + V<sub>f</sub>)/2 . t</i></blockquote></li>
+							<li><blockquote class="groupBody"><i class="formTxt" >a = ΔV / Δt</i></blockquote></li>
+							<li><blockquote class="groupBody"><i class="formTxt" >x = x<sub>o</sub> + V<sub>o</sub>t + at<sup>2</sup> / 2</i></blockquote></li>
+							<li><blockquote class="groupBody"><i class="formTxt" >V<sub>f</sub><sup>2</sup> = V<sub>o</sub><sup>2</sup> + 2aΔx</i></blockquote></li>
+							<li><blockquote class="groupBody"><i class="formTxt" >x = x<sub>o</sub> + (V<sub>o</sub> + V<sub>f</sub>)/2 . t</i></blockquote></li>
 
 						</ul>
 
@@ -388,10 +381,9 @@
 					
 					<div class="card-content">
 
-							<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out"><i class="btnEditText material-icons grey-text">close</i></a>
-							<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
-						
-						
+						<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out"><i class="btnEditText material-icons grey-text">close</i></a>
+						<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
+										
 						<ul>
 							<h5 class="groupTitle">Newton's Second Law</h5>
 							<hr>													
@@ -415,14 +407,12 @@
 					<div class="card-content">
 
 							<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out"><i class="btnEditText material-icons grey-text">close</i></a>
-							<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
-						
+							<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>			
 						
 						<ul>
 							<h5 class="groupTitle">Weight of a body</h5>
-							<hr>
-							
 
+							<hr>
 							
 							<li><blockquote class="groupBody"><i class="formTxt" >w = mg</i></blockquote></li>
 
@@ -446,8 +436,8 @@
 				<div class="card">
 					
 					<div class="card-content">
-							<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" ><i class="btnEditText material-icons grey-text">close</i></a>
-							<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
+						<a class="btnDelGroup btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" ><i class="btnEditText material-icons grey-text">close</i></a>
+						<a class="btnFormula btn-floating btn-small right waves-effect waves-light grey lighten-3 scale-transition scale-out" style="right: 10px;"><i class="btnEditText material-icons grey-text">add</i></a>
 						
 						<ul>
 							
@@ -473,8 +463,6 @@
 
 		</div>
 
-		
-
 	</div>
 	
 
@@ -492,31 +480,31 @@
 	</div>
 
 	<div id="delModal" class="modal">
-			<div class="modal-content">
-				<h4>Delete Formula</h4>
-				<p>Are you sure you want to delete this formula? You won't be able to undo this action</p>
-			</div>
-			<div class="modal-footer">
-					<a href="#!" class="modal-close waves-effect waves-green modal-cancel btn-flat">Cancel</a>
-				<a href="#!" class="modal-close waves-effect waves-green btn-flat red-text" onclick='deleteFinal()'>Agree</a>
-			</div>
+		<div class="modal-content">
+			<h4>Delete Formula</h4>
+			<p>Are you sure you want to delete this formula? You won't be able to undo this action</p>
 		</div>
+		<div class="modal-footer">
+				<a href="#!" class="modal-close waves-effect waves-green modal-cancel btn-flat">Cancel</a>
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat red-text" onclick='deleteFinal()'>Agree</a>
+		</div>
+	</div>
 
-		<div id="delGroupModal" class="modal groupModal">
-				<div class="modal-content">
-					<h4>Delete Group</h4>
-					<p>Are you sure you want to delete this group? You won't be able to undo this action</p>
-				</div>
-				<div class="modal-footer">
-						<a href="#!" class="modal-close waves-effect waves-green modal-cancel btn-flat">Cancel</a>
-					<a href="#!" class="modal-close waves-effect waves-green btn-flat red-text" onclick='deleteFinalGroup()'>Agree</a>
-				</div>
-			</div>
+	<div id="delGroupModal" class="modal groupModal">
+		<div class="modal-content">
+			<h4>Delete Group</h4>
+			<p>Are you sure you want to delete this group? You won't be able to undo this action</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green modal-cancel btn-flat">Cancel</a>
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat red-text" onclick='deleteFinalGroup()'>Agree</a>
+		</div>
+	</div>
 	
 
 
 
-		<script src="js/materialize.js"></script>
+	<script src="js/materialize.js"></script>
 		
 		
 	

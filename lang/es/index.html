@@ -12,7 +12,7 @@
 		
 		<meta name="apple-mobile-web-app-capable" content="yes">
 
-		<link rel="manifest" href="manifest.webmanifest">
+
 
 		<link rel="apple-touch-icon" href="img/icon.png">
 		<link href="splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
@@ -36,11 +36,11 @@
     
 
     <link rel="stylesheet" href="css/materialize.css">
-
+	<script type="text/javascript" src="../../js/admob/admob.js">	</script>
     <script src="js/jquery-3.3.1.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<script type="text/javascript" src="js/admob/admob.js">	</script>
+
 
     <link rel="icon" href="img/favicon (2).ico">
 
@@ -124,7 +124,7 @@
 			<ul id='dropdown4' class='dropdown-content '>
 			  
 			  <li><a href="#!">Español</a></li>
-			  <li><a href="../../index.html">English</a></li>
+			  <li><a href="../../index.html" onclick="localStorage.setItem('language','en'), console.log('asasd')">English</a></li>
 			  
 			</ul>
 		</li>
@@ -163,8 +163,9 @@
 
 						</a>
 					</li>
+					<li><a class="topic black-text"href="../../index.html" onclick="localStorage.setItem('language','en'), console.log('asasd')"><i class="material-icons">language</i>English</a></li>
 					<li><a class="topic black-text selectedLanguage "><i class="material-icons">language</i>Español</a></li>
-					<li><a class="topic black-text"href="../../index.html"><i class="material-icons">language</i>English</a></li>
+					
 					<li><a href="credits.html" class="topic black-text"><i class="material-icons">help</i>Créditos</a></li>
 			  
 				</ul>
@@ -178,7 +179,7 @@
 					<li class="tab"><a href="#"  onclick="solve()"><i class="material-icons">exposure</i></a></li>
         			<li class="tab"><a href="#" onclick="formule()"><i class="material-icons">functions</i></a></li>
      
-        			<li class="tab"><a href="#"><i class="material-icons" onclick="M.toast({html: 'Work in progress!'})">lightbulb_outline</i></a></li>
+        			<li class="tab"><a href="#"><i class="material-icons" onclick="M.toast({html: 'Trabajo en progreso'})">lightbulb_outline</i></a></li>
 			  
 			</ul>
 	  </div>
@@ -528,8 +529,8 @@
 
     <script type="text/javascript" src="js/dark.js">	</script>
 	
-	<script src="cordova.js"></script>
-	<script type="text/javascript" src="pwabuilder-sw-register.js"></script>
+	<script src="../../cordova.js"></script>
+
 	
 
 

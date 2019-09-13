@@ -13,7 +13,7 @@ document.addEventListener('deviceready', function(){
 $('.dropdown-trigger').dropdown({ constrainWidth: false, alignment:'left',closeOnClick:false });
 
 
-
+$('.trigger2').dropdown({ alignment:'right'});
 
 var modal
 
@@ -35,6 +35,8 @@ $(document).ready(function(){
 	if(localStorage.getItem('formulas-fisica') && fisica){
 
 		storage.html(localStorage.getItem('formulas-fisica'))
+		head = lang == "en" ? "Formulas and equations" : "Fórmulas y Ecuaciones";
+		$(".card-formulas").find('#head').html(head);
 
 	}
 
@@ -201,8 +203,7 @@ function formule(){
 	}
 	
 	currentPage = 'formulas';
-	head = lang == "en" ? "Formulas and equations" : "Fórmulas y Ecuaciones";
-	$("#head").html(head);
+	
 }
 
 function learn(){

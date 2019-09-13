@@ -20,7 +20,7 @@
 
 		<meta name="apple-mobile-web-app-title" content="Accurate">
 
-  <title>Calculator++</title>
+  <title>Accurate</title>
 
    <!--Import Google Icon Font-->
     
@@ -133,7 +133,7 @@
         <!-- Dropdown Structure -->
         <ul id='dropdown4' class='dropdown-content '>
           <li><a href="#!">English</a></li>
-          <li><a href="lang/es/credits.html">Español</a></li>
+          <li><a href="lang/es/credits.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')">Español</a></li>
           
         </ul>
       </li>
@@ -173,8 +173,10 @@
     
                 </a>
               </li>
-    
-              <li><a href="#" class="topic black-text active red darken-4"><i class="material-icons">help</i>Credits</a></li>
+              <li><a class="topic black-text selectedLanguage"href="#"><i class="material-icons">language</i>English</a></li>
+              <li><a class="topic black-text" href="lang/es/credits.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')"><i class="material-icons">language</i>Español</a></li>
+              
+              <li><a href="#" class="topic black-text "><i class="material-icons">help</i>Credits</a></li>
             
             </ul>
     

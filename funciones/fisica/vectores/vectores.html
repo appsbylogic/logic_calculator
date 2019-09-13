@@ -150,7 +150,7 @@
       <!-- Dropdown Structure -->
       <ul id='dropdown4' class='dropdown-content '>
         <li><a href="#!">English</a></li>
-        <li><a href="../../../lang/es/funciones/fisica/vectores/vectores.html">Español</a></li>
+        <li><a href="../../../lang/es/funciones/fisica/vectores/vectores.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')">Español</a></li>
         
       </ul>
     </li>
@@ -188,8 +188,10 @@
   
         </a>
         </li>
-        <li><a class="topic black-text selectedLanguage"href="#"><i class="material-icons">language</i>English</a></li>
-        <li><a class="topic black-text" href="../../../lang/es/funciones/fisica/pitagoras/pitagoras.html"><i class="material-icons">language</i>Español</a></li>
+         <li><a class="topic black-text selectedLanguage"href="#"><i class="material-icons">language</i>English</a></li>
+        <li><a class="topic black-text" href="../../../lang/es/funciones/fisica/pitagoras/pitagoras.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')"><i class="material-icons">language</i>Español</a></li>
+       
+        
         <li><a href="../../../credits.html" class="topic black-text"><i class="material-icons">help</i>Credits</a></li>
       
       </ul>
@@ -259,9 +261,13 @@
  
                </div>
         		<div class="row">
-        		  <a class="red waves-effect waves-light btn-large" onclick="anadir()">Add</a>
 
-              <a class="red waves-effect waves-light btn-large right disabled" id="calculate_button" onclick="calcular()">Calculate</a>
+              <div class="col s12">
+   
+                <a class="red waves-effect waves-light btn-large btn-round" onclick="anadir()">Add</a>
+
+                <a class="red waves-effect waves-light btn-large right disabled  btn-round" id="calculate_button" onclick="calcular()">Calculate</a>
+              </div>
 
         		</div>
 

@@ -52,6 +52,10 @@
 
     	}
 
+        #reduce{
+            display: none;
+        }
+
       .result_card{
 
         display: none;
@@ -81,6 +85,10 @@ display: block;
     		
 
     	}
+
+        ul.dropdown-content.select-dropdown li span {
+            color: #ef5350 !important;
+        }
 
     </style>
 
@@ -210,94 +218,147 @@ display: block;
 
 	<div class="container" id="solve">
 
-      <h4 id="head">Second Grade Equations</h4>
-					
-		<div class="row">
-			
-			<div class="col s12">
-				
-				<div class="card">
-					
-					<div class="card-content">
-
-					
-      					
-            <h5 id="preview"><b>x<sup>2</sup> = 0</b></h5>      
-
-				</div>
-
-			</div>
-
-		</div>
-
-    <div class="row">
-      
-      <div class="col s12">
+      <h4 id="head">Fractions</h4>
+      <div class="row">
         
-        <div class="card">
-          
-          <div class="card-content">
+        <div class="col s12">
+            
+            <div class="card">
+            
+            <div class="card-content">
 
-            <h5>Insert your values</h5>
-
-            <div class="row">
                 
-              <div class="input-field col s4">
-                <input  id="a" type="number" class="topic" >
-                <label for="a">a</label>
-              </div>
 
-              <div class="input-field col s4">
-                <input  id="b" type="number" class="topic" >
-                <label for="b">b</label>
-              </div>
+                <h5>Insert your values</h5>
 
-              <div class="input-field col s4">
-                <input  id="c" type="number" class="topic" >
-                <label for="c">c</label>
-              </div>
+                <div class="row">
 
-              
+                    <div class="input-field  col s12 l6 ">
+                        <select class="option ">
+                            <option value="1" class="topic black-text" >Solve</option>
+                            <option value="2" class="topic black-text" >Reduce</option>
+                            
+                        </select>
+                                
+                    </div>
+                </div>
+
+                <div id="firstOption">
+
+                    <div class="row" style="margin-bottom: 0px;">
+                        
+                        <div class="input-field col s5 m2">
+                            <input  id="a1" type="number" class="topic" >
+                            <label for="a1">Numerator</label>
+                        </div>
+                        <div class="col s2 m1 center">
+                                
+
+                        </div>
+                        
+                        <div class="input-field col s5 m2">
+                            <input  id="a2" type="number" class="topic" >
+                            <label for="a2">Numerator</label>
+                        </div>
+
+                    
+                    </div>
+
+                
+
+                    <div class="row">
+                        
+                            <div class="input-field col s5 m2">
+                                <input  id="b1" type="number" class="topic" >
+                                <label for="b1">Denominator</label>
+                            </div>
+                            
+
+                            <div class="col s2 m1 center" style="padding: 0px !important;">
+                                    <a class=" dropdown-trigger btn btn-floating red" data-target='operation' ><b id="operationSymbol">+</b></a>
+
+                                    <ul id='operation' class='dropdown-content'>
+                                            <li><a class="topic black-text" href="#!" onclick="changeOperation('+')">+</a></li>
+                                            <li><a class="topic black-text" href="#!" onclick="changeOperation('-')">-</a></li>
+                                            <li><a class="topic black-text" href="#!" onclick="changeOperation('×')">×</a></li>
+                                            <li><a class="topic black-text" href="#!" onclick="changeOperation('÷')">÷</a></li>
+                                        
+                                        </ul>
+        
+                            </div>
+            
+                        
+        
+                            <div class="input-field col s5 m2">
+                                <input  id="b2" type="number" class="topic" >
+                                <label for="b2">Denominator</label>
+                            </div>
+        
+                        
+                        </div>
+
+                </div>
+
+                <div id="reduce">
+
+                    <div class="row">
+
+                        <div class="input-field col s5 m2">
+                                <input  id="reduceNum" type="number" class="topic" >
+                                <label for="reduceNum">Numerator</label>
+                        </div>
+    
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s5 m2">
+                                <input  id="reduceDen" type="number" class="topic" >
+                                <label for="reduceDen">Denominator</label>
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+
+                <div class="row">
+                    
+                    <div class="col s12 l6">
+                    
+                    <ul class="collapsible" >
+                    <li>
+                    <div class="collapsible-header topic"><i class="material-icons ">help</i>Help</div>
+                    <div class="collapsible-body" ><span><ul>
+                        
+
+
+                        <li><blockquote>a = cuadratic coefficient</blockquote></li>
+
+                        <li><blockquote>b = linear coefficient</blockquote></li>
+
+                        <li><blockquote>c = free term</blockquote></li>
+
+                    </ul></span></div>
+                    </li>
+
+                </ul>
+
+                </div>
+
+                </div>   
+                <div class="row">
+
+                <div class="col s12">
+                    <a class="red waves-effect waves-light btn-large btn-round" onclick="calcular()">Calculate</a>
+
+                </div>
+                
+
+                </div>    
 
             </div>
-            <div class="row">
-                
-                <div class="col s12 l6">
-                 
-                 <ul class="collapsible" >
-                 <li>
-                   <div class="collapsible-header topic"><i class="material-icons ">help</i>Help</div>
-                   <div class="collapsible-body" ><span><ul>
-                     
-
-
-                     <li><blockquote>a = cuadratic coefficient</blockquote></li>
-
-                     <li><blockquote>b = linear coefficient</blockquote></li>
-
-                     <li><blockquote>c = free term</blockquote></li>
-
-                   </ul></span></div>
-                 </li>
-
-               </ul>
-
-               </div>
-
-             </div>   
-            <div class="row">
-
-              <div class="col s12">
-                  <a class="red waves-effect waves-light btn-large btn-round" onclick="calcular()">Calculate</a>
-
-              </div>
-              
-
-            </div>    
 
         </div>
-
-      </div>
 
     </div>
 
@@ -311,15 +372,8 @@ display: block;
             
             <h4>Result</h4>
 
-            <blockquote id="discriminante"></blockquote>
-
             <blockquote id="resultado"></blockquote>
 
-            <blockquote id="vertex"></blockquote>
-
-            <blockquote id="x-int"></blockquote>
-
-            <blockquote id="y-int"></blockquote>
 
           </div>
 
@@ -341,7 +395,7 @@ display: block;
   <script type="text/javascript" src="solve.js"></script>
 
   <script type="text/javascript" src="../../../js/dark.js"></script>
-
+  <script type="text/javascript" src="../../../js/math.js"></script>
 
 </body>
 </html>

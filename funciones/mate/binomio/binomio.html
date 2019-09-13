@@ -4,14 +4,13 @@
 
 	
 
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="icon" href="../../../img/favicon (2).ico">
-
     <meta name="apple-mobile-web-app-capable" content="yes">
 
 		<link rel="apple-touch-icon" href="../../../img/icon.png">
@@ -37,20 +36,23 @@
 
     		background-color: #fcfcfc;
 
-       
     	}
 
-      
-     
+    	#formulas{
+
+    		opacity: 0;
+
+    		position: absolute;
+    		
+    		left: 50%;
+
+    		transform: translateX(-50%);
+
+    		transition: all 0.4s ease;
+
+    	}
+
       .result_card{
-
-        display: none;
-
-        transition: all .5s ease;
-
-      }
-
-      .array_card{
 
         display: none;
 
@@ -58,10 +60,9 @@
 
       .show{
 
-        display: block;
+      display: block;
       }
 
-   
 
      .input-field input:focus {
         border-bottom: 1px solid #e57373 !important;
@@ -80,45 +81,6 @@
     		
 
     	}
-      .back{
-        
-        margin-top: 40px;
-        
-
-      }
-
-      .backBtn{
-        box-shadow: 0px 1px 6px rgba(128, 128, 128, 0.507);
-        text-shadow: 1px 1px 5px grey;
-        background:#ff5252;
-        padding: 2px;
-        border-radius: 100px;
-
-        user-select: none;
-
-      }
-
-      .disBtn{
-        background:rgba(167, 167, 167, 0.616) !important;
-        text-shadow: none !important;
-        color: rgba(136, 136, 136, 0.493);
-        cursor:unset;
-
-      }
-
-      .clearBtn{
-
-        margin-left: 5px;
-        box-shadow: 0px 1px 6px rgba(128, 128, 128, 0.507);
-        text-shadow: 1px 1px 5px grey;
-        background:#ff5252;
-        padding: 2px;
-        border-radius: 100px;
-
-        user-select: none;
-
-      }
-
 
     </style>
 
@@ -188,7 +150,7 @@
         <!-- Dropdown Structure -->
         <ul id='dropdown4' class='dropdown-content '>
           <li><a href="#!">English</a></li>
-          <li><a href="../../../lang/es/funciones/mate/estadistica/estadistica.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')">Español</a></li>
+          <li><a href="../../../lang/es/funciones/mate/binomio/binomio.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')">Español</a></li>
           
         </ul>
       </li>
@@ -227,7 +189,7 @@
                 </a>
               </li>
               <li><a class="topic black-text selectedLanguage"href="#"><i class="material-icons">language</i>English</a></li>
-              <li><a class="topic black-text" href="../../../lang/es/funciones/mate/estadistica/estadistica.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')"><i class="material-icons">language</i>Español</a></li>
+              <li><a class="topic black-text" href="../../../lang/es/funciones/mate/binomio/binomio.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')"><i class="material-icons">language</i>Español</a></li>
               <li><a href="../../../credits.html" class="topic black-text"><i class="material-icons">help</i>Credits</a></li>
             
             </ul>
@@ -248,155 +210,140 @@
 
 	<div class="container" id="solve">
 
-    <h4 id="head">Basic Statistic</h4>
-					
-		<div class="row">
-			
-			<div class="col s12">
-				
-				<div class="card">
-					
-					<div class="card-content">
+        <h4 id="head">Binomial Theorem</h4>
 
-						<div class="row">
+        <div class="row">
 
-						<h5>Insert your values</h5>
+            <div class="col s12">
 
-           
+                <div class="card">
 
-						<div class="input-field col s9 l6 ">
-         					<input  id="input" type="number" class="topic" onfocus="this.value=''" >
-          					<label for="vector">Data</label>
+                    <div class="card-content">
+
+                        <h5 id="preview"><b>(a + b)<sup>2</sup></b></h5>
+
+                    </div>
+
                 </div>
-                
-              <div class="back white-text  ">
-                <i class="material-icons backBtn waves-effect waves-light" onclick="remove()">chevron_left</i>
-                <i class="material-icons clearBtn waves-effect waves-light disBtn" onclick="removeAll()">clear</i></div>
-              
 
-						</div>
-						
-             
+            </div>
+
+
+        </div>
+
+        <div class="row">
+
+            <div class="col s12">
+
+                <div class="card">
+
+                    <div class="card-content">
+                        
+                        <h5>Insert your values</h5>
+
+                        <div class="row">
+
+                            <div class="input-field col s4">
+                                <textarea  id="a"  class="topic materialize-textarea">a</textarea>
+                                <label for="a">First term</label>
+                            </div>
+
+                            <div class="input-field col s4">
+                                <textarea  id="b" type="number" class="topic materialize-textarea" >b</textarea>
+                                <label for="b">Second term</label>
+                            </div>
+
+                            <div class="input-field col s4">
+                                <textarea  id="e" class="topic materialize-textarea">2</textarea>
+                                <label for="e">Exponent</label>
+                            </div>
+
+                            
+
+                        </div>
+                        
+                        <br>
+
+                        <div class="row">
+                
+                            <div class="col s12 l6">
+                                
+                                <ul class="collapsible" >
+                                    <li>
+                                        <div class="collapsible-header topic"><i class="material-icons ">help</i>Help</div>
+                                        <div class="collapsible-body" >
+                                            <ul>
+                                            
+                    
+                    
+                                                <li><blockquote>Add the values of the binomial on the first two lines, then add the value of the exponent on the third line and then click on calculate to get the first 6 terms of the binomial</blockquote></li>
+                        
+                                                
+                    
+                                            </ul>
+                                        </div>
+                                    </li>
             
-
-              <div class="row">
-                
-                 <div class="col s12 l6">
-                  
-                  <ul class="collapsible" >
-                  <li>
-                    <div class="collapsible-header topic"><i class="material-icons ">help</i>Help</div>
-                    <div class="collapsible-body" ><span><ul>
-                      
-
-
-                      <li><blockquote>Add your values to calculate the average, average deviation, standard deviation, the variance, the median and the mode of the given data.</blockquote></li>
-                  
-
-                    </ul></span></div>
-                  </li>
-
-                </ul>
-
-                </div>
-
-              </div>
-
+                                </ul>
+            
+                            </div>
                
-        			
+                        </div>
 
-        		<div class="row">
+                        <div class="row">
+                            
+                            <div class="col s12">
 
-              <div class="col s12">
+                                <a class="red waves-effect waves-light btn-large btn-round" onclick="calcular()">Calculate</a>
 
-
+                            </div>
+                            
+                            
               
-                <a class="red waves-effect waves-light btn-large  btn-round" onclick="add()">Add</a>
-                
-                
-                
-                <a class="red waves-effect right waves-light btn-large disabled  btn-round" onclick="calcular()">Calculate</a>
-              </div>
-              
-
-        		</div>
-
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-  </div>
-  
-  <div class="container array_card">
-
-    <div class="row">
-
-      <div class="col s12">
-
-        <div class="card">
-
-
-          <div class="card-content">
-
-            <h4>Data</h4>
-
-            <blockquote class="values"><b>Values: </b></blockquote>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="container result_card" >
-    
-    <div class="row">
-      
-      <div class="col s12">
+                        </div>
+               
         
-        <div class="card">
-          
-          <div class="card-content">
+        
+                    </div>
             
-            <h4>Result</h4>
-
-            <blockquote class="promedio"></blockquote>
-            <blockquote class="mediana"></blockquote>
-            <blockquote class="moda"></blockquote>
-            <blockquote class="varianza"></blockquote>
-            <blockquote class="desviacionM"></blockquote>
-            <blockquote class="desviacionS"></blockquote>
-
-            
-
-          </div>
+                </div>
+            </div>
 
         </div>
 
-      </div>
+        <div class="row result_card">
+      
+            <div class="col s12">
+              
+              <div class="card" >
+                
+                <div class="card-content">
+                  
+                  <h4>Result</h4>
+      
+                  <blockquote id="result"></blockquote>
+      
+                  
+      
+                </div>
+      
+              </div>
+      
+            </div>
+      
+          </div>
+       
+	</div>
 
-    </div>
 
-  </div>
-    
- 
-    <script src="../../../js/materialize.js"></script>
+   <script src="../../../js/materialize.js"></script>
 
-   <script type="text/javascript" src="../../../index.js"> </script>
-
+    <script type="text/javascript" src="../../../index.js"> </script>
 
   <script type="text/javascript" src="solve.js"></script>
 
   <script type="text/javascript" src="../../../js/dark.js"></script>
+  <script type="text/javascript" src="../../../js/math.js"></script>
 
 
 </body>
