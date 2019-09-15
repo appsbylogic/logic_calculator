@@ -280,6 +280,58 @@ function cambiarUnidades(value){
                 `)
     
             break;
+
+            case 'time':
+                unidadE(hour,'hr')
+                unidadS(second,'s')
+                temp = false;
+                $('#dropdownConversions').html(`
+                <li><a class="topic black-text " href="#!" onclick="unidadE(year, 'yr')">Años</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadE(day, 'd')">Días</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadE(hour, 'hr')">Horas</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadE(min, 'min')">Minutos</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadE(second, 's')">Segundos</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadE(ms, 'ms')">Milisegundos</a></li>
+                
+                
+                
+                
+                
+                `)
+        
+                $('#dropdownConversions2').html(`
+                <li><a class="topic black-text " href="#!" onclick="unidadS(year, 'yr')">Años</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadS(day, 'd')">Días</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadS(hour, 'hr')">Horas</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadS(min, 'min')">Minutos</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadS(second, 's')">Segundos</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadS(ms, 'ms')">Milisegundos</a></li>
+                
+                `)
+    
+            break;
+    
+            case 'deg':
+                unidadE(deg,'deg')
+                unidadS(rad,'rad')
+                temp = false;
+                $('#dropdownConversions').html(`
+                <li><a class="topic black-text " href="#!" onclick="unidadE(deg, 'deg')">Grados sexagesimales</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadE(rad, 'rad')">Radianes</a></li>
+            
+                
+                
+                
+                
+                `)
+        
+                $('#dropdownConversions2').html(`
+                <li><a class="topic black-text " href="#!" onclick="unidadS(deg, 'deg')">Grados sexagesimales</a></li>
+                <li><a class="topic black-text " href="#!" onclick="unidadS(rad, 'rad')">Radianes</a></li>
+        
+                `)
+    
+            break;
                     
     
     }
@@ -454,6 +506,59 @@ function cambiarUnidades(value){
                 `)
     
             break;
+
+            case 'time':
+                unidadE(hour,'hr')
+                unidadS(second,'s')
+                temp = false;
+                $('#dropdownConversions').html(`
+                <li><a class="topic white-text " href="#!" onclick="unidadE(year, 'yr')">Años</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadE(day, 'd')">Días</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadE(hour, 'hr')">Horas</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadE(min, 'min')">Minutos</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadE(second, 's')">Segundos</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadE(ms, 'ms')">Milisegundos</a></li>
+                
+                
+                
+                
+                
+                `)
+        
+                $('#dropdownConversions2').html(`
+                <li><a class="topic white-text " href="#!" onclick="unidadS(year, 'yr')">Años</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadS(day, 'd')">Días</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadS(hour, 'hr')">Horas</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadS(min, 'min')">Minutos</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadS(second, 's')">Segundos</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadS(ms, 'ms')">Milisegundos</a></li>
+                
+                `)
+    
+            break;
+    
+            case 'deg':
+                unidadE(deg,'deg')
+                unidadS(rad,'rad')
+                temp = false;
+                $('#dropdownConversions').html(`
+                <li><a class="topic white-text " href="#!" onclick="unidadE(deg, 'deg')">Grados sexagesimales</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadE(rad, 'rad')">Radianes</a></li>
+            
+                
+                
+                
+                
+                `)
+        
+                $('#dropdownConversions2').html(`
+                <li><a class="topic white-text " href="#!" onclick="unidadS(deg, 'deg')">Grados sexagesimales</a></li>
+                <li><a class="topic white-text " href="#!" onclick="unidadS(rad, 'rad')">Radianes</a></li>
+        
+                `)
+    
+            break;
+       
                     
     
     }

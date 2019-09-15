@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	
+
+  <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="../../../img/favicon (2).ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+		<link rel="apple-touch-icon" href="../../../img/icon.png">
+
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="apple-mobile-web-app-title" content="Accurate">
+
+  <title>Accurate</title>
+
+   <!--Import Google Icon Font-->
+    
+
+    <link rel="stylesheet" href="../../../css/materialize.css">
+
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../../../css/index.css">
+
+    <style type="text/css">
+    	
+    	html{
+
+    		background-color: #fcfcfc;
+
+    	}
+
+    	#formulas{
+
+    		opacity: 0;
+
+    		position: absolute;
+    		
+    		left: 50%;
+
+    		transform: translateX(-50%);
+
+    		transition: all 0.4s ease;
+
+    	}
+
+      .result_card{
+
+        display: none;
+
+      }
+
+      .show{
+
+      display: block;
+      }
+
+
+     .input-field input:focus {
+        border-bottom: 1px solid #e57373 !important;
+        box-shadow: 0 1px 0 0 #e57373 !important;
+      }
+
+      .input-field input[type=number]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+        color: #ef5350 !important;
+      }
+
+
+    	.navbar-fixed{
+
+    		height: 110px;
+
+    		
+
+    	}
+
+    </style>
+
+</head>
+<body>
+
+
+  <ul class="sidenav" id="mobile-demo">
+
+    <!--<li>
+  
+      <div class="user-view">
+    
+        <div class="background">
+      
+          <img src="https://images2.alphacoders.com/601/601814.jpg">
+
+        </div>
+
+        <a href="">
+      
+          <img src="img/foto.jpg" class="circle">
+
+        </a>
+
+        <a href="">
+      
+          <span class="name white-text">Fernando Maldonado </span>
+
+        </a>
+
+        <a href="">
+      
+          <span class="email white-text">fmaldonado824@gmail.com </span>
+
+        </a>
+      </div>
+
+    </li>-->
+      <br>
+      
+      <li><a class="red-text"><h5>Accurate</h5></a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader topic">Secciones</a></li>
+      <li><a href="../../../calculator.html" class="waves-effect topic "><i class="material-icons ">exposure</i>Calculadora</a></li>
+    <li><a href="../../../index.html" class="waves-effect topic "><i class="material-icons ">school</i>Física</a></li>
+    <li><a href="#" class="waves-effect topic selectedTopic red-text text-darken-1"><i class="material-icons red-text text-darken-1 ">exposure_plus_1</i>Matemáticas</a></li>
+
+    <li><div class="divider"></div></li>
+    <li><a class="subheader topic">Opciones</a></li>
+    <li>
+
+  <a class="switch topic" onclick="darkToggle()">
+      Modo Oscuro <i class="material-icons">brightness_2</i>
+    <label>
+    <input type="checkbox" id='darkSwitch' onclick="darkToggle()">
+    <span class="lever"></span>
+    
+    </label>
+
+
+  </a>
+
+  </li>
+
+  <li><a class='dropdown-trigger trigger2' href='#' data-target='dropdown4'><i class="material-icons">language</i><span class="containerDrop topic">Español</span></a>
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdown4' class='dropdown-content '>
+      
+      <li><a href="#!" class="topic">Español</a></li>
+      <li><a class="topic" href="../../../../../funciones/mate/areaP/areaP.html" onclick="localStorage.setItem('language','en'), console.log('asasd')">English</a></li>
+      
+    </ul>
+  </li>
+
+  <li><a class="subheader topic">Información y ayuda</a></li>
+
+   <li class="sidenav-footer"><a href="../../../credits.html" class="topic"><i class="material-icons">help</i> Créditos</a></li>
+
+
+
+</ul>
+
+<div class="navbar-fixed ">
+
+  <nav class="nav-extended ">
+
+    <div class="nav-wrapper  red darken-1">
+      <a href="#!" class="brand-logo">Accurate</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul  class="right hide-on-med-and-down">
+        <li><a href="../../../index.html" class="">Física</a></li>
+        <li><a href="#" class="active red darken-4">Matemáticas</a></li>
+        <li><a href="../../../calculator.html"  >Calculadora</a></li>
+        <li> <a class='dropdown-trigger ' href='#' data-target='dropdown1'><i class="material-icons">settings</i></a></li>
+
+        <ul id='dropdown1' class='dropdown-content' constrainWidth="false" style="width: 1000px !important">
+          <li>
+            <a class="switch topic black-text" data-constrainWidth="false" onclick="darkToggle()">
+                Modo Oscuro<i class="material-icons">brightness_2</i>
+              <label>
+                 <input type="checkbox" id='darkSwitch_pc' onclick="darkToggle()">
+                <span class="lever"></span>
+    
+              </label>
+
+
+            </a>
+          </li>
+          <li><a class="topic black-text"href="../../../../../funciones/mate/areaP/areaP.html" onclick="localStorage.setItem('language','en'), console.log('asasd')"><i class="material-icons">language</i>English</a></li>
+          <li><a class="topic black-text selectedLanguage "><i class="material-icons">language</i>Español</a></li>
+          
+          <li><a href="../../../credits.html" class="topic black-text"><i class="material-icons">help</i>Créditos</a></li>
+        
+        </ul>
+
+      </ul>
+
+    </div>
+
+    <div class="nav-content red accent-2">
+      <ul class="tabs tabs-transparent">
+          <li class="tab "><a href="../../../math.html" target="_self" class="medium white-text" ><i class=" material-icons  left">chevron_left</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+</div>
+	<div class="container" id="solve">
+
+        <h4 id="head">Área y perímetro</h4>
+
+        <div class="row">
+
+        <table class="responsive-table navBarConversions">
+
+            <tbody>
+
+                <tr>
+
+                    <td><h6><a style=" z-index:0 !important;"class="waves-effect waves-light btn-small red lighten-1" onclick="changeInput('square')">Cuadrado</a></h6></td>
+
+                </tr>
+                <tr>
+
+                    <td><h6><a style=" z-index:0 !important;" class="waves-effect waves-light btn-small red lighten-1"  onclick="changeInput('rectangle')">Rectángulo</a></h6></td>
+    
+                </tr>
+                <tr>
+
+                    <td><h6><a style=" z-index:0 !important;" class="waves-effect waves-light btn-small red lighten-1" onclick="changeInput('triangle')">Triángulo Equilátero</a></h6></td>
+
+                </tr>
+                <tr>
+
+                    <td><h6><a style=" z-index:0 !important;" class="waves-effect waves-light btn-small red lighten-1" onclick="changeInput('circle')">Círculo</a></h6></td>
+
+                </tr>
+                <tr>
+
+                    <td><h6><a style=" z-index:0 !important;" class="waves-effect waves-light btn-small red lighten-1" onclick="changeInput('rhombus')">Rombo</a></h6></td>
+
+                </tr>
+
+                <tr>
+
+                    <td><h6><a style=" z-index:0 !important;" class="waves-effect waves-light btn-small red lighten-1" onclick="changeInput('trapeze')">Trapecio</a></h6></td>
+    
+                </tr>
+                
+                <tr>
+
+                    <td><h6><a style=" z-index:0 !important;" class="waves-effect waves-light btn-small red lighten-1" onclick="changeInput('polygon')">Polígono</a></h6></td>
+    
+                </tr> 
+
+            </tbody>
+
+        </table>
+
+  
+
+            
+
+       
+
+        <div class="row">
+
+            <div class="col s12">
+
+                <blockquote><b class="figureName topic">Cuadrado</b></blockquote>
+
+            </div>
+
+            
+
+            <div class="col s12">
+
+                <div class="card">
+
+                    <div class="card-content">
+
+                       
+
+                        <h5>Ingresa tus valores</h5>
+
+                        <div class="inputs">
+
+                            <div class="row">
+
+                                <div class="input-field col s12 m6">
+
+                                    <input id="lado" type="number" >
+                                    <label for="lado">Lado</label> 
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                
+                                <div class="col s12 l6">
+                                    
+                                    <ul class="collapsible" >
+                                        <li>
+                                            <div class="collapsible-header topic"><i class="material-icons ">help</i>Ayuda</div>
+                                            <div class="collapsible-body" >
+                                                <ul>
+                                                
+                        
+                        
+                                                    <li><blockquote>Ingresa los valors solicitados para calcular el área y perímetro de la figura seleccionada.</blockquote></li>
+                            
+                                                    
+                        
+                                                </ul>
+                                            </div>
+                                        </li>
+                
+                                    </ul>
+                
+                                </div>
+                   
+                            </div>
+    
+
+                        <div class="row">
+
+                            <div class="col s12">
+
+                                <a class="red waves-effect waves-light btn-large btn-round" onclick="calcular()">Calcular</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row result_card">
+      
+            <div class="col s12">
+                
+                <div class="card" >
+                
+                <div class="card-content">
+                    
+                    <h4>Result</h4>
+        
+                    <blockquote id="area"></blockquote>
+                    <blockquote id="perimetro"></blockquote>
+                    
+        
+                </div>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+        
+
+       
+	</div>
+
+
+   <script src="../../../js/materialize.js"></script>
+
+    <script type="text/javascript" src="../../../index.js"> </script>
+
+  <script type="text/javascript" src="solve.js"></script>
+
+  <script type="text/javascript" src="../../../js/dark.js"></script>
+  <script type="text/javascript" src="../../../js/math.js"></script>
+
+
+</body>
+</html>

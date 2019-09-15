@@ -47,3 +47,17 @@ let kb = .0009765625
 let  mb = 1;
 let gb = 1024;
 let tb = 1048576
+
+// TIEMPO
+let year = 8760.007008;
+let day = 24;
+let ms = 2.77778e-7;
+let min = 0.01666669;
+let hour = 1
+let second = 0.000277778
+
+// GRADOS
+
+let deg = 1;
+
+let rad = 57.29580406904963;

@@ -63,7 +63,16 @@ function calcular(){
         
         let fraction2 = num2.val() + '/' + den2.val()
 
+        if(num1.val() == '' || num2.val() == '' || den1.val() == '' || den2.val() == ''){
+            $("#resultado").html("<b>Result:</b> " +resultado);
+
+            return
+
+        }
+
         switch($("#operationSymbol").html()){
+
+            
 
             case "+":
             resultado =  math.fraction(math.add(math.fraction(fraction1), math.fraction(fraction2)))
@@ -90,7 +99,12 @@ function calcular(){
 
     }else{
         
+        if($("#reduceNum").val() == '' || $("#reduceDen").val() == ''){
+            $("#resultado").html("<b>Result:</b> " +resultado);
 
+            return
+
+        }
         resultado = reduce($("#reduceNum").val(), $("#reduceDen").val())
 
         $("#resultado").html("<b>Result:</b> " + resultado[0] + "/" + resultado[1]);

@@ -76,7 +76,9 @@ display: block;
       .input-field input[type=number]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
         color: #ef5350 !important;
       }
-
+      .select-dropdown {
+    color: #9e9e9e;
+}
 
     	.navbar-fixed{
 
@@ -153,12 +155,12 @@ display: block;
       </a>
     
       </li>
-      <li><a class='dropdown-trigger trigger2' href='#' data-target='dropdown4'><i class="material-icons">language</i><span class="containerDrop">English</span></a>
+      <li><a class='dropdown-trigger trigger2' href='#' data-target='dropdown4'><i class="material-icons">language</i><span class="containerDrop topic">English</span></a>
 
         <!-- Dropdown Structure -->
         <ul id='dropdown4' class='dropdown-content '>
-          <li><a href="#!">English</a></li>
-          <li><a href="../../../lang/es/funciones/mate/cuadratica/cuadratica.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')">Español</a></li>
+          <li><a class="topic" href="#!">English</a></li>
+          <li><a class="topic" href="../../../lang/es/funciones/mate/fracciones/fracciones.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')">Español</a></li>
           
         </ul>
       </li>
@@ -197,7 +199,7 @@ display: block;
                 </a>
               </li>
               <li><a class="topic black-text selectedLanguage"href="#"><i class="material-icons">language</i>English</a></li>
-              <li><a class="topic black-text" href="../../../lang/es/funciones/mate/cuadratica/cuadratica.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')"><i class="material-icons">language</i>Español</a></li>
+              <li><a class="topic black-text" href="../../../lang/es/funciones/mate/fracciones/fracciones.html"  onclick="localStorage.setItem('language','es'), console.log('asasd')"><i class="material-icons">language</i>Español</a></li>
               <li><a href="../../../credits.html" class="topic black-text"><i class="material-icons">help</i>Credits</a></li>
             
             </ul>
@@ -332,11 +334,8 @@ display: block;
                         
 
 
-                        <li><blockquote>a = cuadratic coefficient</blockquote></li>
+                        <li><blockquote>Select what you want to do, solve or reduce a fraction, then add the values of the numerator and denominator of the fractions and click Calculate.</blockquote></li>
 
-                        <li><blockquote>b = linear coefficient</blockquote></li>
-
-                        <li><blockquote>c = free term</blockquote></li>
 
                     </ul></span></div>
                     </li>

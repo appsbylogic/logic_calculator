@@ -244,7 +244,7 @@ $('.dropdown-trigger1').dropdown({
     onCloseStart: function(){
 
         console.log(derivada)
-        if(!activar){
+        if(!activar && lastIsExp && lastWasExp){
             lastWasExp = false
             lastIsExp = false
             derivada.pop()

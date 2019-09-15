@@ -45,7 +45,7 @@ function calcular(){
     perimetro = resultado[1];
 
     $("#area").html("<b>Area:</b> " + area);
-    $("#perimetro").html("<b>Perimetro:</b> " + perimetro)
+    $("#perimetro").html("<b>Perimeter:</b> " + perimetro)
     console.log(area + ' ' + perimetro)
 
 }

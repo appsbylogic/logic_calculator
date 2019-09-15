@@ -217,6 +217,8 @@ function addArray(){
 
     lastWasExp = lastIsExp
 
+    console.log(lastIsExp)
+
     if(!lastIsExp){
 
         derivada.push('^')
@@ -244,7 +246,7 @@ $('.dropdown-trigger1').dropdown({
     onCloseStart: function(){
 
         console.log(derivada)
-        if(!activar){
+        if(!activar && lastIsExp && lastWasExp){
             lastWasExp = false
             lastIsExp = false
             derivada.pop()

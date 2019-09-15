@@ -201,7 +201,7 @@ function changeInput(figure){
                 <div class="input-field col s12 m6">
 
                     <input id="radio" type="number" >
-                    <label for="radio">Radio</label> 
+                    <label for="radio">Radius</label> 
 
                 </div>
 

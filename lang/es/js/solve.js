@@ -152,7 +152,48 @@ function solve(){
         
         ans = eval(resolver)
     } catch (error) {
-   
+        
+        if(error.message == "Unary operator used immediately before exponentiation expression. Parenthesis must be used to disambiguate operator precedence"){
+            let storeNum = []
+            let storeExp = []
+            let addP1 = false;
+            let addP2 = false;
+            for(var i = operacion.length;i>=0;i--){
+
+                if(addP1){
+                    operacion.splice(i+2,0,")")
+                    addP1 = false;
+                }
+                
+                
+
+                if(operacion[i] == "**" || operacion[i] == "**2" || operacion[i] == "**3"){
+                    addP1 = true
+                }
+                if(operacion[i] == "-"){
+                    addP2 = true
+                }
+
+                if(addP2){
+                    operacion.splice(i+1,0,"(")
+                    addP2 = false;
+                    i=-1;
+                }
+                
+                
+
+            }
+
+            console.log(operacion)
+            resolver = operacion.join().replace(/,/g,'')
+            $('.blink').html(eval(resolver))
+            operacion = []
+            operacion.push(eval(resolver))
+
+            return;
+
+        }
+
         if(error.message == "Unexpected end of input" || "missing ) after argument list"){
             
             $('.blink').html(eval(resolver+")"))

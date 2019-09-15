@@ -114,13 +114,13 @@
 
         </li>
 
-        <li><a class='dropdown-trigger trigger2' href='#' data-target='dropdown4'><i class="material-icons">language</i><span class="containerDrop">Español</span></a>
+        <li><a class='dropdown-trigger trigger2' href='#' data-target='dropdown4'><i class="material-icons">language</i><span class="containerDrop topic">Español</span></a>
 
 			<!-- Dropdown Structure -->
 			<ul id='dropdown4' class='dropdown-content '>
 			  
-			  <li><a href="#!">Español</a></li>
-			  <li><a href="../../calculator.html" onclick="localStorage.setItem('language','en'), console.log('asasd')">English</a></li>
+			  <li><a class="topic" href="#!">Español</a></li>
+			  <li><a class="topic" href="../../calculator.html" onclick="localStorage.setItem('language','en'), console.log('asasd')">English</a></li>
 			  
 			</ul>
 		</li>
@@ -365,6 +365,17 @@
                 <tr>
 
                     <td><h6><a style=" z-index:0 !important;" class="waves-effect waves-light btn-small red lighten-1" onclick="cambiarUnidades('data')">Datos</a></h6></td>
+    
+                </tr> 
+                <tr>
+
+                    <td><h6><a style=" z-index:0 !important;" class="waves-effect waves-light btn-small red lighten-1" onclick="cambiarUnidades('time')">Tiempo</a></h6></td>
+    
+                </tr> 
+
+                <tr>
+
+                    <td><h6><a style=" z-index:0 !important;" class="waves-effect waves-light btn-small red lighten-1" onclick="cambiarUnidades('deg')">Grados</a></h6></td>
     
                 </tr> 
 
