@@ -261,7 +261,7 @@ document.addEventListener('keydown', function(e){
 
     }
     
-    if(e.key == '-' || e.key=='+' || e.key=='!' || e.key=='^' || e.key=='(' || e.key==')' || e.key=='%'){
+    if(e.key == '-' || e.key=='+' || e.key=='!' || e.key=='^' || e.key=='(' || e.key==')' || e.key=='%' || e.key=='0' || e.key=='.'){
 
         insertar(e.key)
 
