@@ -10,7 +10,7 @@ document.addEventListener('deviceready', function(){
 
 
 
-$('.dropdown-trigger').dropdown({ constrainWidth: false, alignment:'left',closeOnClick:false });
+$('.dropdown-trigger').dropdown({ constrainWidth: false, alignment:'left' });
 
 
 $('.trigger2').dropdown({ alignment:'right'});
