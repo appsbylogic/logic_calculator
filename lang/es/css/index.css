@@ -2,8 +2,7 @@
 html{
 
     background-color: #fcfcfc;
-
-
+  touch-action: manipulation;
 
 }
 
