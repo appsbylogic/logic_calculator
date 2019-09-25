@@ -62,7 +62,7 @@ if(isNaN(hypotenuse)){
 
 	if(hypotenuse===0){
 
-		resultado = leg_1*leg_1 + leg_2*leg_2;
+		resultado = leg_1**2 + (leg_2)**2;
 
 		angulo = (Math.atan(leg_1/leg_2))*180/Math.PI;
 
@@ -89,7 +89,7 @@ if(isNaN(hypotenuse)){
 
 	if(leg_1===0){
 
-		resultado = hypotenuse*hypotenuse - leg_2*leg_2;
+		resultado = hypotenuse*hypotenuse - (leg_2)**2;
 
 		resultado = Math.sqrt(resultado);
 
@@ -118,7 +118,7 @@ if(isNaN(hypotenuse)){
 
 	if(leg_2===0){
 
-		resultado = hypotenuse*hypotenuse - leg_1*leg_1;
+		resultado = hypotenuse*hypotenuse - (leg_1)**2;
 
 		resultado = Math.sqrt(resultado);
 
