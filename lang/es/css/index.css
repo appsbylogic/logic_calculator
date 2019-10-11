@@ -2,7 +2,9 @@
 html{
 
     background-color: #fcfcfc;
-  touch-action: manipulation;
+    -ms-touch-action: manipulation;	/* IE10  */
+    touch-action: manipulation;	
+
 
 }
 
@@ -121,10 +123,11 @@ overscroll-behavior: contain;
 }
 
 .border{
-
-    border-color: #161616;
+  background-color: #2b2c30;
+  border-color: #2b2c30;
 
 }
+
 
 .link{
 
@@ -149,10 +152,19 @@ font-weight: normal;
 
 }
 
+
 .grey.darken-5{
 
-    background-color: #161616 !important;
+  background-color: #161616 !important;
 
+}
+
+.grey.darken-bg{
+  background-color: #202125 !important;
+}
+
+.grey.darken-fg{
+  background-color: #2D2E32 !important;
 }
 
 .btn-round{

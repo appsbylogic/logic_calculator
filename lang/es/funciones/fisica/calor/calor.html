@@ -170,7 +170,13 @@
 	  <li><a class="subheader topic">Información y ayuda</a></li>
 	
 	   <li class="sidenav-footer"><a href="../../../credits.html" class="topic"><i class="material-icons">help</i> Créditos</a></li>
-	
+	   <li><a class='dropdown-trigger trigger2' href='#' data-target='dropdown5'><i class="material-icons">settings</i><span id="modeSelector" class="containerDrop topic">System theme</span></a>
+		<ul id='dropdown5' class='dropdown-content '>
+			<li><a href="#!" class="topic" onclick="localStorage.setItem('manual',false); setSystem()">Tema del sistema</a></li>
+			<li><a class="topic" onclick="localStorage.setItem('manual',true);setSystem()">Manual</a></li>
+			
+		  </ul>
+	</li>
 	
 	
 	</ul>

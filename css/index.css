@@ -3,7 +3,8 @@ html{
 
     background-color: #fcfcfc;
 
-  touch-action: manipulation;
+    -ms-touch-action: manipulation;	/* IE10  */
+    touch-action: manipulation;	
 
 }
 
@@ -107,7 +108,7 @@ overscroll-behavior: contain;
 }
 
 .selectedTopic{
-
+  
   background: rgb(244, 67, 54,0.25);
   border-radius: 20px;
   left: -15px;
@@ -126,8 +127,8 @@ overscroll-behavior: contain;
 }
 
 .border{
-
-    border-color: #161616;
+  background-color: #2b2c30;
+  border-color: #2b2c30;
 
 }
 
@@ -154,10 +155,19 @@ font-weight: normal;
 
 }
 
+
 .grey.darken-5{
 
-    background-color: #161616 !important;
+  background-color: #161616 !important;
 
+}
+
+.grey.darken-bg{
+  background-color: #202125 !important;
+}
+
+.grey.darken-fg{
+  background-color: #2D2E32 !important;
 }
 
 .btn-round{
@@ -218,6 +228,7 @@ font-weight: normal;
   animation: anim .3s forwards;
 
 }
+
 
 
 @keyframes anim {

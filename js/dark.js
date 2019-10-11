@@ -1,5 +1,30 @@
-var dark = JSON.parse(localStorage.getItem('dark')) ? localStorage.getItem('dark') : false
+var dark = window.matchMedia('(prefers-color-scheme: dark)').matches 
 
+setSystem();
+
+function setSystem(){
+	if(localStorage.getItem('manual')){
+
+		if(JSON.parse(localStorage.getItem('manual'))){
+			
+			$("#modeSelector").html("Manual")
+		}
+
+		if( JSON.parse(localStorage.getItem('manual')) && localStorage.getItem('dark')){
+			dark = JSON.parse(localStorage.getItem('dark'))
+			$("#modeSelector").html("Manual")
+		}else{
+			dark = window.matchMedia('(prefers-color-scheme: dark)').matches
+			$("#modeSelector").html("System theme (Android 10)")
+		}
+	
+	}else{
+		$("#modeSelector").html("System theme (Android 10)")
+	}
+	addDark();	
+}
+
+console.log()
 var img = dark ? "img/logic_fondo_black.png" : "img/logic_no_fodno.png"
 
 addDark()
@@ -18,14 +43,16 @@ function darkToggle(){
 	$('#darkSwitch_pc').prop('checked', dark)
 
 
-
+	console.log(dark)
 	localStorage.setItem('dark',dark)
 
 	$('#logo').attr("src",imgSrc)
 
 	console.log(localStorage.getItem('dark'))
 
-	$(".collapsible-header").toggleClass('grey darken-4')
+	
+
+	$(".collapsible-header").toggleClass('grey darken-fg')
 
 	$(".collapsible-header").toggleClass('border')
 
@@ -33,17 +60,17 @@ function darkToggle(){
 
 	$(".collapsible-body").toggleClass('border')
 
-	$(".dropdown-content").toggleClass('grey darken-4')
+	$(".dropdown-content").toggleClass('grey darken-fg')
 
-	$(".card").toggleClass('grey darken-4')
+	$(".card").toggleClass('grey darken-fg')
 
 	$(".card").toggleClass('white-text ')
 
-	$("html").toggleClass('grey darken-5')
+	$("html").toggleClass('grey darken-bg')
 
-	$(".content").toggleClass('grey darken-5')
+	$(".content").toggleClass('grey darken-bg')
 
-	$(".sidenav").toggleClass('grey darken-5')
+	$(".sidenav").toggleClass('grey darken-bg')
 
 	$(".material-icons").toggleClass('white-text')
 
@@ -68,13 +95,13 @@ if(dark){
 
 	$('#darkSwitch_pc').prop('checked', true)
 
-	$(".card").addClass('grey darken-4')
+	$(".card").addClass('grey darken-fg')
 
-	$(".dropdown-content").addClass('grey darken-4')
+	$(".dropdown-content").addClass('grey darken-fg')
 
-	$(".modal").addClass('grey darken-4')
+	$(".modal").addClass('grey darken-fg')
 
-	$(".modal-footer").addClass('grey darken-4')
+	$(".modal-footer").addClass('grey darken-fg')
 
 	$(".modal").addClass('white-text')
 
@@ -83,13 +110,13 @@ if(dark){
 
 	$(".card").addClass('white-text ')
 
-	$("html").addClass('grey darken-5')
+	$("html").addClass('grey darken-bg')
 
-	$(".content").addClass('grey darken-5')
+	$(".content").addClass('grey darken-bg')
 
-	$(".sidenav").addClass('grey darken-5')
+	$(".sidenav").addClass('grey darken-bg')
 
-	$(".collapsible-header").addClass('grey darken-4')
+	$(".collapsible-header").addClass('grey darken-fg')
 
 	$(".collapsible-header").addClass('border')
 
@@ -119,13 +146,13 @@ if(dark){
 
 	$('#darkSwitch_pc').prop('checked', false)
 
-	$(".card").removeClass('grey darken-4')
+	$(".card").removeClass('grey darken-fg')
 
-	$(".dropdown-content").removeClass('grey darken-4')
+	$(".dropdown-content").removeClass('grey darken-fg')
 
-	$(".modal").removeClass('grey darken-4')
+	$(".modal").removeClass('grey darken-fg')
 
-	$(".modal-footer").removeClass('grey darken-4')
+	$(".modal-footer").removeClass('grey darken-fg')
 
 	$(".modal").removeClass('white-text')
 
@@ -134,13 +161,13 @@ if(dark){
 
 	$(".card").removeClass('white-text ')
 
-	$("html").removeClass('grey darken-5')
+	$("html").removeClass('grey darken-bg')
 
-	$(".content").removeClass('grey darken-5')
+	$(".content").removeClass('grey darken-bg')
 
-	$(".sidenav").removeClass('grey darken-5')
+	$(".sidenav").removeClass('grey darken-bg')
 
-	$(".collapsible-header").removeClass('grey darken-4')
+	$(".collapsible-header").removeClass('grey darken-fg')
 
 	$(".collapsible-header").removeClass('border')
 
