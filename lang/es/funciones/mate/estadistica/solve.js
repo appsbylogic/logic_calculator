@@ -5,7 +5,7 @@ var promedio;
 var lastItem;
 function add(){
 
-    var number = parseInt(input.val())
+    var number = parseFloat(input.val())
 
    
 

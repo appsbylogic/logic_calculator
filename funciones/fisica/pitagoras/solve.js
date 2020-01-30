@@ -6,11 +6,11 @@ function calcular(){
 	$("html, body").animate({ scrollTop: $(document).height() }, 1000);
 	$('.result_card').addClass('show')
 
-	var leg_1 = parseInt(document.getElementById("a").value);
+	var leg_1 = parseFloat(document.getElementById("a").value);
 
-	var leg_2 = parseInt(document.getElementById("b").value);
+	var leg_2 = parseFloat(document.getElementById("b").value);
 
-	var hypotenuse = parseInt(document.getElementById("c").value);
+	var hypotenuse = parseFloat(document.getElementById("c").value);
 
 	var resul = document.getElementById("resultado");
 

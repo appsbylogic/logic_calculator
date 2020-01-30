@@ -69,6 +69,7 @@ overscroll-behavior: contain;
   font-feature-settings: 'liga';
 }
 
+
 .social {
   font-family: 'Social Media Circled';
 
@@ -109,13 +110,13 @@ overscroll-behavior: contain;
 
 .selectedTopic{
   
-  background: rgb(244, 67, 54,0.25);
+  background: rgba(244, 67, 54, 0.404);
   border-radius: 20px;
   left: -15px;
 }
 
 .selectedLanguage{
-  background: rgb(244, 67, 54,0.25);
+  background: rgba(255, 114, 104, 0.25);
 
 
 }
@@ -269,9 +270,11 @@ font-weight: normal;
   box-shadow: 0 1px 0 0 #e57373 !important;
 
 }
-
-* {
+*:not(input.field) {    
   -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 

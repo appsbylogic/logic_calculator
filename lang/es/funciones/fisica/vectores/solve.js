@@ -27,9 +27,9 @@ function anadir(){
 
 	$('.table_c').addClass('show')
 
-	var magnitude = parseInt(document.getElementById("vector").value);
+	var magnitude = parseFloat(document.getElementById("vector").value);
 
-	var angle = parseInt(document.getElementById("angle").value);
+	var angle = parseFloat(document.getElementById("angle").value);
 
 	var table = document.getElementById("table");
 

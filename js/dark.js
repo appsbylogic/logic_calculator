@@ -1,28 +1,12 @@
-var dark = window.matchMedia('(prefers-color-scheme: dark)').matches 
+var dark = localStorage.getItem('dark')
 
-setSystem();
-
-function setSystem(){
-	if(localStorage.getItem('manual')){
-
-		if(JSON.parse(localStorage.getItem('manual'))){
-			
-			$("#modeSelector").html("Manual")
-		}
-
-		if( JSON.parse(localStorage.getItem('manual')) && localStorage.getItem('dark')){
-			dark = JSON.parse(localStorage.getItem('dark'))
-			$("#modeSelector").html("Manual")
-		}else{
-			dark = window.matchMedia('(prefers-color-scheme: dark)').matches
-			$("#modeSelector").html("System theme (Android 10)")
-		}
-	
-	}else{
-		$("#modeSelector").html("System theme (Android 10)")
-	}
-	addDark();	
+if(localStorage.getItem('dark')){
+	dark = JSON.parse(localStorage.getItem('dark'))
+}else{
+	dark = false;
 }
+
+
 
 console.log()
 var img = dark ? "img/logic_fondo_black.png" : "img/logic_no_fodno.png"

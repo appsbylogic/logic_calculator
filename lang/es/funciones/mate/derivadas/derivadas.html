@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-	
+
 
   <meta charset="utf-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="icon" href="../../../img/favicon (2).ico">
+  <link rel="icon" href="../../../img/favicon (2).ico">
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
-		<link rel="apple-touch-icon" href="../../../img/icon.png">
+  <link rel="apple-touch-icon" href="../../../img/icon.png">
 
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="apple-mobile-web-app-title" content="Accurate">
+  <meta name="apple-mobile-web-app-title" content="Accurate">
 
   <title>Accurate</title>
 
-   <!--Import Google Icon Font-->
-    
+  <!--Import Google Icon Font-->
+
 
   <link rel="stylesheet" href="../../../css/materialize.css">
 
@@ -32,63 +33,62 @@
   <link rel="stylesheet" type="text/css" href="../../../css/index.css">
 
   <style type="text/css">
-    	
-    html{
-
-   
+    html {
 
 
-    	background-color: #fcfcfc;
 
-      height: 100%;
 
-    }
-    
-    body{
+      background-color: #fcfcfc;
 
       height: 100%;
-    }
-       
-
-    #formulas{
-
-    	opacity: 0;
-
-    	position: absolute;
-    		
-    	left: 50%;
-
-    	transform: translateX(-50%);
-
-    	transition: all 0.4s ease;
 
     }
 
-    .dropBtn{
+    body {
+
+      height: 100%;
+    }
+
+
+    #formulas {
+
+      opacity: 0;
+
+      position: absolute;
+
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      transition: all 0.4s ease;
+
+    }
+
+    .dropBtn {
 
       color: white;
 
     }
 
     td {
-            
-      width: 15% ;
-            
+
+      width: 15%;
+
       border-radius: 0px;
 
       padding: 0px 0px;
 
       cursor: pointer;
-              
+
     }
 
-    .navbar-fixed{
+    .navbar-fixed {
 
       z-index: 0;
 
     }
-        
-    td a{
+
+    td a {
 
       color: white;
 
@@ -100,82 +100,81 @@
 
     }
 
-    tr{
-           
+    tr {
+
       border-bottom: none;
 
     }
 
-    .war{ 
-            
+    .war {
+
       padding: 0px 0px !important;
       bottom: 0px;
       margin: 0px;
-            
+
     }
 
-    .showKeyboard{
+    .showKeyboard {
 
       animation: showKey .5s forwards;
 
     }
 
-    .hideKeyboard{
+    .hideKeyboard {
 
       animation: hideKey .5s forwards;
 
     }
 
-    .spinSign{
+    .spinSign {
 
       animation: spin .5s forwards;
 
     }
 
-    .spinSignBack{
+    .spinSignBack {
 
       animation: spinBack .5s forwards;
 
     }
 
-    @keyframes hideKey{
+    @keyframes hideKey {
 
-      100%{
-        
-        transform: translate(-50%,85%);
-       
-       
+      100% {
+
+        transform: translate(-50%, 85%);
+
+
 
       }
 
 
     }
 
-    @keyframes showKey{
+    @keyframes showKey {
 
-      0%{
+      0% {
 
-        transform: translate(-50%,85%);
+        transform: translate(-50%, 85%);
 
       }
 
-      100%{        
-        
-        transform: translate(-50,0%);
+      100% {
+
+        transform: translate(-50, 0%);
 
       }
 
     }
 
-    @keyframes spin{
+    @keyframes spin {
 
-      0%{
+      0% {
 
         transform: rotate(180deg)
-
       }
 
-      100%{
+      100% {
 
         transform: rotate(0deg);
 
@@ -183,28 +182,28 @@
 
     }
 
-    @keyframes spinBack{
+    @keyframes spinBack {
 
-      100%{
+      100% {
 
         transform: rotate(180deg);
 
-        }
-
       }
-     
-    .keyboard{
-        
+
+    }
+
+    .keyboard {
+
       font-size: 20px;
-      
+
       width: 100%;
 
       bottom: 0;
-      
+
       left: 50%;
-      
+
       transform: translate(-50%);
-      
+
       position: fixed;
 
       display: inline-block;
@@ -213,13 +212,13 @@
 
     }
 
-    .result_card{
+    .result_card {
 
       display: none;
 
     }
 
-    .show{
+    .show {
 
       display: block;
     }
@@ -230,27 +229,28 @@
       box-shadow: 0 1px 0 0 #e57373 !important;
     }
 
-    .input-field input[type=number]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+    .input-field input[type=number]:focus+label,
+    .materialize-textarea:focus:not([readonly])+label {
       color: #ef5350 !important;
     }
 
 
-    .navbar-fixed{
+    .navbar-fixed {
 
       height: 110px;
 
-    
-    }
 
-    </style>
+    }
+  </style>
 
 </head>
-<body>
-  
-	
-    <ul class="sidenav" id="mobile-demo">
 
-        <!--<li>
+<body>
+
+
+  <ul class="sidenav" id="mobile-demo">
+
+    <!--<li>
       
           <div class="user-view">
         
@@ -280,248 +280,264 @@
           </div>
     
         </li>-->
-          <br>
-          
-          <li><a class="red-text"><h5>Accurate</h5></a></li>
-          <li><div class="divider"></div></li>
-          <li><a class="subheader topic">Secciones</a></li>
-          <li><a href="../../../calculator.html" class="waves-effect topic "><i class="material-icons ">exposure</i>Calculadora</a></li>
-        <li><a href="../../../index.html" class="waves-effect topic "><i class="material-icons ">school</i>Física</a></li>
-        <li><a href="#" class="waves-effect topic selectedTopic red-text text-darken-1"><i class="material-icons red-text text-darken-1 ">exposure_plus_1</i>Matemáticas</a></li>
-    
-        <li><div class="divider"></div></li>
-        <li><a class="subheader topic">Opciones</a></li>
-        <li>
-    
+    <br>
+
+    <li><a class="red-text">
+        <h5>Accurate</h5>
+      </a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="subheader topic">Secciones</a></li>
+    <li><a href="../../../calculator.html" class="waves-effect topic "><i
+          class="material-icons ">exposure</i>Calculadora</a></li>
+    <li><a href="../../../index.html" class="waves-effect topic "><i class="material-icons ">school</i>Física</a></li>
+    <li><a href="#" class="waves-effect topic selectedTopic red-text text-darken-1"><i
+          class="material-icons red-text text-darken-1 ">exposure_plus_1</i>Matemáticas</a></li>
+
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="subheader topic">Opciones</a></li>
+    <li>
+
       <a class="switch topic" onclick="darkToggle()">
-          Modo Oscuro <i class="material-icons">brightness_2</i>
+        Modo Oscuro <i class="material-icons">brightness_2</i>
         <label>
-        <input type="checkbox" id='darkSwitch' onclick="darkToggle()">
-        <span class="lever"></span>
-        
+          <input type="checkbox" id='darkSwitch' onclick="darkToggle()">
+          <span class="lever"></span>
+
         </label>
-    
-    
+
+
       </a>
-    
-      </li>
 
-      <li><a class='dropdown-trigger trigger2' href='#' data-target='dropdown4'><i class="material-icons">language</i><span class="containerDrop topic">Español</span></a>
+    </li>
 
-        <!-- Dropdown Structure -->
-        <ul id='dropdown4' class='dropdown-content '>
-          
-          <li><a class="topic" href="#!">Español</a></li>
-          <li><a class="topic" href="../../../../../funciones/mate/derivadas/derivadas.html" onclick="localStorage.setItem('language','en'), console.log('asasd')">English</a></li>
-          
+    <li><a class='dropdown-trigger trigger2' href='#' data-target='dropdown4'><i
+          class="material-icons">language</i><span class="containerDrop topic">Español</span></a>
+
+      <!-- Dropdown Structure -->
+      <ul id='dropdown4' class='dropdown-content '>
+
+        <li><a class="topic" href="#!">Español</a></li>
+        <li><a class="topic" href="../../../../../funciones/mate/derivadas/derivadas.html"
+            onclick="localStorage.setItem('language','en'), console.log('asasd')">English</a></li>
+
+      </ul>
+    </li>
+
+    <li><a class="subheader topic">Información y ayuda</a></li>
+
+    <li class="sidenav-footer"><a href="../../../credits.html" class="topic"><i class="material-icons">help</i>
+        Créditos</a></li>
+
+
+
+  </ul>
+
+  <div class="navbar-fixed ">
+
+    <nav class="nav-extended ">
+
+      <div class="nav-wrapper  red darken-1">
+        <a href="#!" class="brand-logo">Accurate</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="../../../index.html" class="">Física</a></li>
+          <li><a href="#" class="active red darken-4">Matemáticas</a></li>
+          <li><a href="../../../calculator.html">Calculadora</a></li>
+          <li> <a class='dropdown-trigger ' href='#' data-target='dropdown1'><i class="material-icons">settings</i></a>
+          </li>
+
+          <ul id='dropdown1' class='dropdown-content' constrainWidth="false" style="width: 1000px !important">
+            <li>
+              <a class="switch topic black-text" data-constrainWidth="false" onclick="darkToggle()">
+                Modo Oscuro<i class="material-icons">brightness_2</i>
+                <label>
+                  <input type="checkbox" id='darkSwitch_pc' onclick="darkToggle()">
+                  <span class="lever"></span>
+
+                </label>
+
+
+              </a>
+            </li>
+            <li><a class="topic black-text" href="../../../../../funciones/mate/derivadas/derivadas.html"
+                onclick="localStorage.setItem('language','en'), console.log('asasd')"><i
+                  class="material-icons">language</i>English</a></li>
+            <li><a class="topic black-text selectedLanguage "><i class="material-icons">language</i>Español</a></li>
+
+            <li><a href="../../../credits.html" class="topic black-text"><i class="material-icons">help</i>Créditos</a>
+            </li>
+
+          </ul>
+
         </ul>
-      </li>
-    
-      <li><a class="subheader topic">Información y ayuda</a></li>
-    
-       <li class="sidenav-footer"><a href="../../../credits.html" class="topic"><i class="material-icons">help</i> Créditos</a></li>
-       <li><a class='dropdown-trigger trigger2' href='#' data-target='dropdown5'><i class="material-icons">settings</i><span id="modeSelector" class="containerDrop topic">System theme</span></a>
-        <ul id='dropdown5' class='dropdown-content '>
-          <li><a href="#!" class="topic" onclick="localStorage.setItem('manual',false); setSystem()">Tema del sistema</a></li>
-          <li><a class="topic" onclick="localStorage.setItem('manual',true);setSystem()">Manual</a></li>
-          
-          </ul>
-      </li>
-    
-    
-    </ul>
-    
-    <div class="navbar-fixed ">
-    
-      <nav class="nav-extended ">
-    
-        <div class="nav-wrapper  red darken-1">
-          <a href="#!" class="brand-logo">Accurate</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul  class="right hide-on-med-and-down">
-            <li><a href="../../../index.html" class="">Física</a></li>
-            <li><a href="#" class="active red darken-4">Matemáticas</a></li>
-            <li><a href="../../../calculator.html"  >Calculadora</a></li>
-            <li> <a class='dropdown-trigger ' href='#' data-target='dropdown1'><i class="material-icons">settings</i></a></li>
-    
-            <ul id='dropdown1' class='dropdown-content' constrainWidth="false" style="width: 1000px !important">
-              <li>
-                <a class="switch topic black-text" data-constrainWidth="false" onclick="darkToggle()">
-                    Modo Oscuro<i class="material-icons">brightness_2</i>
-                  <label>
-                     <input type="checkbox" id='darkSwitch_pc' onclick="darkToggle()">
-                    <span class="lever"></span>
-        
-                  </label>
-    
-    
-                </a>
-              </li>
-              <li><a class="topic black-text"href="../../../../../funciones/mate/derivadas/derivadas.html" onclick="localStorage.setItem('language','en'), console.log('asasd')"><i class="material-icons">language</i>English</a></li>
-              <li><a class="topic black-text selectedLanguage "><i class="material-icons">language</i>Español</a></li>
-             
-              <li><a href="../../../credits.html" class="topic black-text"><i class="material-icons">help</i>Créditos</a></li>
-            
-            </ul>
-    
-          </ul>
-    
-        </div>
-    
-        <div class="nav-content red accent-2">
-          <ul class="tabs tabs-transparent">
-              <li class="tab "><a href="../../../math.html" target="_self" class="medium white-text" ><i class=" material-icons  left">chevron_left</i></a></li>
-          </ul>
-        </div>
-      </nav>
-    
-      
-    </div>
-
-	<div class="container cardContainer" id="solve">
-
-      <h4 id="head">Derivadas</h4>
-					
-		<div class="row">
-			
-			<div class="col s12">
-				
-				<div class="card">
-					
-					<div class="card-content">
-
-					
-                          <h5 id="preview" ><i>f</i><sub>(x)</sub> = </h5>
-                          
-                          <br>
-              
-
-				</div>
-
-			</div>
-
-		</div>
-
- 
 
       </div>
 
-      <div class="row result_card">
-      
-        <div class="col s12">
-          
-          <div class="card" >
-            
-            <div class="card-content cardResult">
-              
-              <h4>Resultado</h4>
-  
-              
+      <div class="nav-content red accent-2">
+        <ul class="tabs tabs-transparent">
+          <li class="tab "><a href="../../../math.html" target="_self" class="medium white-text"><i
+                class=" material-icons  left">chevron_left</i></a></li>
+        </ul>
+      </div>
+    </nav>
 
-  
-              
-  
-            </div>
-  
+
+  </div>
+
+  <div class="container cardContainer" id="solve">
+
+    <h4 id="head">Derivadas</h4>
+
+    <div class="row">
+
+      <div class="col s12">
+
+        <div class="card">
+
+          <div class="card-content">
+
+
+            <h5 id="preview"><i>f</i><sub>(x)</sub> = </h5>
+
+            <br>
+
+
           </div>
-  
+
         </div>
-  
+
+      </div>
+
+
+
+    </div>
+
+    <div class="row result_card">
+
+      <div class="col s12">
+
+        <div class="card">
+
+          <div class="card-content cardResult">
+
+            <h4>Resultado</h4>
+
+
+
+
+
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
 
-    <div class="container keyboard showKeyboard grey darken-4 ">
+  </div>
+
+  <div class="container keyboard showKeyboard grey darken-4 ">
     <div class="row war">
 
-        <div class="col s12 war">
-                <table class="centered white-text z-depth-2">
-                        <tbody>
-                            <tr style="width:100%;" >
-                              <td  class="grey darken-5 " style="cursor:default;" onclick="hideKey()"><a class="waves-effect waves-light "><i class="material-icons arrowUp spinSign">keyboard_arrow_down</i></a></td>
-                              <td class="grey darken-5" style="cursor:default;"></td>
-                              <td class="grey darken-5" style="cursor:default;"></td>
-                              <td class="grey darken-5" style="cursor:default;"></td>
-                              <td class="grey darken-5 " onclick='borrarTodo()'><a class="waves-effect waves-light "><i class="material-icons">remove_circle_outline</i></a></td>
-                              <td class="grey darken-5" onclick="eliminar()"><a class="waves-effect waves-light "><i class="material-icons">navigate_before</i></a></td>
-                          </tr>
-                          <tr>
-                              <td onclick="insert('(')"><a class="waves-effect waves-light ">(</a></td>
-                              <td onclick="insert(')')"><a class="waves-effect waves-light ">)</a></td>
-                              <td class="grey darken-3 " onclick="insert(7)"><a class="waves-effect waves-light ">7</a></td>
-                              <td class="grey darken-3" onclick="insert(8)"><a class="waves-effect waves-light ">8</a></td>
-                              <td class="grey darken-3" onclick="insert(9)"><a class="waves-effect waves-light ">9</a></td>
-                              <td onclick="insert('÷')"><a class="waves-effect waves-light ">÷</a></td>
-                          </tr>
-                        </tbody>
-                
-                        <tbody>
-                          <tr>
-                            <td >
-                              <a class='dropdown-trigger1 dropBtn waves-effect waves-light' href='#' data-target='dropdown2' onclick="addArray('^')">x <sup>[ ]</sup></a>
-                            </td>
-                            <td><a class='dropdown-trigger dropBtn waves-effect waves-light' href='#' data-target='dropdown3'>sin</a></td>
-                            <td class="grey darken-3" onclick="insert(4)"><a class="waves-effect waves-light ">4</a></td>
-                            <td class="grey darken-3" onclick="insert(5)"><a class="waves-effect waves-light ">5</a></td>
-                            <td class="grey darken-3" onclick="insert(6)"><a class="waves-effect waves-light ">6</a></td>
-                            <td onclick="insert('×')"><a class="waves-effect waves-light ">×</a></td>
-                          </tr>
-                          <tr>
-                            <td onclick="insert('/')"><a class="waves-effect waves-light ">/</a></td>
-                            <td onclick="insert('x')"><a class="waves-effect waves-light ">x</a></td>
-                            <td class="grey darken-3" onclick="insert(1)"><a class="waves-effect waves-light ">1</a></td>
-                            <td class="grey darken-3" onclick="insert(2)"><a class="waves-effect waves-light ">2</a></td>
-                            <td class="grey darken-3" onclick="insert(3)"><a class="waves-effect waves-light ">3</a></td>
-                            <td onclick="insert('-')"><a class="waves-effect waves-light ">-</a></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="grey darken-3"onclick="insert(0)"><a class="waves-effect waves-light ">0</a></td>
-                            <td class="grey darken-3"onclick="insert('.')"><a class="waves-effect waves-light ">.</a></td>
-                            <td class="red lighten-1" onclick="calcular()"><a class="waves-effect waves-light ">=</a></td>
-                            <td onclick="insert('+')"><a class="waves-effect waves-light ">+</a></td>
-                          </tr>
-                        </tbody>
-                      </table>
-            
-        </div>
+      <div class="col s12 war">
+        <table class="centered white-text z-depth-2">
+          <tbody>
+            <tr style="width:100%;">
+              <td class="grey darken-5 " style="cursor:default;" onclick="hideKey()"><a
+                  class="waves-effect waves-light "><i
+                    class="material-icons arrowUp spinSign">keyboard_arrow_down</i></a></td>
+              <td class="grey darken-5" style="cursor:default;"></td>
+              <td class="grey darken-5" style="cursor:default;"></td>
+              <td class="grey darken-5" style="cursor:default;"></td>
+              <td class="grey darken-5 " onclick='borrarTodo()'><a class="waves-effect waves-light "><i
+                    class="material-icons">remove_circle_outline</i></a></td>
+              <td class="grey darken-5" onclick="eliminar()"><a class="waves-effect waves-light "><i
+                    class="material-icons">navigate_before</i></a></td>
+            </tr>
+            <tr>
+              <td onclick="insert('(')"><a class="waves-effect waves-light ">(</a></td>
+              <td onclick="insert(')')"><a class="waves-effect waves-light ">)</a></td>
+              <td class="grey darken-3 " onclick="insert(7)"><a class="waves-effect waves-light ">7</a></td>
+              <td class="grey darken-3" onclick="insert(8)"><a class="waves-effect waves-light ">8</a></td>
+              <td class="grey darken-3" onclick="insert(9)"><a class="waves-effect waves-light ">9</a></td>
+              <td onclick="insert('÷')"><a class="waves-effect waves-light ">÷</a></td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <td>
+                <a class='dropdown-trigger1 dropBtn waves-effect waves-light' href='#' data-target='dropdown2'
+                  onclick="addArray('^')">x <sup>[ ]</sup></a>
+              </td>
+              <td><a class='dropdown-trigger dropBtn waves-effect waves-light' href='#' data-target='dropdown3'>sin</a>
+              </td>
+              <td class="grey darken-3" onclick="insert(4)"><a class="waves-effect waves-light ">4</a></td>
+              <td class="grey darken-3" onclick="insert(5)"><a class="waves-effect waves-light ">5</a></td>
+              <td class="grey darken-3" onclick="insert(6)"><a class="waves-effect waves-light ">6</a></td>
+              <td onclick="insert('×')"><a class="waves-effect waves-light ">×</a></td>
+            </tr>
+            <tr>
+              <td onclick="insert('/')"><a class="waves-effect waves-light ">/</a></td>
+              <td onclick="insert('x')"><a class="waves-effect waves-light ">x</a></td>
+              <td class="grey darken-3" onclick="insert(1)"><a class="waves-effect waves-light ">1</a></td>
+              <td class="grey darken-3" onclick="insert(2)"><a class="waves-effect waves-light ">2</a></td>
+              <td class="grey darken-3" onclick="insert(3)"><a class="waves-effect waves-light ">3</a></td>
+              <td onclick="insert('-')"><a class="waves-effect waves-light ">-</a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="grey darken-3" onclick="insert(0)"><a class="waves-effect waves-light ">0</a></td>
+              <td class="grey darken-3" onclick="insert('.')"><a class="waves-effect waves-light ">.</a></td>
+              <td class="red lighten-1" onclick="calcular()"><a class="waves-effect waves-light ">=</a></td>
+              <td onclick="insert('+')"><a class="waves-effect waves-light ">+</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
 
     </div>
 
-</div>
-
-    
+  </div>
 
 
-  
+
+
+
   <ul id='dropdown2' class='dropdown-content' style="z-index:999 !important;">
-      <li ><a href="#!"  class="topic black-text" onclick="insertSup('<sup>/</sup>', true)" >/</a></li>
-      <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>(</sup>', true)">(</a></li>
-      <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>)</sup>', true)">)</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>9</sup>', true)">9</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>8</sup>', true)">8</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>7</sup>', true)">7</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>6</sup>', true)">6</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>5</sup>', true)">5</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>4</sup>', true)">4</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>3</sup>', true)">3</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>2</sup>', true)">2</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>1</sup>', true)">1</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insertSup('<sup>0</sup>', true)">0</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>/</sup>', true)">/</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>(</sup>', true)">(</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>)</sup>', true)">)</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>9</sup>', true)">9</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>8</sup>', true)">8</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>7</sup>', true)">7</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>6</sup>', true)">6</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>5</sup>', true)">5</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>4</sup>', true)">4</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>3</sup>', true)">3</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>2</sup>', true)">2</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>1</sup>', true)">1</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insertSup('<sup>0</sup>', true)">0</a></li>
   </ul>
 
   <ul id='dropdown3' class='dropdown-content'>
     <li><a href="#!" class="topic black-text" onclick="insert('sin(')">sin</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insert('cos(')">cos</a></li>
-    <li><a href="#!"  class="topic black-text" onclick="insert('tan(')">tan</a></li>
-    
+    <li><a href="#!" class="topic black-text" onclick="insert('cos(')">cos</a></li>
+    <li><a href="#!" class="topic black-text" onclick="insert('tan(')">tan</a></li>
+
   </ul>
 
 
-   <script src="../../../js/materialize.js"></script>
+  <script src="../../../js/materialize.js"></script>
 
-    <script type="text/javascript" src="../../../index.js"> </script>
+  <script type="text/javascript" src="../../../index.js"> </script>
 
 
   <script type="text/javascript" src="solve.js"></script>
@@ -530,4 +546,5 @@
   <script type="text/javascript" src="../../../js/math.js"></script>
 
 </body>
+
 </html>
